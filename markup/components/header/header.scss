@@ -1,0 +1,69 @@
+.header {
+	padding-top: in-perc(100, 780);
+	@extend %cf;
+	&-text {
+		float: left;
+	}
+	&-name {
+		font-size: 32px;
+		margin: 0;
+		line-height: 1.2;
+		font-weight: 300;
+		font-family: 'Roboto';
+	}
+	&-pos {
+		margin: 4px 0 0;
+		color: #99979c;
+	}
+	$links-size: 30px;
+	&-links {
+		@extend %nl;
+		font-size: 0;
+		// float: right;
+		text-align: right;
+		margin: -3px;
+		&-item {
+			display: inline-block;		
+			overflow: hidden;	
+			border: 3px solid #000;
+			margin: 3px;
+			font-size: initial;
+			max-width: $links-size;
+			min-width: $links-size + 6;
+
+			transition: max-width .45s linear;
+			@media screen and (min-width: 768px) {
+				&:hover {
+					max-width: 302px;
+				}				
+			}
+		}
+	}
+	&-link {
+		display: table;
+		width: 100%;
+		overflow: hidden;
+		// padding: 0 5px;
+		color: inherit;
+		height: $links-size;
+		white-space: nowrap;
+		&:hover {
+			color: #33b5e5;
+		}
+		&:before {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			min-width: 30px;
+			font-size: 24px;
+		}
+
+		&-text {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0 8px;
+			font-family: Roboto;
+			font-size: 13px;
+		}
+	}
+}
