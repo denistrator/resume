@@ -1,0 +1,83 @@
+$form-color: red !default;
+$form-bg: #eaeef1 !default;
+$form-border: 1px solid #eaeef1 !default;
+$form-border-radius: 2px !default;
+$form-height: 44px !default;
+$form-padding-x: 20px !default;
+$form-font-size: 14px !default;
+$form-line-height: 1.4 !default;
+$form-margin-bottom: 15px !default;
+
+$form-label-color: #eaeef1 !default;
+$form-label-font-size: 14px !default;
+$form-label-margin-bottom: 4px !default;
+
+
+@mixin placeholder($color, $opacity: 1) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    &:focus::-moz-placeholder {
+        color: transparent;
+    }
+    &:focus:-ms-input-placeholder {
+        color: transparent;
+    }
+}
+
+@mixin form-variants($color, $bg, $border-color) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border-color;
+}
+
+@mixin form-size($height, $padding, $font-size, $border-radius: $form-border-radius, $line-height: $form-line-height) {
+    $padding-y: ($height - ($font-size * $form-line-height)) / 2;
+    font-size: $font-size;
+    border-radius: $border-radius;
+    height: $height;
+    line-height: $line-height;
+    padding: $padding-y $padding;
+}
+
+.form {
+	&-group {
+		margin-bottom: $form-margin-bottom;
+	}
+    &-control {
+        width: 100%;
+        display: block;
+        color: $form-color;
+        font-size: $form-font-size;
+        background-color: $form-bg;
+        border: $form-border;
+        border-radius: $form-border-radius;
+        height: $form-height;
+        line-height: $form-line-height;
+        $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
+        padding: $padding-y $form-padding-x;
+        @include placeholder(#ccc);
+    }
+    &-label {
+    	display: block;
+    	color: $form-label-color;
+    	font-size: $form-label-font-size;
+    	margin-bottom: $form-label-margin-bottom;
+    }
+    
+}
