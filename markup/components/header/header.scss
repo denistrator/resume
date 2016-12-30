@@ -1,6 +1,8 @@
+$links-size: 30px !default;
 .header {
-	padding-top: in-perc(100, 780);
 	@extend %cf;
+	padding-top: in-perc(100, 780);
+	margin-bottom: 15px;
 	&-text {
 		float: left;
 	}
@@ -9,13 +11,11 @@
 		margin: 0;
 		line-height: 1.2;
 		font-weight: 300;
-		font-family: 'Roboto';
 	}
 	&-pos {
 		margin: 4px 0 0;
 		color: #99979c;
 	}
-	$links-size: 30px;
 	&-links {
 		@extend %nl;
 		font-size: 0;
@@ -32,10 +32,15 @@
 			min-width: $links-size + 6;
 
 			transition: max-width .45s linear;
+			&:hover {
+				.header-link {
+					color: #33b5e5;
+				}
+			}				
 			@media screen and (min-width: 768px) {
 				&:hover {
 					max-width: 302px;
-				}				
+				}
 			}
 		}
 	}
@@ -43,13 +48,12 @@
 		display: table;
 		width: 100%;
 		overflow: hidden;
-		// padding: 0 5px;
 		color: inherit;
 		height: $links-size;
 		white-space: nowrap;
-		&:hover {
-			color: #33b5e5;
-		}
+		text-decoration: none;
+
+		transition: color .25s linear;
 		&:before {
 			display: table-cell;
 			vertical-align: middle;
@@ -62,8 +66,8 @@
 			display: table-cell;
 			vertical-align: middle;
 			padding: 0 8px;
-			font-family: Roboto;
 			font-size: 13px;
+			font-family: Roboto;
 		}
 	}
 }
