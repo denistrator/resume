@@ -1,2 +1,14 @@
 // File for scss-vars.
 // For example: main colors, paddings and so on.
+
+$grid-gutter: 40px; 
+$container-max-width: 1170px;
+$container-gutter: $grid-gutter;
+
+$font-family-base: Roboto, sans-serif;
+$font-size-base: 15px;
+$line-height-base: (22.5 / 15);
+$heading-font-weight: 300;
+$link-color: #4285F4;
+$link-decoration: underline;
+$margin-bottom-p: 10px;
