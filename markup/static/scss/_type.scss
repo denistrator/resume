@@ -27,12 +27,14 @@ body {
 }
 
 p {
+    font-size: 15px;
     margin-top: 0;
     margin-bottom: $margin-bottom-p;
 }
 
 a {
-    color: $link-color;
+    // color: $link-color;
+    color: inherit;
     text-decoration: $link-decoration;
     &:hover {
         color: $link-color-hover;
@@ -42,9 +44,9 @@ a {
 
 h1,h2,h3,h4,h5,h6,.h1,
 .h2,.h3,.h4,.h5,.h6 {
-	&:not(.prevent-tt) {
-		text-transform: uppercase;
-	}
+	// &:not(.prevent-tt) {
+	// 	text-transform: uppercase;
+	// }
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-color;
@@ -55,6 +57,9 @@ h1, .h1 {
 }
 
 h2, .h2 {
+    &:not(.prevent-tt) {
+        text-transform: uppercase;
+    }
     font-size: $heading-font-size-2;
 }
 

@@ -25,27 +25,11 @@
 }
 
 %nl {
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
-    list-style: none;
-    list-style-position: outside;
+    @include nl;
 }
 
 %cf {
-    &:before,
-    &:after {
-        display: table;
-        content: "";
-    }
-
-    &:after {
-        clear: both;
-    }
-
-    .lt-ie8 & {
-        zoom: 1;
-    }
+    @include cf;
 }
 
 @mixin blocks-justify {

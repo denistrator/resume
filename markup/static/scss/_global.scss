@@ -95,12 +95,12 @@ div[class *="img-holder"] {
 .ver-indents {
 	&-parent {
 		overflow: hidden;
-		// margin-top: -$grid-gutter-width-base / 2;
-		// margin-bottom: -$grid-gutter-width-base / 2;
+		margin-top: -$grid-gutter / 2;
+		margin-bottom: -$grid-gutter / 2;
 	}
 	&-child {
-		// margin-top: $grid-gutter-width-base / 2;
-		// margin-bottom: $grid-gutter-width-base / 2;
+		margin-top: $grid-gutter / 2;
+		margin-bottom: $grid-gutter / 2;
 	}
 }
 
