@@ -1,0 +1,15 @@
+<section class="section portfolio">
+	<h3 class="title portfolio-title section-title">Портфолио</h3>
+	<p class="desc portfolio-desc">Последние свёрстанные PSD макеты</p>
+	<ul class="portfolio-list">
+		{{#each portfolio}}
+			<li class="portfolio-item {{mod}}">
+				<div class="portfolio-img-holder">
+					<img src="static/img/content/{{imgPath}}.png" alt="" class="portfolio-img">
+				</div>
+				<a href="{{link}}" class="portfolio-link">{{title}}</a>
+				<a href="{{githubLink}}" target="_blank" class="portfolio-github-link icon-github-logo"></a>
+			</li>
+		{{/each}}
+	</ul>
+</section>

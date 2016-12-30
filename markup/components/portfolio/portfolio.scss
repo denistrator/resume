@@ -1,0 +1,47 @@
+.portfolio {
+	&-list {
+		@extend %nl;
+		margin-top: 25px;
+	}
+	&-item {
+		display: table;
+		width: 100%;
+		// margin-left: -27px;
+		padding: 15px 0;
+		padding-left: 27px;
+		border: 1px solid  #fff;
+		& + & {
+			margin-top: 15px;
+		}
+		&.old {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			.portfolio-img-holder {
+				// width: 60px;				
+				// padding-right: 37px;
+			}
+		}
+	}
+	&-img-holder {
+		display: table-cell;
+		width: 80px;
+		padding-right: 27px;
+	    vertical-align: middle;
+	}
+	&-link {
+		display: table-cell;
+	    vertical-align: middle;
+		text-decoration: none;
+	}
+	&-github-link {
+		display: table-cell;
+	    vertical-align: middle;
+		width: 1px;
+		padding-right: 15px;
+		text-decoration: none;
+		font-size: 20px;
+		&[href=""] {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.skills {
+    &-list {
+        font-size: 14px;
+    }
+    &-item {
+    	&-special {
+    		border: 1px solid white;
+    		padding: 7px 10px;
+    		margin: 12px 0;
+    		margin-left: -7px;
+    		list-style: none;
+    	}
+    }
+    &-separator {
+        color: #d4d4d4;
+    }
+}
