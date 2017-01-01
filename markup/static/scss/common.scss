@@ -1,11 +1,13 @@
 // Common styles of the project
 
 @import "global";
-@import "grid";
+// @import "grid";
+// Grid without unused classes cleared by uncss
+@import 'uncss-output/grid';
 @import "blocks";
 @import "type";
-@import "btns";
-@import "forms";
+// @import "btns";
+// @import "forms";
 
 ::-webkit-scrollbar-track { 
 	background-color: #f0eef1;
