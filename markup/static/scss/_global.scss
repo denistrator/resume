@@ -99,6 +99,7 @@ div[class *="img-holder"] {
 		margin-bottom: -$grid-gutter / 2;
 	}
 	&-child {
+		overflow: hidden;
 		margin-top: $grid-gutter / 2;
 		margin-bottom: $grid-gutter / 2;
 	}
@@ -110,5 +111,22 @@ div[class *="img-holder"] {
 	}
 	&b {
 		display: block !important;
+	}
+}
+
+.only {
+	&-print {
+		display: none !important;
+		@media print {
+			display: initial !important;
+		}
+	}
+}
+
+.no {
+	&-print {
+		@media print {
+			display: none !important;
+		}
 	}
 }

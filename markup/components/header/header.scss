@@ -19,7 +19,6 @@ $links-size: 30px !default;
 	&-links {
 		@extend %nl;
 		font-size: 0;
-		// float: right;
 		text-align: right;
 		margin: -3px;
 		&-item {
@@ -42,6 +41,10 @@ $links-size: 30px !default;
 					max-width: 302px;
 				}
 			}
+			@media print {
+				max-width: initial;
+				border: none;
+			}
 		}
 	}
 	&-link {
@@ -60,6 +63,10 @@ $links-size: 30px !default;
 			text-align: center;
 			min-width: 30px;
 			font-size: 24px;
+
+			@media print {
+				display: none;
+			}
 		}
 
 		&-text {
