@@ -1,5 +1,8 @@
 .portfolio {
 	&-list {
+		&-wrap {
+			margin-left: -27px;
+		}
 		@extend %nl;
 		margin-top: 25px;
 	}
@@ -25,6 +28,7 @@
 	&-img-holder {
 		display: table-cell;
 		width: 80px;
+		max-height: 80px;
 		padding-right: 27px;
 	    vertical-align: middle;
 	}
@@ -33,11 +37,16 @@
 	    vertical-align: middle;
 		text-decoration: none;
 	}
+	&-title {
+		display: table-cell;
+	    vertical-align: middle;
+	    font-size: 15px;
+	}
 	&-github-link {
 		display: table-cell;
 	    vertical-align: middle;
 		width: 1px;
-		padding-right: 15px;
+		padding: 15px;
 		text-decoration: none;
 		font-size: 20px;
 		&[href=""] {

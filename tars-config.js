@@ -28,12 +28,12 @@ module.exports = {
     },
     "sourcemaps": {
         "js": {
-            "active": true,
-            "inline": true
+            "active": false,
+            "inline": false
         },
         "css": {
-            "active": true,
-            "inline": true
+            "active": false,
+            "inline": false
         }
     },
     "notifyConfig": {
@@ -45,8 +45,8 @@ module.exports = {
     "minifyHtml": false,
     "generateStaticPath": true,
     "buildPath": "./builds/",
-    "useBuildVersioning": true,
-    "useArchiver": true,
+    "useBuildVersioning": false,
+    "useArchiver": false,
     "ulimit": 4096,
     "templater": "handlebars",
     "cssPreprocessor": "scss",
