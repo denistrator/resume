@@ -8,6 +8,14 @@ var data = {
 			mod: ""
 		},
 		{
+			imgPath: "project-6",
+			link: "http://gorcons.apanshin-dev.ru/",
+			title: "Горконс",
+			githubLink: "",
+			mod: "",
+			commercial: true
+		},
+		{
 			imgPath: "project-2",
 			link: "http://denistrator.esy.es/modest",
 			title: "Modest",
@@ -29,9 +37,24 @@ var data = {
 			mod: ""
 		},
 		{
+			imgPath: "project-no-image",
+			link: "http://denistrator.esy.es/cosmetologylife",
+			title: "Косметология Жизни",
+			githubLink: "",
+			mod: "",
+			commercial: true
+		},
+		{
 			imgPath: "project-5",
 			link: "http://denistrator.esy.es/Freebie_Page_Atech/",
 			title: "Atech",
+			githubLink: "",
+			mod: "old"
+		},
+		{
+			imgPath: "project-no-image",
+			link: "http://denistrator.esy.es/naturetour/",
+			title: "Naturetour",
 			githubLink: "",
 			mod: "old"
 		},

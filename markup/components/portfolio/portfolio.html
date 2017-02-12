@@ -11,6 +11,11 @@
 						</div>
 						<h4 class="portfolio-title">{{title}}</h4>
 					</a>
+					{{#if commercial}}
+						<div class="portfolio-commercial">
+							<span class="portfolio-commercial-symbol" text="Коммерческий проект">$</span>
+						</div>
+					{{/if}}
 					<a href="{{githubLink}}" target="_blank" class="portfolio-github-link icon-github-logo"></a>
 				</li>
 			{{/each}}
