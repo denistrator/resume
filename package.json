@@ -6,10 +6,11 @@
   "directories": {},
   "dependencies": {},
   "devDependencies": {
+    "critical": "^0.8.1",
     "gulp": "^3.9.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-uncss": "^1.0.6",
-    "critical": "^0.8.1"
+    "gulp-inline-source": "^3.0.0",
+    "gulp-uncss": "^1.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
