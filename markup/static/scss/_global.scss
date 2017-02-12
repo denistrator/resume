@@ -34,64 +34,64 @@ div[class *="img-holder"] {
 	font-size: 0;
 }
 
-.js-fine-align-landscape {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-    left: -50%;
-    right: -50%;
-    height: 100%;
-    max-width: none;
-    width: auto;
-    margin: auto;
-}
-.js-fine-align-portrait {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: -100%;
-    bottom: -100%;
-    height: auto;
-    max-width: none;
-    width: 100%;
-    margin: auto;
-}
+// .js-fine-align-landscape {
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+//     left: -50%;
+//     right: -50%;
+//     height: 100%;
+//     max-width: none;
+//     width: auto;
+//     margin: auto;
+// }
+// .js-fine-align-portrait {
+// 	position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: -100%;
+//     bottom: -100%;
+//     height: auto;
+//     max-width: none;
+//     width: 100%;
+//     margin: auto;
+// }
 
-.inline-block-align > * {
-	display: inline-block;
-	vertical-align: middle;
-}
+// .inline-block-align > * {
+// 	display: inline-block;
+// 	vertical-align: middle;
+// }
 
-.text {
-	&-center {
-		text-align: center;
-	}
-	&-uppercase {
-		text-transform: uppercase;
-	}
-	&-accent {
-		// color: $accent;
-	}
-}
+// .text {
+// 	&-center {
+// 		text-align: center;
+// 	}
+// 	&-uppercase {
+// 		text-transform: uppercase;
+// 	}
+// 	&-accent {
+// 		// color: $accent;
+// 	}
+// }
 
-.pull-left {
-	float: left;
-}
-.pull-right {
-	float: right;
-}
+// .pull-left {
+// 	float: left;
+// }
+// .pull-right {
+// 	float: right;
+// }
 
-.po {
-	&r {
-		position: relative;
-	}
-	&a {
-		position: absolute;
-	}
-	&s {
-		position: static;
-	}
-}
+// .po {
+// 	&r {
+// 		position: relative;
+// 	}
+// 	&a {
+// 		position: absolute;
+// 	}
+// 	&s {
+// 		position: static;
+// 	}
+// }
 .ver-indents {
 	&-parent {
 		overflow: hidden;
@@ -105,14 +105,14 @@ div[class *="img-holder"] {
 	}
 }
 
-.d {
-	&n {
-		display: none !important;
-	}
-	&b {
-		display: block !important;
-	}
-}
+// .d {
+// 	&n {
+// 		display: none !important;
+// 	}
+// 	&b {
+// 		display: block !important;
+// 	}
+// }
 
 .only {
 	&-print {

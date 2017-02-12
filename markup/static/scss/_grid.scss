@@ -1,7 +1,7 @@
 $grid-columns: 12 !default; 
 $grid-gutter: 15px !default; 
-$container-max-width: 1170px;
-$container-gutter: 15px;
+$container-max-width: 1170px !default;
+$container-gutter: $grid-gutter !default;
 
 $breakpoint: ( 
 	xs: 480px, 
