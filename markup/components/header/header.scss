@@ -45,6 +45,13 @@ $links-size: 30px !default;
 				max-width: initial;
 				border: none;
 			}
+			&--mobile-open {
+				@media screen and (max-width: 768px) {
+					&:hover {
+						max-width: 302px;
+					}
+				}
+			}
 		}
 	}
 	&-link {
