@@ -121,6 +121,11 @@ div[class *="img-holder"] {
 			display: initial !important;
 		}
 	}
+	&-js {
+		.no-js & {
+			display: none;
+		}
+	}
 }
 
 .no {
