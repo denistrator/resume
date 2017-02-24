@@ -24,6 +24,18 @@
 	width: 8px;
 }
 
+html[lang=ru] {
+	.lang-en {
+		display: none;
+	}
+}
+
+html[lang=en] {
+	.lang-ru {
+		display: none;
+	}
+}
+
 body {
 	position: relative;
 	min-height: 100%;

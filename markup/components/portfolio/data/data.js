@@ -3,14 +3,16 @@ var data = {
 		{
 			imgPath: "project-1",
 			link: "http://denistrator.esy.es/mountains",
-			title: "Mountains",
+			titleEN: "Mountains",
+			titleRU: "Mountains",
 			githubLink: "https://github.com/denistrator/training-01-mountains",
 			mod: ""
 		},
 		{
 			imgPath: "project-6",
 			link: "http://gorcons.apanshin-dev.ru/",
-			title: "Горконс",
+			titleRU: "Горконс",
+			titleEN: "Gorcons",
 			githubLink: "",
 			mod: "",
 			commercial: true,
@@ -19,14 +21,16 @@ var data = {
 		{
 			imgPath: "project-2",
 			link: "http://denistrator.esy.es/modest",
-			title: "Modest",
+			titleEN: "Modest",
+			titleRU: "Modest",
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-8",
 			mod: ""
 		},
 		{
 			imgPath: "project-3",
 			link: "http://denistrator.esy.es/tajam",
-			title: "Tajam",
+			titleEN: "Tajam",
+			titleRU: "Tajam",
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-7",
 			mod: "",
 			alternateImg: true
@@ -34,14 +38,16 @@ var data = {
 		{
 			imgPath: "project-4",
 			link: "http://denistrator.esy.es/yellow_moon",
-			title: "Yellow Moon",
+			titleEN: "Yellow Moon",
+			titleRU: "Yellow Moon",
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-6",
 			mod: ""
 		},
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/cosmetologylife",
-			title: "Косметология Жизни",
+			titleRU: "Косметология Жизни",
+			titleEN: "Cosmetology Life",
 			githubLink: "",
 			mod: "",
 			commercial: true,
@@ -50,7 +56,8 @@ var data = {
 		{
 			imgPath: "project-5",
 			link: "http://denistrator.esy.es/Freebie_Page_Atech/",
-			title: "Atech",
+			titleEN: "Atech",
+			titleRU: "Atech",
 			githubLink: "",
 			mod: "old",
 			alternateImg: true
@@ -58,7 +65,8 @@ var data = {
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/naturetour/",
-			title: "Naturetour",
+			titleEN: "Naturetour",
+			titleRU: "Naturetour",
 			githubLink: "",
 			mod: "old",
 			alternateImg: true
@@ -66,7 +74,8 @@ var data = {
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/extended/",
-			title: "Extended",
+			titleEN: "Extended",
+			titleRU: "Extended",
 			githubLink: "",
 			mod: "old",
 			alternateImg: true
