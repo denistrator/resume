@@ -10,8 +10,11 @@
 		display: table;
 		width: 100%;
 		border: 1px solid #fff;
+		.light & {
+			border-color: $dark;
+		}
 		&:hover {
-			box-shadow: inset 0 0 0 1px white;
+			// box-shadow: inset 0 0 0 1px white;
 		}
 		& + & {
 			margin-top: 15px;
@@ -30,6 +33,19 @@
 		max-height: 80px;
 		padding-right: 27px;
 	    vertical-align: middle;
+	}
+	&-img {
+		&-alternateImg {
+			display: none;
+		}
+		.light & {
+			&.hasAlternate {
+				display: none;
+			}
+			&.portfolio-img-alternateImg {
+				display: block;
+			}
+		}
 	}
 	&-link {
 		display: table-cell;
@@ -64,8 +80,11 @@
 		font-weight: 100;
 		&-symbol {
 			cursor: pointer;
-			border-bottom: 1px dotted $light;
 			z-index: -1;
+			border-bottom: 1px dotted $light;
+			.light & {
+				border-bottom-color: inherit;
+			}
 			&:after {
 				content: attr(text);
 				display: block;
@@ -74,14 +93,19 @@
 				top: 100%;
 				transform: translateY(-50%);
 				font-size: 12px;
-				line-height: 1.5;
 				padding: 0px 10px;
+				line-height: 1.5;
 				white-space: nowrap;
 				color: #000;
 				background-color: $light;
 				
 				opacity: 0;
 				transition: opacity .3s;
+
+				border: 1px solid transparent;
+				.light & {
+					border-color: inherit;
+				}
 			}
 			&:hover:after {
 				opacity: 1;

@@ -63,6 +63,10 @@ $links-size: 30px !default;
 		white-space: nowrap;
 		text-decoration: none;
 
+		background: transparent;
+		border: none;
+		padding: 0;
+
 		transition: color .25s linear;
 		&:before {
 			display: table-cell;
@@ -83,5 +87,16 @@ $links-size: 30px !default;
 			font-size: 13px;
 			font-family: Roboto;
 		}
+	}
+}
+
+.reading-mode-toggle {
+	&-wrap {
+		.no-js & {
+			display: none;
+		}
+	}
+	&.dark:before {
+		content: "\e909";
 	}
 }

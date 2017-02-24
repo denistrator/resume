@@ -6,6 +6,9 @@
     &-item {
     	&-special {
     		border-top: 1px solid white;
+            .light & {
+                border-top-color: inherit;
+            }
     		padding: 15px 10px 0;
             margin: 15px -7px 0 0;
     		list-style: none;
@@ -13,5 +16,8 @@
     }
     &-separator {
         color: $light2;
+        .light & {
+            color: lighten($dark, 35%);
+        }
     }
 }

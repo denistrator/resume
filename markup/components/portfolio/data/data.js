@@ -13,7 +13,8 @@ var data = {
 			title: "Горконс",
 			githubLink: "",
 			mod: "",
-			commercial: true
+			commercial: true,
+			alternateImg: true
 		},
 		{
 			imgPath: "project-2",
@@ -27,7 +28,8 @@ var data = {
 			link: "http://denistrator.esy.es/tajam",
 			title: "Tajam",
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-7",
-			mod: ""
+			mod: "",
+			alternateImg: true
 		},
 		{
 			imgPath: "project-4",
@@ -42,28 +44,32 @@ var data = {
 			title: "Косметология Жизни",
 			githubLink: "",
 			mod: "",
-			commercial: true
+			commercial: true,
+			alternateImg: true
 		},
 		{
 			imgPath: "project-5",
 			link: "http://denistrator.esy.es/Freebie_Page_Atech/",
 			title: "Atech",
 			githubLink: "",
-			mod: "old"
+			mod: "old",
+			alternateImg: true
 		},
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/naturetour/",
 			title: "Naturetour",
 			githubLink: "",
-			mod: "old"
+			mod: "old",
+			alternateImg: true
 		},
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/extended/",
 			title: "Extended",
 			githubLink: "",
-			mod: "old"
+			mod: "old",
+			alternateImg: true
 		}
 	]
 };
