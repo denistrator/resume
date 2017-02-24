@@ -1,4 +1,4 @@
-####What  you need(installed glogaly):
+####What  you need(installed globaly):
 1. Node.js
 2. Gulp
 3. TARS
