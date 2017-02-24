@@ -91,11 +91,6 @@ $links-size: 30px !default;
 }
 
 .reading-mode-toggle {
-	&-wrap {
-		.no-js & {
-			display: none;
-		}
-	}
 	&.dark:before {
 		content: "\e909";
 	}
