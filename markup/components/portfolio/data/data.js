@@ -27,6 +27,14 @@ var data = {
 			mod: ""
 		},
 		{
+			imgPath: "project-no-image",
+			link: "http://denistrator.esy.es/counter/",
+			titleEN: "Counter",
+			titleRU: "Счётчик",
+			githubLink: "https://github.com/denistrator/counter",
+			mod: ""
+		},
+		{
 			imgPath: "project-3",
 			link: "http://denistrator.esy.es/tajam",
 			titleEN: "Tajam",
@@ -49,7 +57,7 @@ var data = {
 			titleRU: "Косметология Жизни",
 			titleEN: "Cosmetology Life",
 			githubLink: "",
-			mod: "",
+			mod: "old",
 			commercial: true,
 			alternateImg: true
 		},
