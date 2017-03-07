@@ -32,7 +32,7 @@ var data = {
 			titleEN: "Tajam",
 			titleRU: "Tajam",
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-7",
-			mod: "",
+			mod: "portfolio-collapse-pos",
 			alternateImg: true
 		},
 		{
