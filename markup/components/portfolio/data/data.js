@@ -32,7 +32,8 @@ var data = {
 			titleEN: "Counter",
 			titleRU: "Счётчик",
 			githubLink: "https://github.com/denistrator/counter",
-			mod: ""
+			mod: "",
+			alternateImg: true
 		},
 		{
 			imgPath: "project-3",
