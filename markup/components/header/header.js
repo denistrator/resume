@@ -3,7 +3,9 @@
 
     readingModeToggle.addEventListener('click', function() {
         var body = document.querySelector('body.page');
+
         body.classList.toggle('light');
+
         if (body.classList.contains('light')) {
             readingModeToggle.classList.remove('dark');
             readingModeToggle.classList.add('light');
@@ -19,13 +21,17 @@
 
     langToggle.addEventListener('click', function() {
         var currentLang = html.getAttribute('lang');
-        console.log(currentLang);
-        if (currentLang === 'ru') {
-            html.setAttribute('lang', 'en');
-            langToggleText.innerHTML = 'EN';
-        } else {
-            html.setAttribute('lang', 'ru');
-            langToggleText.innerHTML = 'RU';
+        var lang, locale;
+        switch (currentLang) {
+            case 'en':
+                lang = 'ru';
+                locale = 'RU';
+                break;
+            default:
+                lang = 'en';
+                locale = 'EN';
         }
+        html.setAttribute('lang', lang);
+        langToggleText.innerHTML = locale;
     }, false);
 })();
