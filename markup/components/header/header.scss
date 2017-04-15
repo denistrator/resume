@@ -91,6 +91,12 @@ $links-size: 30px !default;
 	}
 }
 
+.lang-toggle {
+	&-text {
+		font-size: 17px;
+	}
+}
+
 .reading-mode-toggle {
 	&.dark:before {
 		content: "\e909";
