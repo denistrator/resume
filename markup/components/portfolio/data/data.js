@@ -26,15 +26,15 @@ var data = {
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-8",
 			mod: ""
 		},
-		{
-			imgPath: "project-no-image",
-			link: "http://denistrator.esy.es/counter/",
-			titleEN: "Counter",
-			titleRU: "Счётчик",
-			githubLink: "https://github.com/denistrator/counter",
-			mod: "",
-			alternateImg: true
-		},
+		// {
+		// 	imgPath: "project-no-image",
+		// 	link: "http://denistrator.esy.es/counter/",
+		// 	titleEN: "Counter",
+		// 	titleRU: "Счётчик",
+		// 	githubLink: "https://github.com/denistrator/counter",
+		// 	mod: "",
+		// 	alternateImg: true
+		// },
 		{
 			imgPath: "project-3",
 			link: "http://denistrator.esy.es/tajam",
@@ -52,16 +52,16 @@ var data = {
 			githubLink: "https://github.com/denistrator/spalah-lessons--lesson-6",
 			mod: ""
 		},
-		{
-			imgPath: "project-no-image",
-			link: "http://denistrator.esy.es/cosmetologylife",
-			titleRU: "Косметология Жизни",
-			titleEN: "Cosmetology Life",
-			githubLink: "",
-			mod: "old",
-			commercial: true,
-			alternateImg: true
-		},
+		// {
+		// 	imgPath: "project-no-image",
+		// 	link: "http://denistrator.esy.es/cosmetologylife",
+		// 	titleRU: "Косметология Жизни",
+		// 	titleEN: "Cosmetology Life",
+		// 	githubLink: "",
+		// 	mod: "old",
+		// 	commercial: true,
+		// 	alternateImg: true
+		// },
 		{
 			imgPath: "project-5",
 			link: "http://denistrator.esy.es/Freebie_Page_Atech/",
@@ -80,14 +80,14 @@ var data = {
 			mod: "old",
 			alternateImg: true
 		},
-		{
-			imgPath: "project-no-image",
-			link: "http://denistrator.esy.es/extended/",
-			titleEN: "Extended",
-			titleRU: "Extended",
-			githubLink: "",
-			mod: "old",
-			alternateImg: true
-		}
+		// {
+		// 	imgPath: "project-no-image",
+		// 	link: "http://denistrator.esy.es/extended/",
+		// 	titleEN: "Extended",
+		// 	titleRU: "Extended",
+		// 	githubLink: "",
+		// 	mod: "old",
+		// 	alternateImg: true
+		// }
 	]
 };
