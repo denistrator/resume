@@ -1,7 +1,7 @@
 ####What  you need(installed globaly):
-1. Node.js
-2. Gulp
-3. TARS
+1. [Node.js](nodejs.org)
+2. [Gulp](gulpjs.com)
+3. [TARS-CLI](github.com/tars/tars-cli)
 
 ####Then enter in console:
 1. `npm i`
