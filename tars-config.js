@@ -32,7 +32,7 @@ module.exports = {
             "inline": false
         },
         "css": {
-            "active": false,
+            "active": true,
             "inline": false
         }
     },

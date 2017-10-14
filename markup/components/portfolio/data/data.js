@@ -8,16 +8,16 @@ var data = {
 			githubLink: "https://github.com/denistrator/training-01-mountains",
 			mod: ""
 		},
-		{
-			imgPath: "project-6",
-			link: "http://gorcons.apanshin-dev.ru/",
-			titleRU: "Горконс",
-			titleEN: "Gorcons",
-			githubLink: "",
-			mod: "",
-			commercial: true,
-			alternateImg: true
-		},
+		// {
+		// 	imgPath: "project-6",
+		// 	link: "http://gorcons.apanshin-dev.ru/",
+		// 	titleRU: "Горконс",
+		// 	titleEN: "Gorcons",
+		// 	githubLink: "",
+		// 	mod: "",
+		// 	commercial: true,
+		// 	alternateImg: true
+		// },
 		{
 			imgPath: "project-2",
 			link: "http://denistrator.esy.es/modest",
@@ -62,15 +62,15 @@ var data = {
 		// 	commercial: true,
 		// 	alternateImg: true
 		// },
-		{
-			imgPath: "project-5",
-			link: "http://denistrator.esy.es/Freebie_Page_Atech/",
-			titleEN: "Atech",
-			titleRU: "Atech",
-			githubLink: "",
-			mod: "old",
-			alternateImg: true
-		},
+		// {
+		// 	imgPath: "project-5",
+		// 	link: "http://denistrator.esy.es/Freebie_Page_Atech/",
+		// 	titleEN: "Atech",
+		// 	titleRU: "Atech",
+		// 	githubLink: "",
+		// 	mod: "old",
+		// 	alternateImg: true
+		// },
 		{
 			imgPath: "project-no-image",
 			link: "http://denistrator.esy.es/naturetour/",
