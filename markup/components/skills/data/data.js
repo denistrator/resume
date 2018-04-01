@@ -1,1 +1,3 @@
-var data = {skills: {}};
+var data = {
+    skills: {}
+};

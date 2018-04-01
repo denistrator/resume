@@ -1,1 +1,3 @@
-var data = {footer: {}};
+var data = {
+    footer: {}
+};

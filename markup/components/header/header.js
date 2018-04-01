@@ -1,7 +1,7 @@
-(function() {
+(function () {
     var readingModeToggle = document.querySelector('.reading-mode-toggle');
 
-    readingModeToggle.addEventListener('click', function() {
+    readingModeToggle.addEventListener('click', function () {
         var body = document.querySelector('body.page');
 
         body.classList.toggle('light');
@@ -19,17 +19,17 @@
     var langToggleText = document.querySelector('.lang-toggle-text');
     var html = document.querySelector('html');
 
-    langToggle.addEventListener('click', function() {
+    langToggle.addEventListener('click', function () {
         var currentLang = html.getAttribute('lang');
         var lang, locale;
         switch (currentLang) {
             case 'en':
                 lang = 'ru';
-                locale = 'RU';
+                locale = 'Ru';
                 break;
             default:
                 lang = 'en';
-                locale = 'EN';
+                locale = 'En';
         }
         html.setAttribute('lang', lang);
         langToggleText.innerHTML = locale;

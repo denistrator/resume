@@ -22,8 +22,8 @@ $links-size: 30px !default;
 		text-align: right;
 		margin: -3px;
 		&-item {
-			display: inline-block;		
-			overflow: hidden;	
+			display: inline-block;
+			overflow: hidden;
 			border: 3px solid #000;
 			margin: 3px;
 			font-size: initial;
@@ -36,7 +36,7 @@ $links-size: 30px !default;
 					color: #33b5e5;
 					background-color: rgba(white, 0.15);
 				}
-			}				
+			}
 			@media screen and (min-width: 768px) {
 				&:hover {
 					max-width: 302px;
@@ -94,6 +94,7 @@ $links-size: 30px !default;
 .lang-toggle {
 	&-text {
 		font-size: 17px;
+        text-transform: uppercase;
 	}
 }
 

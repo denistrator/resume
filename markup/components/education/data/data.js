@@ -1,1 +1,3 @@
-var data = {education: {}};
+var data = {
+    education: {}
+};
