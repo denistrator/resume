@@ -2,6 +2,7 @@ var data = {
     portfolio: [
         {
             imgPath: 'project-1',
+            imgExt: 'png',
             link: 'http://denistrator.esy.es/mountains',
             titleEN: 'Mountains',
             titleRU: 'Mountains',
@@ -10,6 +11,7 @@ var data = {
         },
         {
             imgPath: 'project-2',
+            imgExt: 'png',
             link: 'http://denistrator.esy.es/modest',
             titleEN: 'Modest',
             titleRU: 'Modest',
@@ -18,6 +20,7 @@ var data = {
         },
         {
             imgPath: 'project-3',
+            imgExt: 'png',
             link: 'http://denistrator.esy.es/tajam',
             titleEN: 'Tajam',
             titleRU: 'Tajam',
@@ -27,6 +30,7 @@ var data = {
         },
         {
             imgPath: 'project-4',
+            imgExt: 'png',
             link: 'http://denistrator.esy.es/yellow_moon',
             titleEN: 'Yellow Moon',
             titleRU: 'Yellow Moon',
@@ -35,6 +39,7 @@ var data = {
         },
         {
             imgPath: 'project-no-image',
+            imgExt: 'png',
             link: 'http://denistrator.esy.es/naturetour/',
             titleEN: 'Naturetour',
             titleRU: 'Naturetour',
