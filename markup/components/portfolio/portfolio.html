@@ -4,7 +4,7 @@
 		<span class="lang-en">Portfolio</span>
 	</h3>
 	<p class="desc">
-		<span class="lang-ru">Последние свёрстанные PSD макеты</span>
+		<span class="lang-ru">Последние работы</span>
 		<span class="lang-en">Last works</span>
 	</p>
 	<div class="portfolio-list-wrap">
@@ -13,19 +13,22 @@
 				<li class="portfolio-item {{mod}}">
 					<a href="{{link}}" class="portfolio-link">
 						<div class="portfolio-img-holder">
-							<img src="static/img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}" class="portfolio-img {{#if alternateImg}} hasAlternate {{/if}}
+							<img src="%=static=%/img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}" class="portfolio-img {{#if alternateImg}} hasAlternate {{/if}}
 							">
 							{{#if alternateImg}}
-								<img src="static/img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}" class="portfolio-img portfolio-img-alternateImg">
+								<img src="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}" class="portfolio-img portfolio-img-alternateImg">
 							{{/if}}
 						</div>
 						<h4 class="portfolio-title">
 							<span class="lang-ru">{{titleRU}}</span>
 							<span class="lang-en">{{titleEN}}</span>
 						</h4>
+						{{#each labels}}
+							<span class="portfolio-item-label icon-{{icon}}" title="{{text}}">{{text}}</span>
+						{{/each}}
 					</a>
                     {{#if githubLink}}
-                        <a href="{{githubLink}}" target="_blank" class="portfolio-github-link icon-github-logo" title="View on GitHab"></a>
+                        <a href="{{githubLink}}" class="portfolio-github-link icon-github-logo" title="View on GitHab"></a>
                     {{/if}}
 				</li>
 			{{/each}}

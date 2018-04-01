@@ -4,19 +4,29 @@ var data = {
             imgPath: 'project-timberland',
             imgExt: 'svg',
             link: 'https://www.timberland.co.il/',
-            titleEN: 'Timberland Israel',
-            titleRU: 'Timberland Израиль',
-            mod: '',
-            alternateImg: true
+            titleEN: 'Timberland (Israel)',
+            titleRU: 'Timberland (Израиль)',
+            alternateImg: true,
+            labels: {
+                magento: {
+                    icon: 'magento',
+                    text: 'Magento 2 Project'
+                }
+            }
         },
         {
             imgPath: 'project-nautica',
             imgExt: 'svg',
             link: 'https://www.nautica.co.il/',
-            titleEN: 'Nautica Israel',
-            titleRU: 'Nautica Израиль',
-            mod: '',
-            alternateImg: true
+            titleEN: 'Nautica (Israel)',
+            titleRU: 'Nautica (Израиль)',
+            alternateImg: true,
+            labels: {
+                magento: {
+                    icon: 'magento',
+                    text: 'Magento 2 Project'
+                }
+            }
         },
         {
             imgPath: 'project-1',
@@ -24,8 +34,7 @@ var data = {
             link: 'http://denistrator.esy.es/mountains',
             titleEN: 'Mountains',
             titleRU: 'Mountains',
-            githubLink: 'https://github.com/denistrator/training-01-mountains',
-            mod: ''
+            githubLink: 'https://github.com/denistrator/training-01-mountains'
         },
         {
             imgPath: 'project-2',
@@ -33,8 +42,7 @@ var data = {
             link: 'http://denistrator.esy.es/modest',
             titleEN: 'Modest',
             titleRU: 'Modest',
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8',
-            mod: ''
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8'
         },
         {
             imgPath: 'project-3',
@@ -52,8 +60,7 @@ var data = {
             link: 'http://denistrator.esy.es/yellow_moon',
             titleEN: 'Yellow Moon',
             titleRU: 'Yellow Moon',
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6',
-            mod: ''
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6'
         },
         {
             imgPath: 'project-no-image',
