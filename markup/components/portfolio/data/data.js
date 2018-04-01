@@ -1,6 +1,24 @@
 var data = {
     portfolio: [
         {
+            imgPath: 'project-timberland',
+            imgExt: 'svg',
+            link: 'https://www.timberland.co.il/',
+            titleEN: 'Timberland Israel',
+            titleRU: 'Timberland Израиль',
+            mod: '',
+            alternateImg: true
+        },
+        {
+            imgPath: 'project-nautica',
+            imgExt: 'svg',
+            link: 'https://www.nautica.co.il/',
+            titleEN: 'Nautica Israel',
+            titleRU: 'Nautica Израиль',
+            mod: '',
+            alternateImg: true
+        },
+        {
             imgPath: 'project-1',
             imgExt: 'png',
             link: 'http://denistrator.esy.es/mountains',
