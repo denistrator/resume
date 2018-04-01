@@ -24,12 +24,9 @@
 							<span class="lang-en">{{titleEN}}</span>
 						</h4>
 					</a>
-					{{#if commercial}}
-						<div class="portfolio-commercial">
-							<span class="portfolio-commercial-symbol" text="Коммерческий проект">$</span>
-						</div>
-					{{/if}}
-					<a href="{{githubLink}}" target="_blank" class="portfolio-github-link icon-github-logo" title="View on GitHab"></a>
+                    {{#if githubLink}}
+                        <a href="{{githubLink}}" target="_blank" class="portfolio-github-link icon-github-logo" title="View on GitHab"></a>
+                    {{/if}}
 				</li>
 			{{/each}}
 			<div class="portfolio-expander icon-double-arrow-down only-js"></div>

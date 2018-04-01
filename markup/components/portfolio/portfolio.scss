@@ -91,50 +91,6 @@
 			display: none;
 		}
 	}
-	&-commercial {
-		@extend .portfolio-link-item;
-		justify-content: center;
-
-		position: relative;
-		font-size: 20px;
-		font-weight: 100;
-		cursor: pointer;
-		&:hover {
-			.portfolio-commercial-symbol:after {
-				opacity: 1;
-			}
-		}
-		&-symbol {
-			z-index: 1;
-			line-height: 1.2;
-			border-bottom: 1px dotted $light;
-			.light & {
-				border-bottom-color: inherit;
-			}
-			&:after {
-				content: attr(text);
-				display: block;
-				position: absolute;
-				right: 100%;
-				top: 100%;
-				transform: translateY(-50%);
-				font-size: 12px;
-				padding: 0px 10px;
-				line-height: 1.5;
-				white-space: nowrap;
-				color: #000;
-				background-color: $light;
-				
-				opacity: 0;
-				transition: opacity .3s;
-
-				border: 1px solid transparent;
-				.light & {
-					border-color: inherit;
-				}
-			}
-		}
-	}
 	&-expander {
 		position: absolute;
 		z-index: 1;
