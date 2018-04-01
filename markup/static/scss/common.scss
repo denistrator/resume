@@ -153,10 +153,3 @@ ul {
     }
 
 }
-
-.line-separator {
-    color: $light2;
-    .light & {
-        color: lighten($dark, 35%);
-    }
-}
