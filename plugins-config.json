@@ -11,7 +11,7 @@
         },
         "port": 3004,
         "open": true,
-        "notify": true,
+        "notify": false,
 
         // Choose browser to open
         // @type {String|Array}
