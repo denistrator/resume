@@ -1,7 +1,7 @@
 ####What  you need(installed globaly):
-1. [Node.js](nodejs.org)
-2. [Gulp](gulpjs.com)
-3. [TARS-CLI](github.com/tars/tars-cli)
+1. [Node.js](https://nodejs.org/en/)
+2. [Gulp](https://gulpjs.com)
+3. [TARS-CLI](https://github.com/tars/tars-cli)
 
 ####Then enter in console:
 1. `npm i`
