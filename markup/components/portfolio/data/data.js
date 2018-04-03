@@ -29,6 +29,20 @@ var data = {
             }
         },
         {
+            imgPath: 'project-layam',
+            imgExt: 'png',
+            link: 'https://www.layam.com/',
+            titleEN: 'Layam Sacal (Israel)',
+            titleRU: 'Layam Sacal (Израиль)',
+            alternateImg: true,
+            labels: {
+                magento: {
+                    icon: 'magento',
+                    text: 'Magento 2 Project'
+                }
+            }
+        },
+        {
             imgPath: 'project-1',
             imgExt: 'png',
             link: 'http://denistrator.esy.es/mountains',
