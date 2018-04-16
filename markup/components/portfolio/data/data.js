@@ -32,8 +32,8 @@ var data = {
             imgPath: 'project-layam',
             imgExt: 'png',
             link: 'https://www.layam.com/',
-            titleEN: 'Layam Sacal (Israel)',
-            titleRU: 'Layam Sacal (Израиль)',
+            titleEN: 'Layam Sakal (Israel)',
+            titleRU: 'Layam Sakal (Израиль)',
             alternateImg: true,
             labels: {
                 magento: {
@@ -48,7 +48,8 @@ var data = {
             link: 'http://denistrator.esy.es/mountains',
             titleEN: 'Mountains',
             titleRU: 'Mountains',
-            githubLink: 'https://github.com/denistrator/training-01-mountains'
+            githubLink: 'https://github.com/denistrator/training-01-mountains',
+            mod: 'portfolio-collapse-pos',
         },
         {
             imgPath: 'project-2',
@@ -65,7 +66,6 @@ var data = {
             titleEN: 'Tajam',
             titleRU: 'Tajam',
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7',
-            mod: 'portfolio-collapse-pos',
             alternateImg: true
         },
         {
