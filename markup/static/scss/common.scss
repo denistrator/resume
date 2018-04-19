@@ -112,6 +112,7 @@ ul {
 .section {
     $a: 28px;
     padding-left: $a;
+    page-break-inside: avoid;
     &-head {
     }
     &-title:before {
