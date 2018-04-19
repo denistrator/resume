@@ -15,6 +15,10 @@ $links-size: 30px !default;
 	&-pos {
 		margin: 4px 0 0;
 		color: #99979c;
+		&:before {
+			content: '//';
+			speak: none;
+		}
 	}
 	&-links {
 		@extend %nl;
