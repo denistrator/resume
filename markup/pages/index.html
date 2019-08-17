@@ -39,8 +39,6 @@
         {{> footer/footer}}
     </div>
 
-   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
-
     <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
     <script>
         (function () {
@@ -70,6 +68,15 @@
         ga('create', 'UA-90167644-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script defer>
+        WebFontConfig = {
+            google: {
+                families: ['Roboto:300,400&display=swap']
+            }
+        };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" defer></script>
 </body>
 
 </html>
