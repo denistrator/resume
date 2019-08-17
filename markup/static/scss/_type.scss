@@ -1,13 +1,16 @@
 $body-color: #000 !default;
 $body-bg: #fff !default;
+
 $font-size-base: 16px !default;
 $line-height-base: 1.4 !default;
 $font-family-base: Arial, sans-serif !default;
 $margin-bottom-p: 15px !default;
+
 $link-color: blue !default;
-$link-color-hover: lighten($link-color, 10%)!default;
+$link-color-hover: lighten($link-color, 10%) !default;
 $link-decoration: none !default;
-$link-decoration-hover: none!default;
+$link-decoration-hover: none !default;
+
 $heading-font-family: inherit !default;
 $heading-font-weight: 700 !default;
 $heading-color: inherit !default;
@@ -23,49 +26,42 @@ body {
     background-color: $body-bg;
     font-size: $font-size-base;
     line-height: $line-height-base;
-	font-family: $font-family-base;
+    font-family: $font-family-base;
 }
 
-p, .p {
+p,
+.p {
     font-size: 15px;
     margin-top: 0;
     margin-bottom: $margin-bottom-p;
 }
 
 a {
-    // color: $link-color;
     color: inherit;
     text-decoration: $link-decoration;
+
     &:hover {
         color: $link-color-hover;
         text-decoration: $link-decoration-hover;
     }
+
     @media print {
         text-decoration: none;
     }
 }
 
-h1,h2,h3,h4,h5,h6,.h1,
-.h2,.h3,.h4,.h5,.h6 {
-	// &:not(.prevent-tt) {
-	// 	text-transform: uppercase;
-	// }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-color;
 }
 
 h1, .h1 {
-    &:not(.prevent-tt) {
-        text-transform: uppercase;
-    }
     font-size: $heading-font-size-1;
 }
 
 h2, .h2 {
-    &:not(.prevent-tt) {
-        text-transform: uppercase;
-    }
     font-size: $heading-font-size-2;
 }
 
