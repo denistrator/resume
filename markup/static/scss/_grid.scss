@@ -1,50 +1,35 @@
-$grid-columns: 12 !default; 
-$grid-gutter: 15px !default; 
-$container-max-width: 1170px !default;
-$container-gutter: $grid-gutter !default;
+.row:before, .row:after {
+    display: table;
+    content: "";
+}
 
-$breakpoint: ( 
-	xs: 480px, 
-	sm: 768px, 
-	md: 980px, 
-	lg: 1200px
-);
+.row:after {
+    clear: both;
+}
 
 .container {
-    max-width: $container-max-width;
+    max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: $container-gutter;
-    padding-right: $container-gutter;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .row {
-    @extend %cf;
-    margin: 0 (-$grid-gutter);
+    margin: 0 -15px;
 }
 
-%cols-base {
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
-    float: left; 
+.col-sm-4, .col-sm-8 {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
 }
 
-@each $key, $val in $breakpoint {
-    @for $i from 1 through $grid-columns {
-        .col-#{$key}-#{$i} {
-            @extend %cols-base;
-        }    
+@media all and (min-width: 768px) {
+    .col-sm-4 {
+        width: 33.33333%;
     }
-    @media all and (min-width: $val) {
-        @for $i from 1 through $grid-columns {
-            .col-#{$key}-#{$i} {
-                width: 100% / $grid-columns * $i;
-            }    
-        }
-        @for $i from 1 through $grid-columns {
-            .col-#{$key}-offset-#{$i} {
-                margin-left: 100% / $grid-columns * $i;
-            }
-        }
+    .col-sm-8 {
+        width: 66.66667%;
     }
 }

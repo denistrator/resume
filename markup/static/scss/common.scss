@@ -1,8 +1,6 @@
 // Common styles of the project
 @import "global";
-// @import "grid";
-// Grid without unused classes cleared by uncss
-@import 'uncss-output/grid';
+@import "grid";
 @import "blocks";
 @import "type";
 // @import "btns";
