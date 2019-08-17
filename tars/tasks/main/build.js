@@ -17,6 +17,7 @@ module.exports = () => {
             [
                 'css:compress-css'
             ],
+            'inline-source',
             'service:zip-build',
             () => {
                 console.log(
