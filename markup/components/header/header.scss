@@ -54,6 +54,7 @@ $links-size: 30px !default;
                     max-width: 302px;
                 }
             }
+
             @media print {
                 max-width: initial;
                 border: none;
@@ -65,6 +66,10 @@ $links-size: 30px !default;
                         max-width: 302px;
                     }
                 }
+            }
+
+            .label {
+                @include visually-hidden;
             }
         }
     }
@@ -116,9 +121,5 @@ $links-size: 30px !default;
         &:before {
             content: "\e909";
         }
-    }
-
-    .label {
-        @include visually-hidden;
     }
 }
