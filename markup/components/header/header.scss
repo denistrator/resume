@@ -112,7 +112,13 @@ $links-size: 30px !default;
 }
 
 .reading-mode-toggle {
-    &.dark:before {
-        content: "\e909";
+    &.dark {
+        &:before {
+            content: "\e909";
+        }
+    }
+
+    .label {
+        @include visually-hidden;
     }
 }
