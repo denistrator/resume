@@ -2,25 +2,16 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>{{pageTitle}}</title>
 <meta content="{{pageDescription}}" name="description">
-<meta content="" name="keywords">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta content="telephone=no" name="format-detection">
-<!-- This make sense for mobile browsers. It means, that content has been optimized for mobile browsers -->
 <meta name="HandheldFriendly" content="true">
 <meta name="theme-color" content="{{themeColor}}">
 
 <link rel="icon" type="image/x-icon" href="favicon.png">
 
-<link rel="preconnect" href="//fonts.gstatic.com">
-<link rel="preconnect" href="//fonts.googleapis.com">
-<link rel="preconnect" href="//www.google-analytics.com">
+{{> head/preconnects }}
 
 <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css" media="all" inline>
 <link href="%=static=%css/icomoon.css" rel="stylesheet" media="all" inline>
 
-<script>
-    (function (H) {
-        H.className = H.className.replace(/\bno-js\b/, 'js')
-    })(document.documentElement)
-</script>
+{{> head/js-checker }}
