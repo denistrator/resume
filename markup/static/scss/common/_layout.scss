@@ -1,78 +1,28 @@
-.wrapper {
-    background-color: $light;
-    background-color: rgba($light, 0.98);
-
+.page-wrapper {
     @media screen and (min-width: 768px) {
-        overflow-y: auto;
-        overflow-x: hidden;
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
         margin: in-perc(30, 1920);
-        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
 .container {
-    padding: 0 in-perc(60, 1070);
-}
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1060px;
 
-.content {
-    &-container {
-        @extend .container;
-        padding: 0;
-
-        @media screen and (min-width: 768px) {
-            padding: 0 in-perc(60, 1070);
-        }
-    }
-}
-
-.content {
-    counter-reset: section-number;
-    margin: 5% 0;
-
-    &-angled-edge {
-        @extend .block-inverse;
-        position: relative;
-        z-index: 1;
-        padding-top: 30px;
-        padding-bottom: 30px;
+    @media (max-width: 767px) {
         padding-left: in-perc(60, 1070);
         padding-right: in-perc(60, 1070);
+    }
 
-        @media screen and (min-width: 768px) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .light & {
-            color: $dark;
-        }
-
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border: 1px solid transparent;
-            background-color: $dark;
-            pointer-events: none;
-            transform: skewY(-2deg);
-
-            @media (min-width: 768px) {
-                border-color: $dark;
-            }
-
-            .light & {
-                background-color: transparent;
-            }
-        }
+    @media (min-width: 768px) {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }

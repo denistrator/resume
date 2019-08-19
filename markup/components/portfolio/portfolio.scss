@@ -8,6 +8,7 @@
         @extend %nl;
         position: relative;
         transition: height 0.5s;
+        overflow: hidden;
     }
 
     &-item {

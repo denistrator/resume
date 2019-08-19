@@ -1,9 +1,8 @@
 @import "common/global";
-@import "common/grid";
-@import "common/blocks";
 @import "common/type";
 @import "common/layout";
 @import "common/sections";
+@import "common/section";
 @import "common/i18n";
 @import "common/browser-ui";
 
@@ -19,4 +18,13 @@ body {
 
 ul {
     padding-left: 0;
+}
+
+.page-wrapper {
+    background-color: $light;
+    background-color: rgba($light, 0.98);
+
+    @media screen and (min-width: 768px) {
+        box-shadow: 0 6px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    }
 }

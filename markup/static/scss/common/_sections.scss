@@ -1,29 +1,76 @@
-.section {
-    $a: 28px;
-    padding-left: $a;
-    page-break-inside: avoid;
+.sections {
+    @include cf;
+    @extend .container;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    counter-reset: section-number;
 
-    &-title {
-        &:before {
-            content: "0" counter(section-number) ". ";
-            counter-increment: section-number;
-            user-select: none;
-            font-size: 70%;
-            margin-left: -$a;
+    @media (max-width: 767px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .light & {
+        color: $dark;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        border: 1px solid transparent;
+        background-color: $dark;
+        pointer-events: none;
+        transform: skewY(-2deg);
+
+        @media (max-width: 767px) {
+            right: 0;
+            left: 0;
+        }
+
+        @media (min-width: 768px) {
+            border-color: $dark;
+            right: 40px;
+            left: 40px;
+        }
+
+        .light & {
+            background-color: transparent;
         }
     }
 
-    .title {
-        margin: 0;
-        line-height: 1.2;
+    &-main,
+    &-aside {
+        @media (max-width: 767px) {
+            padding-left: in-perc(60, 1070);
+            padding-right: in-perc(60, 1070);
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
-    .desc {
-        font-size: 12px;
-        color: $light2;
+    &-main {
+        @media (min-width: 768px) {
+            width: (100% / 3 * 2);
+        }
+    }
 
-        .light & {
-            color: lighten($dark, 10%);
+    &-aside {
+        @media (min-width: 768px) {
+            width: (100% / 3);
         }
     }
 }

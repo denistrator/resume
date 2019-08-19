@@ -6,37 +6,23 @@
 </head>
 
 <body class="page">
-    <div class="wrapper">
+<div class="page-wrapper">
         <div class="container">
             {{> header/header}}
         </div>
-        <div class="content-container">
-            <div class="content">
-                <div class="content-angled-edge">
-                    <div class="ver-indents-parent">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="ver-indents-child">
-                                    {{> skills/skills}}
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="ver-indents-child">
-                                    {{> education/education}}
-                                </div>
-                                <div class="ver-indents-child">
-                                    {{> experience/experience}}
-                                </div>
-                                <div class="ver-indents-child">
-                                    {{> portfolio/portfolio}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <main class="container sections">
+        <div class="sections-aside">
+            {{> skills/skills}}
         </div>
+        <div class="sections-main">
+            {{> education/education}}
+            {{> experience/experience}}
+            {{> portfolio/portfolio}}
+        </div>
+    </main>
+    <div class="container">
         {{> footer/footer}}
+    </div>
     </div>
 
     <script src="%=static=%js/main%=hash=%%=min=%.js" async></script>

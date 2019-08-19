@@ -13,19 +13,6 @@ img {
     max-height: 100%;
 }
 
-.ver-indents {
-    &-parent {
-        overflow: hidden;
-        margin-top: -10px;
-        margin-bottom: -10px;
-    }
-
-    &-child {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
-
 .only {
     &-print {
         display: none !important;
