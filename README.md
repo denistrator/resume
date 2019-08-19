@@ -1,4 +1,4 @@
-####What  you need(installed globaly):
+####What  you need(installed globally):
 1. [Node.js](https://nodejs.org/en/)
 2. [Bower](https://bower.io/)
 3. [Gulp](https://gulpjs.com)
@@ -11,4 +11,4 @@
 
 If you have `Error: Can't find Python executable "python", you can set the PYTHON env variable` try [this](https://github.com/felixrieseberg/windows-build-tools/issues/56#issuecomment-308739624)
 
-Castom tasks are in './tars/user-tasks', it's `critical`, `minify-html` you can start them using command `tars start taskName`
+Custom tasks are in './tars/user-tasks', it's  `minify-html` you can start them using command `tars start taskName`
