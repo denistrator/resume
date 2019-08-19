@@ -17,14 +17,7 @@ body {
 
 img {
     max-width: 100%;
-    display: block;
-    height: auto;
-    margin: auto;
-}
-
-div[class *="logo-holder"],
-div[class *="img-holder"] {
-    font-size: 0;
+    max-height: 100%;
 }
 
 .ver-indents {

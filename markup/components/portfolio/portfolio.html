@@ -12,13 +12,17 @@
 			{{#each portfolio}}
 				<li class="portfolio-item {{mod}}">
 					<a href="{{link}}" class="portfolio-link">
-						<div class="portfolio-img-holder">
-							<img loading="lazy" src="%=static=%/img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}" class="portfolio-img {{#if alternateImg}} hasAlternate {{/if}}
-							">
-							{{#if alternateImg}}
-								<img loading="lazy" src="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}" class="portfolio-img portfolio-img-alternateImg">
-							{{/if}}
-						</div>
+                        <picture class="portfolio-image {{#if alternateImg}} hasAlternate {{/if}}">
+                            <source srcset="%=static=%/img/content/{{imgPath}}.{{imgExt}}" type="image/jpeg">
+                            <img loading="lazy" src="%=static=%/img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}">
+                        </picture>
+
+                        {{#if alternateImg}}
+                            <picture class="portfolio-image portfolio-image-alternate">
+                                <source srcset="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" type="image/jpeg">
+                                <img loading="lazy" src="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}">
+                            </picture>
+                        {{/if}}
 						<h4 class="portfolio-title">
 							<span class="lang-ru">{{titleRU}}</span>
 							<span class="lang-en">{{titleEN}}</span>

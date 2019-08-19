@@ -42,28 +42,26 @@
         }
     }
 
-    &-img-holder {
+    &-image {
+        align-self: center;
         display: flex;
+        align-items: center;
+        justify-content: center;
         width: 55px;
         height: 65px;
-    }
-
-    &-img {
-        align-self: center;
-        max-height: 100%;
-
-        &-alternateImg {
-            display: none;
-        }
 
         .light & {
             &.hasAlternate {
                 display: none;
             }
+        }
+    }
 
-            &.portfolio-img-alternateImg {
-                display: block;
-            }
+    &-image-alternate {
+        display: none;
+
+        .light & {
+            display: flex;
         }
     }
 
