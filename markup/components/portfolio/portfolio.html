@@ -13,14 +13,20 @@
 				<li class="portfolio-item {{mod}}">
 					<a href="{{link}}" class="portfolio-link">
                         <picture class="portfolio-image {{#if alternateImg}} hasAlternate {{/if}}">
-                            <source srcset="%=static=%/img/content/{{imgPath}}.{{imgExt}}" type="image/jpeg">
-                            <img loading="lazy" src="%=static=%/img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}">
+                            {{#is imgExt '===' 'png'}}
+                                <source srcset="%=static=%img/content/{{imgPath}}.webp" type="image/webp">
+                            {{/is}}
+                            <source srcset="%=static=%img/content/{{imgPath}}.{{imgExt}}" type="image/jpeg">
+                            <img loading="lazy" src="%=static=%img/content/{{imgPath}}.{{imgExt}}" alt="{{title}}">
                         </picture>
 
                         {{#if alternateImg}}
                             <picture class="portfolio-image portfolio-image-alternate">
-                                <source srcset="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" type="image/jpeg">
-                                <img loading="lazy" src="%=static=%/img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}">
+                                {{#is imgExt '===' 'png'}}
+                                <source srcset="%=static=%img/content/{{imgPath}}_i.webp" type="image/webp">
+                                {{/is}}
+                                <source srcset="%=static=%img/content/{{imgPath}}_i.{{imgExt}}" type="image/jpeg">
+                                <img loading="lazy" src="%=static=%img/content/{{imgPath}}_i.{{imgExt}}" alt="{{title}}">
                             </picture>
                         {{/if}}
 						<h4 class="portfolio-title">
