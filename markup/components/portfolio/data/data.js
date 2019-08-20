@@ -1,12 +1,16 @@
 var data = {
     portfolio: [
         {
-            imgPath: 'project-timberland',
-            imgExt: 'svg',
             link: 'https://www.timberland.co.il/',
-            titleEN: 'Timberland (Israel)',
-            titleRU: 'Timberland (Израиль)',
-            alternateImg: true,
+            title: {
+                en: 'Timberland (Israel)',
+                ru: 'Timberland (Израиль)',
+            },
+            image: {
+                path: 'project-timberland',
+                ext: 'svg',
+                hasAlternate: true
+            },
             labels: {
                 magento: {
                     icon: 'magento',
@@ -15,12 +19,16 @@ var data = {
             }
         },
         {
-            imgPath: 'project-nautica',
-            imgExt: 'svg',
             link: 'https://www.nautica.co.il/',
-            titleEN: 'Nautica (Israel)',
-            titleRU: 'Nautica (Израиль)',
-            alternateImg: true,
+            title: {
+                en: 'Nautica (Israel)',
+                ru: 'Nautica (Израиль)'
+            },
+            image: {
+                path: 'project-nautica',
+                ext: 'svg',
+                hasAlternate: true
+            },
             labels: {
                 magento: {
                     icon: 'magento',
@@ -29,12 +37,16 @@ var data = {
             }
         },
         {
-            imgPath: 'project-layam',
-            imgExt: 'png',
             link: 'https://www.layam.com/',
-            titleEN: 'Layam Sakal (Israel)',
-            titleRU: 'Layam Sakal (Израиль)',
-            alternateImg: true,
+            title: {
+                en: 'Layam Sakal (Israel)',
+                ru: 'Layam Sakal (Израиль)'
+            },
+            image: {
+                path: 'project-layam',
+                ext: 'png',
+                hasAlternate: true
+            },
             labels: {
                 magento: {
                     icon: 'magento',
@@ -43,48 +55,68 @@ var data = {
             }
         },
         {
-            imgPath: 'project-1',
-            imgExt: 'png',
             link: 'http://denistrator.esy.es/mountains',
-            titleEN: 'Mountains',
-            titleRU: 'Mountains',
+            title: {
+                en: 'Mountains',
+                ru: 'Mountains'
+            },
+            image: {
+                path: 'project-1',
+                ext: 'png'
+            },
             githubLink: 'https://github.com/denistrator/training-01-mountains',
-            mod: 'portfolio-collapse-pos',
+            mod: 'portfolio-collapse-pos'
         },
         {
-            imgPath: 'project-2',
-            imgExt: 'png',
             link: 'http://denistrator.esy.es/modest',
-            titleEN: 'Modest',
-            titleRU: 'Modest',
+            title: {
+                en: 'Modest',
+                ru: 'Modest'
+            },
+            image: {
+                path: 'project-2',
+                ext: 'png'
+            },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8'
         },
         {
-            imgPath: 'project-3',
-            imgExt: 'png',
             link: 'http://denistrator.esy.es/tajam',
-            titleEN: 'Tajam',
-            titleRU: 'Tajam',
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7',
-            alternateImg: true
+            title: {
+                en: 'Tajam',
+                ru: 'Tajam'
+            },
+            image: {
+                path: 'project-3',
+                ext: 'png',
+                hasAlternate: true
+            },
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7'
         },
         {
-            imgPath: 'project-4',
-            imgExt: 'png',
             link: 'http://denistrator.esy.es/yellow_moon',
-            titleEN: 'Yellow Moon',
-            titleRU: 'Yellow Moon',
+            title: {
+                en: 'Yellow Moon',
+                ru: 'Yellow Moon'
+            },
+            image: {
+                path: 'project-4',
+                ext: 'png'
+            },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6'
         },
         {
-            imgPath: 'project-no-image',
-            imgExt: 'png',
             link: 'http://denistrator.esy.es/naturetour/',
-            titleEN: 'Naturetour',
-            titleRU: 'Naturetour',
+            title: {
+                en: 'Naturetour',
+                ru: 'Naturetour'
+            },
+            image: {
+                path: 'project-no-image',
+                ext: 'png',
+                hasAlternate: true
+            },
             githubLink: '',
-            mod: 'old',
-            alternateImg: true
+            mod: 'old'
         }
     ]
 };
