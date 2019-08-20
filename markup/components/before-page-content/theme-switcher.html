@@ -1,9 +1,11 @@
 <script>
     (function () {
-        var userTime = new Date();
+        var userTime = new Date(),
+            $page = document.querySelector('.page');
         if (userTime.getHours() > 10 && userTime.getHours() < 16) {
-            document.querySelector('.page').classList.toggle('light');
-            document.querySelector('.reading-mode-toggle').classList.toggle('dark');
+            $page.classList.toggle('light');
+        } else {
+            $page.classList.toggle('dark');
         }
     })();
 </script>

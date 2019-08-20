@@ -118,7 +118,7 @@ $links-size: 30px !default;
 }
 
 .reading-mode-toggle {
-    &.dark {
+    .dark & {
         &:before {
             content: "\e909";
         }

@@ -1,26 +1,21 @@
 (function () {
-    var readingModeToggle = document.querySelector('.reading-mode-toggle');
+    var $readingModeToggle = document.querySelector('.reading-mode-toggle');
 
-    readingModeToggle.addEventListener('click', function () {
-        var body = document.querySelector('body.page');
+    $readingModeToggle.addEventListener('click', function () {
+        var $page = document.querySelector('.page');
 
-        body.classList.toggle('light');
-
-        if (body.classList.contains('light')) {
-            readingModeToggle.classList.remove('dark');
-            readingModeToggle.classList.add('light');
-        } else {
-            readingModeToggle.classList.remove('light');
-            readingModeToggle.classList.add('dark');
-        }
+        $page.classList.toggle('light');
+        $page.classList.toggle('dark');
     }, false);
+})();
 
-    var langToggle = document.querySelector('.lang-toggle');
-    var langToggleText = document.querySelector('.lang-toggle-text');
-    var html = document.querySelector('html');
+(function () {
+    var $langToggle = document.querySelector('.lang-toggle');
+    var $langToggleText = document.querySelector('.lang-toggle-text');
+    var $root = document.querySelector('html');
 
-    langToggle.addEventListener('click', function () {
-        var currentLang = html.getAttribute('lang');
+    $langToggle.addEventListener('click', function () {
+        var currentLang = $root.getAttribute('lang');
         var lang, locale;
         switch (currentLang) {
             case 'en':
@@ -31,7 +26,7 @@
                 lang = 'en';
                 locale = 'En';
         }
-        html.setAttribute('lang', lang);
-        langToggleText.innerHTML = locale;
+        $root.setAttribute('lang', lang);
+        $langToggleText.innerHTML = locale;
     }, false);
 })();
