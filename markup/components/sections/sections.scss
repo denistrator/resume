@@ -8,6 +8,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
+    background-color: $dark;
+    background-clip: content-box;
     counter-reset: section-number;
 
     @media (max-width: 767px) {
@@ -17,6 +19,7 @@
 
     .light & {
         color: $dark;
+        background-color: transparent;
     }
 
     &:before {
@@ -27,7 +30,7 @@
         top: 0;
         bottom: 0;
         border: 1px solid transparent;
-        background-color: $dark;
+        background-color: inherit;
         pointer-events: none;
         transform: skewY(-2deg);
 
