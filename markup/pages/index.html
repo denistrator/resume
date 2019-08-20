@@ -7,9 +7,10 @@
 
 <body class="page">
 <div class="page-wrapper">
-        <div class="container">
-            {{> header/header}}
-        </div>
+    {{> before-page-content/theme-switcher}}
+    <div class="container">
+        {{> header/header}}
+    </div>
     <main class="container sections">
         <div class="sections-aside">
             {{> skills/skills}}
@@ -26,8 +27,6 @@
     </div>
 
     <script src="%=static=%js/main%=hash=%%=min=%.js" async></script>
-
-    {{> before-body-close/theme-switcher}}
 
     {{> before-body-close/google-analytics}}
 </body>
