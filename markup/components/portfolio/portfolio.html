@@ -17,7 +17,8 @@
                                 <source srcset="%=static=%img/content/{{image.path}}.webp" type="image/webp">
                             {{/is}}
                             <source srcset="%=static=%img/content/{{image.path}}.{{image.ext}}" type="image/jpeg">
-                            <img loading="lazy" src="%=static=%img/content/{{image.path}}.{{image.ext}}" alt="{{title.en}}">
+                            <img loading="lazy" src="%=static=%img/content/{{image.path}}.{{image.ext}}"
+                                 alt="{{title.en}}" width="{{image.width}}" height="{{image.height}}">
                         </picture>
 
                         {{#if image.hasAlternate}}
@@ -26,7 +27,8 @@
                                 <source srcset="%=static=%img/content/{{image.path}}_i.webp" type="image/webp">
                                 {{/is}}
                                 <source srcset="%=static=%img/content/{{image.path}}_i.{{image.ext}}" type="image/jpeg">
-                                <img loading="lazy" src="%=static=%img/content/{{image.path}}_i.{{image.ext}}" alt="{{title.en}}">
+                                <img loading="lazy" src="%=static=%img/content/{{image.path}}_i.{{image.ext}}"
+                                     alt="{{title.en}}" width="{{image.width}}" height="{{image.height}}">
                             </picture>
                         {{/if}}
 						<h3 class="portfolio-title">

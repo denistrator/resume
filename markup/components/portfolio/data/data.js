@@ -9,7 +9,9 @@ var data = {
             image: {
                 path: 'project-timberland',
                 ext: 'svg',
-                hasAlternate: true
+                hasAlternate: true,
+                width: 102,
+                height: 95
             },
             labels: {
                 magento: {
@@ -27,7 +29,9 @@ var data = {
             image: {
                 path: 'project-nautica',
                 ext: 'svg',
-                hasAlternate: true
+                hasAlternate: true,
+                width: 138,
+                height: 194
             },
             labels: {
                 magento: {
@@ -45,7 +49,9 @@ var data = {
             image: {
                 path: 'project-layam',
                 ext: 'png',
-                hasAlternate: true
+                hasAlternate: true,
+                width: 92,
+                height: 31
             },
             labels: {
                 magento: {
@@ -62,7 +68,9 @@ var data = {
             },
             image: {
                 path: 'project-1',
-                ext: 'png'
+                ext: 'png',
+                width: 256,
+                height: 256
             },
             githubLink: 'https://github.com/denistrator/training-01-mountains',
             mod: 'portfolio-collapse-pos'
@@ -75,7 +83,9 @@ var data = {
             },
             image: {
                 path: 'project-2',
-                ext: 'png'
+                ext: 'png',
+                width: 256,
+                height: 256
             },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8'
         },
@@ -88,7 +98,9 @@ var data = {
             image: {
                 path: 'project-3',
                 ext: 'png',
-                hasAlternate: true
+                hasAlternate: true,
+                width: 44,
+                height: 50
             },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7'
         },
@@ -100,7 +112,9 @@ var data = {
             },
             image: {
                 path: 'project-4',
-                ext: 'png'
+                ext: 'png',
+                width: 256,
+                height: 256
             },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6'
         },
@@ -113,7 +127,9 @@ var data = {
             image: {
                 path: 'project-no-image',
                 ext: 'png',
-                hasAlternate: true
+                hasAlternate: true,
+                width: 100,
+                height: 100
             },
             githubLink: '',
             mod: 'old'
