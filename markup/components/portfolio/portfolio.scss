@@ -1,14 +1,16 @@
 .portfolio {
-    &-list {
-        &-wrap {
-            margin-top: 25px;
-            margin-left: -27px;
-        }
+    &-list-wrap {
+        margin-top: 25px;
+        margin-left: -27px;
+        margin-bottom: -10px;
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
 
+    &-list {
         @extend %nl;
         position: relative;
         transition: height 0.5s;
-        overflow: hidden;
     }
 
     &-item {
