@@ -30,8 +30,8 @@ var data = {
                 path: 'project-nautica',
                 ext: 'svg',
                 hasAlternate: true,
-                width: 138,
-                height: 194
+                width: 46,
+                height: 65
             },
             labels: {
                 magento: {
@@ -50,8 +50,8 @@ var data = {
                 path: 'project-layam',
                 ext: 'png',
                 hasAlternate: true,
-                width: 92,
-                height: 31
+                width: 55,
+                height: 19
             },
             labels: {
                 magento: {
@@ -69,8 +69,8 @@ var data = {
             image: {
                 path: 'project-1',
                 ext: 'png',
-                width: 256,
-                height: 256
+                width: 55,
+                height: 55
             },
             githubLink: 'https://github.com/denistrator/training-01-mountains',
             mod: 'portfolio-collapse-pos'
@@ -84,8 +84,8 @@ var data = {
             image: {
                 path: 'project-2',
                 ext: 'png',
-                width: 256,
-                height: 256
+                width: 55,
+                height: 55
             },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8'
         },
@@ -113,8 +113,8 @@ var data = {
             image: {
                 path: 'project-4',
                 ext: 'png',
-                width: 256,
-                height: 256
+                width: 55,
+                height: 55
             },
             githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6'
         },
@@ -128,8 +128,8 @@ var data = {
                 path: 'project-no-image',
                 ext: 'png',
                 hasAlternate: true,
-                width: 100,
-                height: 100
+                width: 55,
+                height: 55
             },
             githubLink: '',
             mod: 'old'
