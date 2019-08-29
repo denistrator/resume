@@ -6,7 +6,7 @@
   "directories": {},
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "3.9.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-inline-source": "^3.0.0",
     "gulp-webp": "^3.0.0",
