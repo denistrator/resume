@@ -1,14 +1,19 @@
-(function() {
-	var blockToCollapse = document.querySelector(".portfolio-list");
-    var collapsedHeight = document.querySelector(".portfolio-collapse-pos").offsetTop +
-   						  document.querySelector(".portfolio-collapse-pos").offsetHeight;
+(function () {
+    var $portfolioList = document.querySelector('.portfolio-list'),
+        $portfolioListCollapsePos = $portfolioList.querySelector('.portfolio-collapse-pos'),
+        $portfolioListExpander = $portfolioList.querySelector('.portfolio-expander'),
+        portfolioListCollapsedHeight = $portfolioListCollapsePos.offsetTop + $portfolioListCollapsePos.offsetHeight;
 
-    blockToCollapse.style.height = collapsedHeight +"px";
+    collapsePortfolioList();
 
-    var expander = document.querySelector(".portfolio-expander");
-    expander.addEventListener('click', function() {
-        blockToCollapse.style.height = blockToCollapse.scrollHeight +"px";
-    	expander.classList.add("hide");
-    });
+    $portfolioListExpander.addEventListener('click', expandPortfolioList);
+
+    function collapsePortfolioList() {
+        $portfolioList.style.height = portfolioListCollapsedHeight + 'px';
+    }
+
+    function expandPortfolioList() {
+        $portfolioList.style.height = $portfolioList.scrollHeight + 'px';
+        $portfolioListExpander.classList.add('hide');
+    }
 })();
-
