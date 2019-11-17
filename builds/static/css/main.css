@@ -223,8 +223,7 @@ button:-moz-focusring,
   margin: 0;
   padding: 0;
   text-indent: 0;
-  list-style: none;
-  list-style-position: outside;
+  list-style: none outside none;
 }
 
 .header:before, .header:after {
@@ -438,10 +437,7 @@ ul {
   text-align: center;
   position: relative;
   z-index: 1;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 5.60748%;
-  padding-right: 5.60748%;
+  padding: 15px 5.60748%;
   margin-bottom: 15px;
 }
 
@@ -609,7 +605,6 @@ ul {
 
 .lang-toggle-text {
   font-size: 17px;
-  text-transform: uppercase;
 }
 
 .dark .reading-mode-toggle:before {
