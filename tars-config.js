@@ -16,10 +16,11 @@ module.exports = {
         "workflow": "concat",
         "bundler": "webpack",
         "lint": false,
-        "useBabel": false,
+        "useBabel": true,
         "removeConsoleLog": true,
         "webpack": {
-            "useHMR": false
+            "useHMR": false,
+            "providePlugin": {}
         },
         "jsPathsToConcatBeforeModulesJs": [],
         "lintJsCodeBeforeModules": false,
@@ -28,12 +29,12 @@ module.exports = {
     },
     "sourcemaps": {
         "js": {
-            "active": false,
-            "inline": false
+            "active": true,
+            "inline": true
         },
         "css": {
             "active": true,
-            "inline": false
+            "inline": true
         }
     },
     "notifyConfig": {
@@ -44,6 +45,7 @@ module.exports = {
     },
     "minifyHtml": true,
     "generateStaticPath": true,
+    "devPath": "./dev/",
     "buildPath": "./builds/",
     "useBuildVersioning": false,
     "useArchiver": false,
@@ -58,5 +60,5 @@ module.exports = {
         "imagesFolderName": "img",
         "componentsFolderName": "components"
     },
-    "devPath": "./dev/"
+    "staticPrefix": "static/"
 };
