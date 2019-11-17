@@ -6,24 +6,24 @@
 </head>
 
 <body class="page">
-<div class="page-wrapper">
-    {{> before-page-content/theme-switcher}}
-    <div class="container">
-        {{> header/header}}
-    </div>
-    <main class="container sections">
-        <div class="sections-aside">
-            {{> skills/skills}}
+    <div class="page-wrapper">
+        {{> before-page-content/theme-switcher}}
+        <div class="container">
+            {{> header/header}}
         </div>
-        <div class="sections-main">
-            {{> education/education}}
-            {{> experience/experience}}
-            {{> portfolio/portfolio}}
+        <main class="container sections">
+            <div class="sections-aside">
+                {{> skills/skills}}
+            </div>
+            <div class="sections-main">
+                {{> education/education}}
+                {{> experience/experience}}
+                {{> portfolio/portfolio}}
+            </div>
+        </main>
+        <div class="container">
+            {{> footer/footer}}
         </div>
-    </main>
-    <div class="container">
-        {{> footer/footer}}
-    </div>
     </div>
 
     <script src="%=static=%js/main%=hash=%%=min=%.js" async></script>

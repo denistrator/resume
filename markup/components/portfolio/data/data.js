@@ -1,10 +1,10 @@
-var data = {
+const data = {
     portfolio: [
         {
             link: 'https://www.timberland.co.il/',
             title: {
                 en: 'Timberland (Israel)',
-                ru: 'Timberland (Израиль)',
+                ru: 'Timberland (Израиль)'
             },
             image: {
                 path: 'project-timberland',

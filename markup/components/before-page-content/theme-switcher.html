@@ -1,6 +1,6 @@
 <script>
     (function () {
-        var userTime = new Date(),
+        const userTime = new Date(),
             $page = document.querySelector('.page');
         if (userTime.getHours() > 10 && userTime.getHours() < 16) {
             $page.classList.toggle('light');

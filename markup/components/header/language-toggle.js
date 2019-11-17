@@ -1,8 +1,8 @@
 (function () {
-    var $root = document.querySelector('html'),
+    const $root = document.querySelector('html'),
         $langToggle = document.querySelector('.lang-toggle');
 
-    var languages = [
+    const languages = [
         'en',
         'ru'
     ];
@@ -14,7 +14,7 @@
     }
 
     function getNextLanguage() {
-        var currentLanguageIndex = languages.indexOf($root.getAttribute('lang'));
+        const currentLanguageIndex = languages.indexOf($root.getAttribute('lang'));
 
         return languages[currentLanguageIndex + 1] || languages[0];
     }

@@ -25,4 +25,4 @@ RewriteRule ^(.*)$ zyro/$1 [L,QSA]
     <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
         Header unset Cache-Control
     </FilesMatch>
-</IfModule>
+</ifModule>

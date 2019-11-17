@@ -8,7 +8,7 @@
 
 /* Module data example */
 
-var data = {
+const data = {
     _template: {
         big: {
             title: 'Hello world',

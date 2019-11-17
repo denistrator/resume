@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     text-indent: 0;
-    list-style: none;
-    list-style-position: outside;
+    list-style: none outside none;
 }
 
 @mixin cf {

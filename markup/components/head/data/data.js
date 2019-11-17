@@ -1,4 +1,4 @@
-var data = {
+const data = {
     head: {
         defaults: {
             pageTitle: 'Belevtsov Denis - Resume',
