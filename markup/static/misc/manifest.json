@@ -1,5 +1,7 @@
 {
-    "name": "App",
+    "name": "Belevtsov Denis - Resume",
+    "theme_color": "#f0eef1",
+    "background_color": "#fff",
     "icons": [
         {
             "src": "/favicon/android-icon-36x36.png",
