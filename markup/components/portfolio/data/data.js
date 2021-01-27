@@ -87,7 +87,8 @@ const data = {
                 width: 55,
                 height: 55
             },
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8'
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-8',
+            isVisuallyHidden: true
         },
         {
             link: 'http://denistrator.esy.es/tajam',
@@ -102,7 +103,8 @@ const data = {
                 width: 44,
                 height: 50
             },
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7'
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-7',
+            isVisuallyHidden: true
         },
         {
             link: 'http://denistrator.esy.es/yellow_moon',
@@ -116,7 +118,8 @@ const data = {
                 width: 55,
                 height: 55
             },
-            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6'
+            githubLink: 'https://github.com/denistrator/spalah-lessons--lesson-6',
+            isVisuallyHidden: true
         },
         {
             link: 'http://denistrator.esy.es/naturetour/',
@@ -132,7 +135,8 @@ const data = {
                 height: 55
             },
             githubLink: '',
-            mod: 'old'
+            mod: 'old',
+            isVisuallyHidden: true
         }
     ]
 };

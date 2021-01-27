@@ -612,17 +612,22 @@ ul {
 }
 
 .portfolio-list-wrap {
+  position: relative;
   margin-top: 25px;
   margin-left: -27px;
-  margin-bottom: -10px;
-  padding-bottom: 10px;
-  overflow: hidden;
 }
 
 .portfolio-list {
-  position: relative;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
+  margin-bottom: 25px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-property: height, margin-bottom;
+  transition-property: height, margin-bottom;
+}
+
+.portfolio-list.expanded {
+  margin-bottom: 0;
 }
 
 .portfolio-item {
@@ -661,6 +666,10 @@ ul {
 
 .portfolio-item.old:hover {
   opacity: 0.8;
+}
+
+.portfolio-item.hidden {
+  visibility: hidden;
 }
 
 .portfolio-image {
@@ -748,30 +757,24 @@ ul {
 }
 
 .portfolio-expander {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 50%;
-  max-height: 22px;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-  padding: 2px 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 20px;
+  display: block;
   font-size: 13px;
   color: #000;
   background-color: #f0eef1;
-  cursor: pointer;
   border: 1px solid transparent;
 }
 
 .light .portfolio-expander {
-  color: #fff;
-  border-color: inherit;
-  background-color: #0a0a0a;
+  border-color: currentColor;
 }
 
 .light .portfolio-expander:hover {
-  color: #0a0a0a;
-  background-color: #f0eef1;
+  color: #f0eef1;
+  background-color: #0a0a0a;
 }
 
 .portfolio-expander:hover {
@@ -791,8 +794,8 @@ ul {
   left: -10px;
 }
 
-.portfolio-expander.hide {
-  visibility: hidden;
+.portfolio-expander.hidden {
+  display: none;
 }
 
 .skills-list {

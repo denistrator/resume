@@ -10,7 +10,7 @@
 	<div class="portfolio-list-wrap">
 		<ul class="portfolio-list">
 			{{#each portfolio}}
-				<li class="portfolio-item {{mod}}">
+				<li class="portfolio-item {{mod}} {{#if isVisuallyHidden}}hidden{{/if}}">
 					<a href="{{link}}" class="portfolio-link">
                         <picture class="portfolio-image {{#if image.hasAlternate}} hasAlternate {{/if}}">
                             {{#is image.ext '===' 'png'}}
@@ -44,7 +44,7 @@
                     {{/if}}
 				</li>
 			{{/each}}
-			<li class="portfolio-expander icon-double-arrow-down only-js" role="none"></li>
 		</ul>
+        <button class="portfolio-expander icon-double-arrow-down only-js" aria-label="Expand portfolio list"></button>
 	</div>
 </section>

@@ -1,19 +1,25 @@
 (function () {
-    const $portfolioList = document.querySelector('.portfolio-list'),
-        $portfolioListCollapsePos = $portfolioList.querySelector('.portfolio-collapse-pos'),
-        $portfolioListExpander = $portfolioList.querySelector('.portfolio-expander'),
-        portfolioListCollapsedHeight = $portfolioListCollapsePos.offsetTop + $portfolioListCollapsePos.offsetHeight;
+    const $list               = document.querySelector('.portfolio-list'),
+          $listHiddenItems    = $list.querySelectorAll('.portfolio-item.hidden'),
+          $listCollapsePos    = $list.querySelector('.portfolio-collapse-pos'),
+          $listExpander       = document.querySelector('.portfolio-expander'),
+          listCollapsedHeight = $listCollapsePos.offsetTop + $listCollapsePos.offsetHeight;
 
     collapsePortfolioList();
 
-    $portfolioListExpander.addEventListener('click', expandPortfolioList);
+    $listExpander.addEventListener('click', expandPortfolioList);
 
     function collapsePortfolioList() {
-        $portfolioList.style.height = portfolioListCollapsedHeight + 'px';
+        $list.style.height = listCollapsedHeight + 'px';
     }
 
     function expandPortfolioList() {
-        $portfolioList.style.height = $portfolioList.scrollHeight + 'px';
-        $portfolioListExpander.classList.add('hide');
+        Array.from($listHiddenItems).forEach(function (e) {
+            e.classList.remove('hidden');
+        });
+
+        $list.style.height = $list.scrollHeight + 'px';
+        $list.classList.add('expanded');
+        $listExpander.classList.add('hidden');
     }
 })();
