@@ -1,6 +1,25 @@
 "use strict";
 
 (function () {
+  var $portfolioList = document.querySelector('.portfolio-list'),
+      $portfolioListCollapsePos = $portfolioList.querySelector('.portfolio-collapse-pos'),
+      $portfolioListExpander = $portfolioList.querySelector('.portfolio-expander'),
+      portfolioListCollapsedHeight = $portfolioListCollapsePos.offsetTop + $portfolioListCollapsePos.offsetHeight;
+  collapsePortfolioList();
+  $portfolioListExpander.addEventListener('click', expandPortfolioList);
+
+  function collapsePortfolioList() {
+    $portfolioList.style.height = portfolioListCollapsedHeight + 'px';
+  }
+
+  function expandPortfolioList() {
+    $portfolioList.style.height = $portfolioList.scrollHeight + 'px';
+    $portfolioListExpander.classList.add('hide');
+  }
+})();
+"use strict";
+
+(function () {
   var $root = document.querySelector('html'),
       $langToggle = document.querySelector('.lang-toggle');
   var languages = ['en', 'ru'];
@@ -25,24 +44,5 @@
     var $page = document.querySelector('.page');
     $page.classList.toggle('light');
     $page.classList.toggle('dark');
-  }
-})();
-"use strict";
-
-(function () {
-  var $portfolioList = document.querySelector('.portfolio-list'),
-      $portfolioListCollapsePos = $portfolioList.querySelector('.portfolio-collapse-pos'),
-      $portfolioListExpander = $portfolioList.querySelector('.portfolio-expander'),
-      portfolioListCollapsedHeight = $portfolioListCollapsePos.offsetTop + $portfolioListCollapsePos.offsetHeight;
-  collapsePortfolioList();
-  $portfolioListExpander.addEventListener('click', expandPortfolioList);
-
-  function collapsePortfolioList() {
-    $portfolioList.style.height = portfolioListCollapsedHeight + 'px';
-  }
-
-  function expandPortfolioList() {
-    $portfolioList.style.height = $portfolioList.scrollHeight + 'px';
-    $portfolioListExpander.classList.add('hide');
   }
 })();
