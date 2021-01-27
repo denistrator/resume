@@ -36,7 +36,7 @@
     @return $number;
 }
 
-@function in-perc($val, $width: strip-unit($container-max-width - $grid-gutter-width-base)) {
+@function in-perc($val, $width) {
     @return ($val / $width * 100%);
 }
 
