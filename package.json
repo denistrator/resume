@@ -4,9 +4,12 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
-  "dependencies": {},
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-inline-source": "^3.0.0",
     "gulp-webp": "^3.0.0",
