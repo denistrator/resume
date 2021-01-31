@@ -9,205 +9,24 @@
         <span class="lang-en">Know it, use it</span>
     </p>
 
-    <p class="skills-list-label">Magento 2:</p>
-    <ul class="skills-list">
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">XML Лейаут</span>
-                <span class="lang-en">XML Layout</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Fallback/Inheritance система</span>
-                <span class="lang-en">Fallback/Inheritance system</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">Ui lib</span>
-            <span class="skills-skill">Blank &amp; Luma</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Разработка модулей</span>
-                <span class="lang-en">Custom modules development</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)</span>
-                <span class="lang-en">3rd-party modules customization <br/> (Mirasvit, Amasty, Ubertheme, etc)</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">PHP плагины</span>
-                <span class="lang-en">PHP plugins</span>
-            </span>
-            <span class="skills-skill">ViewModels</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Реализация (widget.xml)</span>
-                <span class="lang-en">Widgets (widget.xml)</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Ui компоненты</span>
-                <span class="lang-en">Ui components</span>
-            </span>
-            <span class="skills-skill">Js Layout</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">JS максины</span>
-                <span class="lang-en">JS mixins</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">r.js бандлинг (напр. magepack)</span>
-                <span class="lang-en">r.js bundling (e.g. magepack)</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Кастомизация писем</span>
-                <span class="lang-en">Emails customization</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Реализация RTL тем</span>
-                <span class="lang-en">RTL themes implementation</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Magento 1 (темы, модули)</span>
-                <span class="lang-en">Magento 1 (themes, modules)</span>
-            </span>
-        </li>
-    </ul>
-
+    {{#each skillAreas}}
     <p class="skills-list-label">
-        <span class="lang-ru">Фронт-энд:</span>
-        <span class="lang-en">Front-end:</span>
+        {{#if title.default}} {{title.default}} {{/if}}
+        {{#if title.en}} <span class="lang-en">{{title.en}}</span> {{/if}}
+        {{#if title.ru}} <span class="lang-ru">{{title.ru}}</span> {{/if}}
     </p>
     <ul class="skills-list">
+        {{#each skillGroups}}
         <li class="skills-item">
-            <span class="skills-skill">HTML</span>
-            <span class="skills-skill">CSS</span>
-            <span class="skills-skill">SCSS</span>
-            <span class="skills-skill">LESS</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">BEM</span>
+            {{#each this}}
             <span class="skills-skill">
-                <span class="lang-ru">Модульная вёрстка</span>
-                <span class="lang-en">Modular markup</span>
+                {{#if label.default}} {{label.default}} {{/if}}
+                {{#if label.en}} <span class="lang-en">{{label.en}}</span> {{/if}}
+                {{#if label.ru}} <span class="lang-ru">{{label.ru}}</span> {{/if}}
             </span>
+            {{/each}}
         </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Семантическая вёрстка</span>
-                <span class="lang-en">Semantic markup</span>
-            </span>
-            <span class="skills-skill">
-                <span class="lang-ru">Доступность</span>
-                <span class="lang-en">Accessibility</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Реализация RTL</span>
-                <span class="lang-en">RTL Implementation</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">JS</span>
-            <span class="skills-skill">jQuery</span>
-            <span class="skills-skill">Knockout</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">Require JS</span>
-            <span class="skills-skill">JS Bundling</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">Handlebars</span>
-            <span class="skills-skill">Jade</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">NPM</span>
-            <span class="skills-skill">Grunt</span>
-            <span class="skills-skill">Gulp</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">Photoshop</span>
-            <span class="skills-skill">Zeplin</span>
-            <span class="skills-skill">Avocode</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">SVG</span>
-            <span class="skills-skill">Font Icons</span>
-        </li>
-        <li class="skills-item">Pixel perfect</li>
-        <li class="skills-item">
-            <span class="lang-ru">Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)</span>
-            <span class="lang-en">Optimization for Google Pagespeed <br> (this page has 100 score)</span>
-        </li>
+        {{/each}}
     </ul>
-
-    <p class="skills-list-label">
-        <span class="lang-ru">Бэк-энд:</span>
-        <span class="lang-en">Back-end:</span>
-    </p>
-    <ul class="skills-list">
-        <li class="skills-item">
-            <span class="skills-skill">Composer</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">PHP</span>
-            <span class="skills-skill">
-                <span class="lang-ru">PHP Дебаг</span>
-                <span class="lang-en">PHP Debug</span>
-            </span>
-            <span class="skills-skill">
-                <span class="lang-en">PHP DOM <br/> (parsing &amp; modifying html on server side)</span>
-                <span class="lang-ru">PHP DOM <br/> (работа с html dom на стороне сервера)</span>
-            </span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Базовый MySQL</span>
-                <span class="lang-en">Basic MySQL</span>
-            </span>
-        </li>
-    </ul>
-
-    <p class="skills-list-label">
-        <span class="lang-ru">Прочее:</span>
-        <span class="lang-en">Misc:</span>
-    </p>
-    <ul class="skills-list">
-        <li class="skills-item">
-            <span class="skills-skill">Jira</span>
-            <span class="skills-skill">Git</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">Linux</span>
-            <span class="skills-skill">Win 10 + WSL</span>
-        </li>
-        <li class="skills-item">
-            <span class="skills-skill">
-                <span class="lang-ru">Семант. верс.</span>
-                <span class="lang-en">Semantic versioning</span>
-            </span>
-            <span class="skills-skill">
-                <span class="lang-ru">Ведение changelog</span>
-                <span class="lang-en">Keeping a changelog</span>
-            </span>
-        </li>
-    </ul>
+    {{/each}}
 </section>
