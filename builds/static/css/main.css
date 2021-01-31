@@ -934,16 +934,26 @@ ul {
   color: #242424;
 }
 
-.skills-list {
-  font-size: 14px;
-}
-
-.skills-list-label {
-  margin-bottom: 3px;
-}
-
-.skills-list-label + ul {
+.skills-areas {
   margin-top: 0;
+  list-style: none;
+}
+
+.skills-area {
+  margin-bottom: 14px;
+}
+
+.skills-group {
+  margin-top: 0;
+  font-size: 14px;
+  list-style: disc;
+}
+
+.skills-group-label {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .skills-skill + .skills-skill:before {

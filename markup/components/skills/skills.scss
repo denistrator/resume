@@ -1,14 +1,24 @@
 .skills {
-    &-list {
-        font-size: 14px;
+    &-areas {
+        margin-top: 0;
+        list-style: none;
     }
 
-    &-list-label {
-        margin-bottom: 3px;
+    &-area {
+        margin-bottom: 14px;
+    }
 
-        + ul {
-            margin-top: 0;
-        }
+    &-group {
+        margin-top: 0;
+        font-size: 14px;
+        list-style: disc;
+    }
+
+    &-group-label {
+        margin-top: 0;
+        margin-bottom: 3px;
+        font-size: 15px;
+        font-weight: 400;
     }
 
     &-skill {

@@ -9,24 +9,28 @@
         <span class="lang-en">Know it, use it</span>
     </p>
 
-    {{#each skillAreas}}
-    <p class="skills-list-label">
-        {{#if title.default}} {{title.default}} {{/if}}
-        {{#if title.en}} <span class="lang-en">{{title.en}}</span> {{/if}}
-        {{#if title.ru}} <span class="lang-ru">{{title.ru}}</span> {{/if}}
-    </p>
-    <ul class="skills-list">
-        {{#each skillGroups}}
-        <li class="skills-item">
-            {{#each this}}
-            <span class="skills-skill">
-                {{#if label.default}} {{label.default}} {{/if}}
-                {{#if label.en}} <span class="lang-en">{{label.en}}</span> {{/if}}
-                {{#if label.ru}} <span class="lang-ru">{{label.ru}}</span> {{/if}}
-            </span>
-            {{/each}}
+    <ul class="skills-areas">
+        {{#each skillAreas}}
+        <li class="skills-area">
+            <h3 class="skills-group-label">
+                {{#if title.default}} {{title.default}} {{/if}}
+                {{#if title.en}} <span class="lang-en">{{title.en}}</span> {{/if}}
+                {{#if title.ru}} <span class="lang-ru">{{title.ru}}</span> {{/if}}
+            </h3>
+            <ul class="skills-group">
+                {{#each skillGroups}}
+                <li class="skills-item">
+                    {{#each this}}
+                    <span class="skills-skill">
+                        {{#if label.default}} {{{label.default}}} {{/if}}
+                        {{#if label.en}} <span class="lang-en">{{{label.en}}}</span> {{/if}}
+                        {{#if label.ru}} <span class="lang-ru">{{{label.ru}}}</span> {{/if}}
+                    </span>
+                    {{/each}}
+                </li>
+                {{/each}}
+            </ul>
         </li>
         {{/each}}
     </ul>
-    {{/each}}
 </section>
