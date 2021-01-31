@@ -432,7 +432,7 @@ ul {
 /* Plugins, which is used in current project. */
 /* Components, which is used in current project. */
 .education-list-label {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .education-list {
@@ -936,18 +936,14 @@ ul {
 
 .skills-list {
   font-size: 14px;
-  margin-bottom: 0;
 }
 
-.skills-item-special {
-  border-top: 1px solid white;
-  padding: 15px 10px 0;
-  margin-top: 15px;
-  list-style: none;
+.skills-list-label {
+  margin-bottom: 3px;
 }
 
-.light .skills-item-special {
-  border-top-color: inherit;
+.skills-list-label + ul {
+  margin-top: 0;
 }
 
 .skills-skill + .skills-skill:before {
