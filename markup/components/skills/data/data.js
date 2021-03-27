@@ -7,120 +7,88 @@ const data = {
             skillGroups: [
                 [
                     {
-                        label: {
-                            en: 'XML Layout',
-                            ru: 'XML Лейаут'
-                        }
+                        en: 'XML Layout',
+                        ru: 'XML Лейаут'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Fallback/Inheritance system',
-                            ru: 'Fallback/Inheritance система'
-                        }
+                        en: 'Fallback/Inheritance system',
+                        ru: 'Fallback/Inheritance система'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'Ui lib'
-                        }
+                        default: 'Ui lib'
                     },
                     {
-                        label: {
-                            default: 'Blank & Luma'
-                        }
+                        default: 'Blank & Luma'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Custom modules development',
-                            ru: 'Разработка модулей'
-                        }
+                        en: 'Custom modules development',
+                        ru: 'Разработка модулей'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: '3rd-party modules customization <br/> (Mirasvit, Amasty, Ubertheme, etc)',
-                            ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)'
-                        }
+                        en: '3rd-party modules customization <br/> (Mirasvit, Amasty, Ubertheme, etc)',
+                        ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'PHP plugins',
-                            ru: 'PHP плагины'
-                        }
+                        en: 'PHP plugins',
+                        ru: 'PHP плагины'
                     },
                     {
-                        label: {
-                            default: 'ViewModels'
-                        }
+                        default: 'ViewModels'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Widgets (widget.xml)',
-                            ru: 'Виджеты (widget.xml)'
-                        }
+                        en: 'Widgets (widget.xml)',
+                        ru: 'Виджеты (widget.xml)'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Ui components',
-                            ru: 'Ui компоненты'
-                        }
+                        en: 'Ui components',
+                        ru: 'Ui компоненты'
                     },
                     {
-                        label: {
-                            default: 'Js Layout'
-                        }
+                        default: 'Js Layout'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'JS mixins',
-                            ru: 'JS максины'
-                        }
+                        en: 'JS mixins',
+                        ru: 'JS максины'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'r.js bundling (e.g. magepack)',
-                            ru: 'r.js бандлинг (напр. magepack)'
-                        }
+                        en: 'r.js bundling (e.g. magepack)',
+                        ru: 'r.js бандлинг (напр. magepack)'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Emails customization',
-                            ru: 'Кастомизация писем'
-                        }
+                        en: 'Emails customization',
+                        ru: 'Кастомизация писем'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'RTL themes implementation',
-                            ru: 'Реализация RTL тем'
-                        }
+                        en: 'RTL themes implementation',
+                        ru: 'Реализация RTL тем'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Magento 1 (themes, modules)',
-                            ru: 'Magento 1 (темы, модули)'
-                        }
+                        en: 'Magento 1 (themes, modules)',
+                        ru: 'Magento 1 (темы, модули)'
                     }
                 ]
             ]
@@ -133,161 +101,109 @@ const data = {
             skillGroups: [
                 [
                     {
-                        label: {
-                            default: 'HTML'
-                        }
+                        default: 'HTML'
                     },
                     {
-                        label: {
-                            default: 'CSS'
-                        }
+                        default: 'CSS'
                     },
                     {
-                        label: {
-                            default: 'SCSS'
-                        }
+                        default: 'SCSS'
                     },
                     {
-                        label: {
-                            default: 'LESS'
-                        }
+                        default: 'LESS'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'BEM'
-                        }
+                        default: 'BEM'
                     },
                     {
-                        label: {
-                            en: 'Modular markup',
-                            ru: 'Модульная вёрстка'
-                        }
+                        en: 'Modular markup',
+                        ru: 'Модульная вёрстка'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Semantic markup',
-                            ru: 'Семантическая вёрстка'
-                        }
+                        en: 'Semantic markup',
+                        ru: 'Семантическая вёрстка'
                     },
                     {
-                        label: {
-                            en: 'Accessibility',
-                            ru: 'Доступность'
-                        }
+                        en: 'Accessibility',
+                        ru: 'Доступность'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'RTL Implementation',
-                            ru: 'Реализация RTL'
-                        }
+                        en: 'RTL Implementation',
+                        ru: 'Реализация RTL'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'JS'
-                        }
+                        default: 'JS'
                     },
                     {
-                        label: {
-                            default: 'jQuery'
-                        }
+                        default: 'jQuery'
                     },
                     {
-                        label: {
-                            default: 'Knockout'
-                        }
+                        default: 'Knockout'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'Require JS'
-                        }
+                        default: 'RequireJS'
                     },
                     {
-                        label: {
-                            default: 'JS Bundling'
-                        }
+                        default: 'JS Bundling'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'Handlebars'
-                        }
+                        default: 'Handlebars'
                     },
                     {
-                        label: {
-                            default: 'Jade'
-                        }
+                        default: 'Jade'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'NPM'
-                        }
+                        default: 'NPM'
                     },
                     {
-                        label: {
-                            default: 'Grunt'
-                        }
+                        default: 'Grunt'
                     },
                     {
-                        label: {
-                            default: 'Gulp'
-                        }
+                        default: 'Gulp'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'Photoshop'
-                        }
+                        default: 'Photoshop'
                     },
                     {
-                        label: {
-                            default: 'Zeplin'
-                        }
+                        default: 'Zeplin'
                     },
                     {
-                        label: {
-                            default: 'Avocode'
-                        }
+                        default: 'Avocode'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'SVG'
-                        }
+                        default: 'SVG'
                     },
                     {
-                        label: {
-                            default: 'Font Icons'
-                        }
+                        default: 'Font Icons'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'Pixel perfect'
-                        }
+                        default: 'Pixel perfect'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Optimization for Google Pagespeed <br> (this page has 100 score)',
-                            ru: 'Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)'
-                        }
+                        en: 'Optimization for Google Pagespeed <br> (this page has 100 score)',
+                        ru: 'Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)'
                     }
                 ]
             ]
@@ -300,36 +216,26 @@ const data = {
             skillGroups: [
                 [
                     {
-                        label: {
-                            default: 'Composer'
-                        }
+                        default: 'Composer'
                     }
                 ],
                 [
                     {
-                        label: {
-                            default: 'PHP'
-                        }
+                        default: 'PHP'
                     },
                     {
-                        label: {
-                            en: 'PHP Debug',
-                            ru: 'PHP Дебаг'
-                        }
+                        en: 'PHP Debug',
+                        ru: 'PHP Дебаг'
                     },
                     {
-                        label: {
-                            en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
-                            ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)'
-                        }
+                        en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
+                        ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)'
                     }
                 ],
                 [
                     {
-                        label: {
-                            en: 'Basic MySQL',
-                            ru: 'Базовый MySQL'
-                        }
+                        en: 'Basic MySQL',
+                        ru: 'Базовый MySQL'
                     }
                 ]
             ]
@@ -342,42 +248,28 @@ const data = {
             skillGroups: [
                 [
                     {
-                        label: {
-                            default: 'Jira'
-                        }
+                        default: 'Jira'
                     },
                     {
-                        label: {
-                            default: 'Git'
-                        }
+                        default: 'Git'
                     }
                 ],
-
                 [
                     {
-                        label: {
-                            default: 'Linux'
-                        }
+                        default: 'Linux'
                     },
                     {
-                        label: {
-                            default: 'Win 10 + WSL'
-                        }
+                        default: 'Win 10 + WSL'
                     }
                 ],
-
                 [
                     {
-                        label: {
-                            en: 'Semantic versioning',
-                            ru: 'Семант. верс.'
-                        }
+                        en: 'Semantic versioning',
+                        ru: 'Семант. верс.'
                     },
                     {
-                        label: {
-                            en: 'Keeping a changelog',
-                            ru: 'Ведение changelog'
-                        }
+                        en: 'Keeping a changelog',
+                        ru: 'Ведение changelog'
                     }
                 ]
             ]
