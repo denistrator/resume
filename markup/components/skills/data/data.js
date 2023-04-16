@@ -64,7 +64,7 @@ const data = {
                 [
                     {
                         en: 'JS mixins',
-                        ru: 'JS максины'
+                        ru: 'JS миксины'
                     }
                 ],
                 [
