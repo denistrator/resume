@@ -253,7 +253,7 @@ switch (cssPreprocName) {
                  *  you need to find where the CommentArray comes from and get rid of it
                  */
                 const { includePaths, ...options } = tars.pluginsConfig['gulp-sass'];
-                return sass({ ...options, includePaths: [...includePaths] })
+                return sass({ ...options, includePaths: [...includePaths], "silenceDeprecations": ["legacy-js-api", "import"] });
             },
         };
         break;
