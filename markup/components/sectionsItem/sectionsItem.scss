@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .section {
     $a: 28px;
     padding-left: $a;
@@ -26,7 +28,7 @@
         color: $light2;
 
         .light & {
-            color: lighten($dark, 10%);
+            color: color.adjust($dark, $lightness: 10%);
         }
     }
 }

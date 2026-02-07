@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .skills {
     &-areas {
         margin-top: 0;
@@ -28,7 +30,7 @@
                 color: $light2;
 
                 .light & {
-                    color: lighten($dark, 35%);
+                    color: color.adjust($dark, $lightness: 35%);
                 }
             }
         }
