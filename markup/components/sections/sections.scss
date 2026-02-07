@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .sections {
     @include cf;
     @extend .container;
@@ -67,13 +69,13 @@
 
     &-main {
         @media (min-width: 768px) {
-            width: (100% / 3 * 2);
+            width: (math.div(100%, 3) * 2);
         }
     }
 
     &-aside {
         @media (min-width: 768px) {
-            width: (100% / 3);
+            width: (math.div(100%, 3));
         }
     }
 }
