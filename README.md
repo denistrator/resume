@@ -61,11 +61,7 @@ It is important! All examples in documentation use the default settings.
 **Attention, [TARS-CLI](https://github.com/tars/tars-cli) is the preferred
  way to work with TARS. It is faster and more comfortable to work with TARS-CLI. In case of using TARS with TARS-CLI all installation steps are not necessary!**
 
-You need to [install `Node.js`](http://nodejs.org/) with version equal to 4.x.x and higher. If you use Node.js version 5.x.x, please, make sure, that you use npm version 3.x.x and higher. Otherwise update npm by using command:
-
-```bash
-npm i -g npm
-```
+You need to [install `Node.js`](http://nodejs.org/) with version >=20
 
 For Windows you have to do some more steps:
 
