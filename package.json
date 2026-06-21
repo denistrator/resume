@@ -4,6 +4,9 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11"
