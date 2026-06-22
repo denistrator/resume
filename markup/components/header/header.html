@@ -18,12 +18,14 @@
     <nav aria-label="Contact and actions">
     <ul class="header-links">
         <li class="header-links-item">
-            <a href="mailto:denistrators@gmail.com" class="header-link icon-mail-black-envelope-symbol" aria-label="Email">
+            <a href="mailto:denistrators@gmail.com" class="header-link" aria-label="Email">
+                {{Icon iconName="mail" className="header-icon" iconWidth="24" iconHeight="24"}}
                 <span class="header-link-text"><span class="only-print">e-mail: </span>denistrators@gmail.com</span>
             </a>
         </li>
         <li class="header-links-item no-print">
-            <a href="https://github.com/denistrator/" target="_blank" class="header-link icon-github-logo" rel="noopener" aria-label="GitHub (opens in new tab)">
+            <a href="https://github.com/denistrator/" target="_blank" class="header-link" rel="noopener" aria-label="GitHub (opens in new tab)">
+                {{Icon iconName="github" className="header-icon" iconWidth="24" iconHeight="24"}}
                 <span class="label">
                     <span class="lang-ru">Моя страница на GitHub</span>
                     <span class="lang-en">My GitHub page</span>
@@ -31,18 +33,9 @@
                 </span>
             </a>
         </li>
-        <!--
-        <li class="header-links-item no-print">
-            <a href="https://www.linkedin.com/in/denistrator" target="_blank" class="header-link icon-linkedin-logo" rel="noopener">
-                <span class="label">
-                    <span class="lang-ru">Моя страница на LinkedIn</span>
-                    <span class="lang-en">My LinkedIn page</span>
-                </span>
-            </a>
-        </li>
-        -->
         <li class="header-links-item header-links-item--mobile-open">
-            <div class="header-link icon-locate">
+            <div class="header-link">
+                {{Icon iconName="locate" className="header-icon" iconWidth="24" iconHeight="24"}}
 				<span class="header-link-text">
 					<span class="lang-ru"><span class="only-print">г. </span>Харьков</span>
 					<span class="lang-en">Kharkiv<span class="only-print"> city</span></span>
@@ -52,23 +45,28 @@
         </li>
         <li class="header-links-item no-print">
             <div class="lang-en">
-                <a href="media/Belevtsov Denis - Resume-en.pdf" class="header-link icon-pdf-file-symbol" aria-label="Download resume in PDF">
+                <a href="media/Belevtsov Denis - Resume-en.pdf" class="header-link" aria-label="Download resume in PDF">
+                    {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
                     <div class="label">Download this resume in PDF</div>
                 </a>
             </div>
             <div class="lang-ru">
-                <a href="media/Belevtsov Denis - Resume-ru.pdf" class="header-link icon-pdf-file-symbol" aria-label="Завантажити резюме в PDF">
+                <a href="media/Belevtsov Denis - Resume-ru.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
+                    {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
                     <div class="label">Загрузить PDF версию этого резюме</div>
                 </a>
             </div>
             <div class="lang-uk">
-                <a href="media/Belevtsov Denis - Resume-uk.pdf" class="header-link icon-pdf-file-symbol" aria-label="Завантажити резюме в PDF">
+                <a href="media/Belevtsov Denis - Resume-uk.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
+                    {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
                     <div class="label">Завантажити PDF версію цього резюме</div>
                 </a>
             </div>
         </li>
         <li class="header-links-item no-print only-js">
-            <button class="reading-mode-toggle header-link icon-sun dark" aria-pressed="false" aria-label="Toggle reading mode">
+            <button class="reading-mode-toggle header-link" aria-pressed="false" aria-label="Toggle reading mode">
+                {{Icon iconName="sun" className="header-icon icon-sun" iconWidth="24" iconHeight="24"}}
+                {{Icon iconName="moon" className="header-icon icon-moon" iconWidth="24" iconHeight="24"}}
                 <span class="label">
 					<span class="lang-ru">Переключить режим чтения (светлый или тёмный)</span>
 					<span class="lang-en">Toggle reading mode (light or dark)</span>
