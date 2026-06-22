@@ -42,3 +42,42 @@ img {
         }
     }
 }
+
+.skip-link {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    &:focus {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: auto;
+        height: auto;
+        clip: auto;
+        overflow: visible;
+        margin: 0;
+        padding: 8px 16px;
+        background: #fff;
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        outline: 2px solid #000;
+        outline-offset: 2px;
+    }
+}
+
+a,
+button {
+    &:focus-visible {
+        outline: 2px solid #33b5e5;
+        outline-offset: 2px;
+    }
+}
