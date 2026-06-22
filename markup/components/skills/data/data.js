@@ -2,107 +2,38 @@ const data = {
     skillAreas: [
         {
             title: {
+                default: 'Hyvä:'
+            },
+            skillGroups: [
+                [{default: 'Hyvä Themes'}],
+                [{default: 'Alpine.js'}],
+                [{default: 'Tailwind CSS'}],
+                [{default: 'Hyvä UI'}],
+                [{default: 'Magewire'}]
+            ]
+        },
+        {
+            title: {
                 default: 'Magento 2:'
             },
             skillGroups: [
-                [
-                    {
-                        en: 'XML Layout',
-                        ru: 'XML Лейаут',
-                        uk: 'XML Розмітка'
-                    }
-                ],
-                [
-                    {
-                        en: 'Fallback/Inheritance system',
-                        ru: 'Fallback/Inheritance система',
-                        uk: 'Fallback/Inheritance система'
-                    }
-                ],
-                [
-                    {
-                        default: 'Ui lib'
-                    },
-                    {
-                        default: 'Blank & Luma'
-                    }
-                ],
-                [
-                    {
-                        en: 'Custom modules development',
-                        ru: 'Разработка модулей',
-                        uk: 'Розробка модулів'
-                    }
-                ],
-                [
-                    {
-                        en: '3rd-party modules customization <br/> (Mirasvit, Amasty, Ubertheme, etc)',
-                        ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)',
-                        uk: 'Кастомізація сторонніх модулів <br/> (Mirasvit, Amasty, Ubertheme тощо)'
-                    }
-                ],
-                [
-                    {
-                        en: 'PHP plugins',
-                        ru: 'PHP плагины',
-                        uk: 'PHP плагіни'
-                    },
-                    {
-                        default: 'ViewModels'
-                    }
-                ],
-                [
-                    {
-                        en: 'Widgets (widget.xml)',
-                        ru: 'Виджеты (widget.xml)',
-                        uk: 'Віджети (widget.xml)'
-                    }
-                ],
-                [
-                    {
-                        en: 'Ui components',
-                        ru: 'Ui компоненты',
-                        uk: 'Ui компоненти'
-                    },
-                    {
-                        default: 'Js Layout'
-                    }
-                ],
-                [
-                    {
-                        en: 'JS mixins',
-                        ru: 'JS миксины',
-                        uk: 'JS міксини'
-                    }
-                ],
-                [
-                    {
-                        en: 'r.js bundling (e.g. magepack)',
-                        ru: 'r.js бандлинг (напр. magepack)',
-                        uk: 'r.js бандлінг (напр. magepack)'
-                    }
-                ],
-                [
-                    {
-                        en: 'Emails customization',
-                        ru: 'Кастомизация писем',
-                        uk: 'Кастомізація листів'
-                    }
-                ],
-                [
-                    {
-                        en: 'RTL themes implementation',
-                        ru: 'Реализация RTL тем',
-                        uk: 'Реалізація RTL тем'
-                    }
-                ],
-                [
-                    {
-                        en: 'Magento 1 (themes, modules)',
-                        ru: 'Magento 1 (темы, модули)',
-                        uk: 'Magento 1 (теми, модулі)'
-                    }
-                ]
+                [{en: 'XML Layout', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
+                [{en: 'Fallback/Inheritance system', ru: 'Fallback/Inheritance система', uk: 'Fallback/Inheritance система'}],
+                [{default: 'Ui lib / Blank / Luma'}],
+                [{en: 'Custom modules development', ru: 'Разработка модулей', uk: 'Розробка модулів'}],
+                [{
+                    en: '3rd-party modules customisation <br/> (Mirasvit, Amasty, Ubertheme, etc)',
+                    ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)',
+                    uk: 'Кастомізація сторонніх модулів <br/> (Mirasvit, Amasty, Ubertheme тощо)'
+                }],
+                [{en: 'PHP DI, Plugins ViewModels', ru: 'PHP DI, Плагины ViewModels', uk: 'PHP DI, Плагіни ViewModels'}],
+                [{en: 'Widgets (widget.xml)', ru: 'Виджеты (widget.xml)', uk: 'Віджети (widget.xml)'}],
+                [{default: 'Magewire'}],
+                [{en: 'Ui components', ru: 'Ui компоненты', uk: 'Ui компоненти'}],
+                [{en: 'RequireJS JS mixins', ru: 'RequireJS JS миксины', uk: 'RequireJS JS міксини'}],
+                [{en: 'Emails customisation', ru: 'Кастомизация писем', uk: 'Кастомізація листів'}],
+                [{en: 'RTL themes implementation', ru: 'Реализация RTL тем', uk: 'Реалізація RTL тем'}],
+                [{en: 'Magento 1 (themes, modules)', ru: 'Magento 1 (темы, модули)', uk: 'Magento 1 (теми, модулі)'}]
             ]
         },
         {
@@ -112,118 +43,14 @@ const data = {
                 uk: 'Фронт-енд:'
             },
             skillGroups: [
-                [
-                    {
-                        default: 'HTML'
-                    },
-                    {
-                        default: 'CSS'
-                    },
-                    {
-                        default: 'SCSS'
-                    },
-                    {
-                        default: 'LESS'
-                    }
-                ],
-                [
-                    {
-                        default: 'BEM'
-                    },
-                    {
-                        en: 'Modular markup',
-                        ru: 'Модульная вёрстка',
-                        uk: 'Модульна верстка'
-                    }
-                ],
-                [
-                    {
-                        en: 'Semantic markup',
-                        ru: 'Семантическая вёрстка',
-                        uk: 'Семантична верстка'
-                    },
-                    {
-                        en: 'Accessibility',
-                        ru: 'Доступность',
-                        uk: 'Доступність'
-                    }
-                ],
-                [
-                    {
-                        en: 'RTL Implementation',
-                        ru: 'Реализация RTL',
-                        uk: 'Реалізація RTL'
-                    }
-                ],
-                [
-                    {
-                        default: 'JS'
-                    },
-                    {
-                        default: 'jQuery'
-                    },
-                    {
-                        default: 'Knockout'
-                    }
-                ],
-                [
-                    {
-                        default: 'RequireJS'
-                    },
-                    {
-                        default: 'JS Bundling'
-                    }
-                ],
-                [
-                    {
-                        default: 'Handlebars'
-                    },
-                    {
-                        default: 'Jade'
-                    }
-                ],
-                [
-                    {
-                        default: 'NPM'
-                    },
-                    {
-                        default: 'Grunt'
-                    },
-                    {
-                        default: 'Gulp'
-                    }
-                ],
-                [
-                    {
-                        default: 'Photoshop'
-                    },
-                    {
-                        default: 'Zeplin'
-                    },
-                    {
-                        default: 'Avocode'
-                    }
-                ],
-                [
-                    {
-                        default: 'SVG'
-                    },
-                    {
-                        default: 'Font Icons'
-                    }
-                ],
-                [
-                    {
-                        default: 'Pixel perfect'
-                    }
-                ],
-                [
-                    {
-                        en: 'Optimization for Google Pagespeed <br> (this page has 100 score)',
-                        ru: 'Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)',
-                        uk: 'Оптимізація для Google Pagespeed <br> (результат цієї сторінки 100 балів)'
-                    }
-                ]
+                [{en: 'Accessibility / Semantic HTML5', ru: 'Доступность / Семантический HTML5', uk: 'Доступність / Семантичний HTML5'}],
+                [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
+                [{default: 'jQuery / Knockout'}],
+                [{default: 'RequireJS JS'}],
+                [{default: 'NPM / Grunt / Gulp'}],
+                [{default: 'SVG / Font Icons'}],
+                [{default: 'Pixel perfect'}],
+                [{en: 'Optimization for Google Pagespeed', ru: 'Оптимизация для Google Pagespeed', uk: 'Оптимізація для Google Pagespeed'}]
             ]
         },
         {
@@ -233,33 +60,22 @@ const data = {
                 uk: 'Бек-енд:'
             },
             skillGroups: [
-                [
-                    {
-                        default: 'Composer'
-                    }
-                ],
-                [
-                    {
-                        default: 'PHP'
-                    },
-                    {
-                        en: 'PHP Debug',
-                        ru: 'PHP Дебаг',
-                        uk: 'PHP Дебаг'
-                    },
-                    {
-                        en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
-                        ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
-                        uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
-                    }
-                ],
-                [
-                    {
-                        en: 'Basic MySQL',
-                        ru: 'Базовый MySQL',
-                        uk: 'Базовий MySQL'
-                    }
-                ]
+                [{default: 'Composer'}],
+                [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
+                    en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
+                    ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
+                    uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
+                }],
+                [{en: 'Basic MySQL', ru: 'Базовый MySQL', uk: 'Базовий MySQL'}]
+            ]
+        },
+        {
+            title: {
+                default: 'Flow:'
+            },
+            skillGroups: [
+                [{default: 'Docker'}],
+                [{en: 'Git/GitHub Actions, CI/CD for Hyvä/Tailwind builds', ru: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind сборок', uk: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind збірок'}]
             ]
         },
         {
@@ -269,34 +85,8 @@ const data = {
                 uk: 'Інше:'
             },
             skillGroups: [
-                [
-                    {
-                        default: 'Jira'
-                    },
-                    {
-                        default: 'Git'
-                    }
-                ],
-                [
-                    {
-                        default: 'Linux'
-                    },
-                    {
-                        default: 'Win 10 + WSL'
-                    }
-                ],
-                [
-                    {
-                        en: 'Semantic versioning',
-                        ru: 'Семант. верс.',
-                        uk: 'Семант. верс.'
-                    },
-                    {
-                        en: 'Keeping a changelog',
-                        ru: 'Ведение changelog',
-                        uk: 'Ведення changelog'
-                    }
-                ]
+                [{default: 'Jira'}],
+                [{en: 'Semantic versioning', ru: 'Семант. верс.', uk: 'Семант. верс.'}, {en: 'Keeping a changelog', ru: 'Ведение changelog', uk: 'Ведення changelog'}]
             ]
         }
     ]
