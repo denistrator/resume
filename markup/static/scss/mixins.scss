@@ -49,3 +49,30 @@
     height: 1px; width: 1px;
     margin: -1px; padding: 0; border: 0;
 }
+
+%section-list {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+%section-list-item {
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+%section-list-item-title {
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+%section-list-item-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
