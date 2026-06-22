@@ -11,7 +11,7 @@ $links-size: 40px !default;
 
     &-name {
         text-transform: uppercase;
-        font-size: 32px;
+        font-size: 38px;
         margin: 0;
         line-height: 1.2;
         font-weight: 300;
@@ -19,7 +19,7 @@ $links-size: 40px !default;
 
     &-pos {
         margin: 4px 0 0;
-        color: #4c4b4e;
+        color: $text-secondary;
 
         &:before {
             content: '//';
@@ -29,8 +29,8 @@ $links-size: 40px !default;
 
     &-languages {
         margin: 2px 0 0;
-        font-size: 12px;
-        color: #4c4b4e;
+        font-size: 14px;
+        color: $text-secondary;
     }
 
     &-links {
@@ -42,7 +42,7 @@ $links-size: 40px !default;
         &-item {
             display: inline-block;
             overflow: hidden;
-            border: 3px solid #000;
+            border: 3px solid $text-primary;
             margin: 3px;
             font-size: initial;
             max-width: $links-size;
@@ -102,7 +102,7 @@ $links-size: 40px !default;
             display: table-cell;
             vertical-align: middle;
             padding: 0 8px;
-            font-size: 13px;
+            font-size: 15px;
             font-family: $font-family-base;
         }
     }
