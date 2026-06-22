@@ -4,7 +4,8 @@ const data = {
             link: 'https://www.timberland.co.il/',
             title: {
                 en: 'Timberland (Israel)',
-                ru: 'Timberland (Израиль)'
+                ru: 'Timberland (Израиль)',
+                uk: 'Timberland (Ізраїль)'
             },
             image: {
                 path: 'project-timberland',
@@ -24,7 +25,8 @@ const data = {
             link: 'https://www.nautica.co.il/',
             title: {
                 en: 'Nautica (Israel)',
-                ru: 'Nautica (Израиль)'
+                ru: 'Nautica (Израиль)',
+                uk: 'Nautica (Ізраїль)'
             },
             image: {
                 path: 'project-nautica',
@@ -44,7 +46,8 @@ const data = {
             link: 'https://www.layam.com/',
             title: {
                 en: 'Layam Sakal (Israel)',
-                ru: 'Layam Sakal (Израиль)'
+                ru: 'Layam Sakal (Израиль)',
+                uk: 'Layam Sakal (Ізраїль)'
             },
             image: {
                 path: 'project-layam',
@@ -64,7 +67,8 @@ const data = {
             link: 'http://denistrator.esy.es/mountains',
             title: {
                 en: 'Mountains',
-                ru: 'Mountains'
+                ru: 'Mountains',
+                uk: 'Mountains'
             },
             image: {
                 path: 'project-1',
@@ -79,7 +83,8 @@ const data = {
             link: 'http://denistrator.esy.es/modest',
             title: {
                 en: 'Modest',
-                ru: 'Modest'
+                ru: 'Modest',
+                uk: 'Modest'
             },
             image: {
                 path: 'project-2',
@@ -94,7 +99,8 @@ const data = {
             link: 'http://denistrator.esy.es/tajam',
             title: {
                 en: 'Tajam',
-                ru: 'Tajam'
+                ru: 'Tajam',
+                uk: 'Tajam'
             },
             image: {
                 path: 'project-3',
@@ -110,7 +116,8 @@ const data = {
             link: 'http://denistrator.esy.es/yellow_moon',
             title: {
                 en: 'Yellow Moon',
-                ru: 'Yellow Moon'
+                ru: 'Yellow Moon',
+                uk: 'Yellow Moon'
             },
             image: {
                 path: 'project-4',
@@ -125,7 +132,8 @@ const data = {
             link: 'http://denistrator.esy.es/naturetour/',
             title: {
                 en: 'Naturetour',
-                ru: 'Naturetour'
+                ru: 'Naturetour',
+                uk: 'Naturetour'
             },
             image: {
                 path: 'project-no-image',
