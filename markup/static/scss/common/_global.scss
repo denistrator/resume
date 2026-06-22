@@ -81,3 +81,27 @@ button {
         outline-offset: 2px;
     }
 }
+
+@media print {
+    body {
+        background: none !important;
+    }
+
+    .page-wrapper {
+        box-shadow: none !important;
+        background: none !important;
+    }
+
+    .skip-link,
+    .no-print {
+        display: none !important;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+}
