@@ -1,0 +1,17 @@
+.achievements {
+    &-list {
+        @extend %section-list;
+    }
+
+    &-item {
+        @extend %section-list-item;
+    }
+
+    &-title {
+        @extend %section-list-item-title;
+    }
+
+    &-desc {
+        @extend %section-list-item-desc;
+    }
+}

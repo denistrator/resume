@@ -1,45 +1,28 @@
 <section class="section experience">
     <h2 class="title section-title">
-        <span class="lang-ru">Опыт</span>
-        <span class="lang-en">Experience</span>
-        <span class="lang-uk">Досвід</span>
+        <span class="lang-ru">Работа</span>
+        <span class="lang-en">Work Experience</span>
+        <span class="lang-uk">Робота</span>
     </h2>
     <p class="desc">
-        <span class="lang-ru">Использование технологий. Работа в команде</span>
-        <span class="lang-en">Using technologies. Team work</span>
-        <span class="lang-uk">Використання технологій. Робота в команді</span>
+        <span class="lang-ru">Magento 2 Фронтенд Разработчик | 10+ лет опыта</span>
+        <span class="lang-en">Magento 2 Frontend Developer | 10+ Years Experience</span>
+        <span class="lang-uk">Magento 2 Фронтенд Розробник | 10+ років досвіду</span>
     </p>
     <ul class="experience-list">
+        {{#each items}}
         <li class="experience-item">
-            <span class="lang-ru">Вёрстка HTML/CSS &mdash; 6 года.</span>
-            <span class="lang-en">HTML/CSS Markup - 6 years.</span>
-            <span class="lang-uk">Верстка HTML/CSS &mdash; 6 років.</span>
+            <h3 class="experience-title">
+                <span class="lang-en">{{{title.en}}}</span>
+                <span class="lang-ru">{{{title.ru}}}</span>
+                <span class="lang-uk">{{{title.uk}}}</span>
+            </h3>
+            <p class="experience-desc">
+                <span class="lang-en">{{{description.en}}}</span>
+                <span class="lang-ru">{{{description.ru}}}</span>
+                <span class="lang-uk">{{{description.uk}}}</span>
+            </p>
         </li>
-        <li class="experience-item">
-            <span class="lang-ru">Фронтенд для Magento 1/2 &mdash; 2,5 года.</span>
-            <span class="lang-en">Frontend for Magento 1/2 &mdash; 2.5 years.</span>
-            <span class="lang-uk">Фронтенд для Magento 1/2 &mdash; 2,5 роки.</span>
-        </li>
-        <li class="experience-item">
-            <span class="lang-ru">Работа в команде &mdash; 2.5 год.</span>
-            <span class="lang-en">Team work - 2.5 year.</span>
-            <span class="lang-uk">Робота в команді &mdash; 2,5 роки.</span>
-        </li>
-        <li class="experience-item">
-            <span class="lang-ru">14+ свёрстанных макетов за время самообучения.</span>
-            <span class="lang-en">14+ psd layouts made during self education.</span>
-            <span class="lang-uk">14+ верстаних макетів за час самостійного навчання.</span>
-        </li>
-        <li class="experience-item">
-            <span class="lang-ru">11 свёрстанных макетов за время обучения на курсе</span>
-            <span class="lang-en">11 psd layouts made during studying on course</span>
-            <span class="lang-uk">11 верстаних макетів за час навчання на курсі</span>
-        &quot;<a href="http://spalah.ua/kh/school/advanced-html-css/">Advanced HTML/CSS</a>&quot;
-        </li>
+        {{/each}}
     </ul>
-    <p>
-		<span class="lang-ru">Есть опыт вёрстки под Angular. Сейчас выполняю фронтенд задачи для Magento 1/2.</span>
-        <span class="lang-en">Have experience in markup for Angular. Currently developing FE for Magento 1/2.</span>
-        <span class="lang-uk">Маю досвід верстки під Angular. Наразі виконую фронтенд завдання для Magento 1/2.</span>
-    </p>
 </section>

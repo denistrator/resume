@@ -1,0 +1,28 @@
+<section class="section achievements">
+    <h2 class="title section-title">
+        <span class="lang-ru">Достижения</span>
+        <span class="lang-en">Achievements</span>
+        <span class="lang-uk">Досягнення</span>
+    </h2>
+    <p class="desc">
+        <span class="lang-ru">Ключевые результаты и вклад в проекты</span>
+        <span class="lang-en">Key results and contributions to projects</span>
+        <span class="lang-uk">Ключові результати та внесок у проєкти</span>
+    </p>
+    <ul class="achievements-list">
+        {{#each items}}
+        <li class="achievements-item">
+            <h3 class="achievements-title">
+                <span class="lang-en">{{{title.en}}}</span>
+                <span class="lang-ru">{{{title.ru}}}</span>
+                <span class="lang-uk">{{{title.uk}}}</span>
+            </h3>
+            <p class="achievements-desc">
+                <span class="lang-en">{{{description.en}}}</span>
+                <span class="lang-ru">{{{description.ru}}}</span>
+                <span class="lang-uk">{{{description.uk}}}</span>
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</section>
