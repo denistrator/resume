@@ -92,18 +92,6 @@ $links-size: 30px !default;
             outline-offset: -2px;
         }
 
-        &:before {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-            min-width: 30px;
-            font-size: 24px;
-
-            @media print {
-                display: none;
-            }
-        }
-
         &-text {
             display: table-cell;
             vertical-align: middle;
@@ -111,6 +99,13 @@ $links-size: 30px !default;
             font-size: 13px;
             font-family: $font-family-base;
         }
+    }
+
+    &-icon {
+        display: block;
+        min-width: 30px;
+        height: 30px;
+        padding: 1px;
     }
 }
 
@@ -121,9 +116,17 @@ $links-size: 30px !default;
 }
 
 .reading-mode-toggle {
+    .icon-moon {
+        display: none;
+    }
+
     .dark & {
-        &:before {
-            content: "\e909";
+        .icon-sun {
+            display: none;
+        }
+
+        .icon-moon {
+            display: table-cell;
         }
     }
 }
