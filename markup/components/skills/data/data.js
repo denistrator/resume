@@ -8,13 +8,15 @@ const data = {
                 [
                     {
                         en: 'XML Layout',
-                        ru: 'XML Лейаут'
+                        ru: 'XML Лейаут',
+                        uk: 'XML Розмітка'
                     }
                 ],
                 [
                     {
                         en: 'Fallback/Inheritance system',
-                        ru: 'Fallback/Inheritance система'
+                        ru: 'Fallback/Inheritance система',
+                        uk: 'Fallback/Inheritance система'
                     }
                 ],
                 [
@@ -28,19 +30,22 @@ const data = {
                 [
                     {
                         en: 'Custom modules development',
-                        ru: 'Разработка модулей'
+                        ru: 'Разработка модулей',
+                        uk: 'Розробка модулів'
                     }
                 ],
                 [
                     {
                         en: '3rd-party modules customization <br/> (Mirasvit, Amasty, Ubertheme, etc)',
-                        ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)'
+                        ru: 'Кастомизация сторонних модулей <br/> (Mirasvit, Amasty, Ubertheme, и пр)',
+                        uk: 'Кастомізація сторонніх модулів <br/> (Mirasvit, Amasty, Ubertheme тощо)'
                     }
                 ],
                 [
                     {
                         en: 'PHP plugins',
-                        ru: 'PHP плагины'
+                        ru: 'PHP плагины',
+                        uk: 'PHP плагіни'
                     },
                     {
                         default: 'ViewModels'
@@ -49,13 +54,15 @@ const data = {
                 [
                     {
                         en: 'Widgets (widget.xml)',
-                        ru: 'Виджеты (widget.xml)'
+                        ru: 'Виджеты (widget.xml)',
+                        uk: 'Віджети (widget.xml)'
                     }
                 ],
                 [
                     {
                         en: 'Ui components',
-                        ru: 'Ui компоненты'
+                        ru: 'Ui компоненты',
+                        uk: 'Ui компоненти'
                     },
                     {
                         default: 'Js Layout'
@@ -64,31 +71,36 @@ const data = {
                 [
                     {
                         en: 'JS mixins',
-                        ru: 'JS миксины'
+                        ru: 'JS миксины',
+                        uk: 'JS міксини'
                     }
                 ],
                 [
                     {
                         en: 'r.js bundling (e.g. magepack)',
-                        ru: 'r.js бандлинг (напр. magepack)'
+                        ru: 'r.js бандлинг (напр. magepack)',
+                        uk: 'r.js бандлінг (напр. magepack)'
                     }
                 ],
                 [
                     {
                         en: 'Emails customization',
-                        ru: 'Кастомизация писем'
+                        ru: 'Кастомизация писем',
+                        uk: 'Кастомізація листів'
                     }
                 ],
                 [
                     {
                         en: 'RTL themes implementation',
-                        ru: 'Реализация RTL тем'
+                        ru: 'Реализация RTL тем',
+                        uk: 'Реалізація RTL тем'
                     }
                 ],
                 [
                     {
                         en: 'Magento 1 (themes, modules)',
-                        ru: 'Magento 1 (темы, модули)'
+                        ru: 'Magento 1 (темы, модули)',
+                        uk: 'Magento 1 (теми, модулі)'
                     }
                 ]
             ]
@@ -96,7 +108,8 @@ const data = {
         {
             title: {
                 en: 'Front-end:',
-                ru: 'Фронт-энд:'
+                ru: 'Фронт-энд:',
+                uk: 'Фронт-енд:'
             },
             skillGroups: [
                 [
@@ -119,23 +132,27 @@ const data = {
                     },
                     {
                         en: 'Modular markup',
-                        ru: 'Модульная вёрстка'
+                        ru: 'Модульная вёрстка',
+                        uk: 'Модульна верстка'
                     }
                 ],
                 [
                     {
                         en: 'Semantic markup',
-                        ru: 'Семантическая вёрстка'
+                        ru: 'Семантическая вёрстка',
+                        uk: 'Семантична верстка'
                     },
                     {
                         en: 'Accessibility',
-                        ru: 'Доступность'
+                        ru: 'Доступность',
+                        uk: 'Доступність'
                     }
                 ],
                 [
                     {
                         en: 'RTL Implementation',
-                        ru: 'Реализация RTL'
+                        ru: 'Реализация RTL',
+                        uk: 'Реалізація RTL'
                     }
                 ],
                 [
@@ -203,7 +220,8 @@ const data = {
                 [
                     {
                         en: 'Optimization for Google Pagespeed <br> (this page has 100 score)',
-                        ru: 'Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)'
+                        ru: 'Оптимизация для Google Pagespeed <br> (результат этой страницы 100 баллов)',
+                        uk: 'Оптимізація для Google Pagespeed <br> (результат цієї сторінки 100 балів)'
                     }
                 ]
             ]
@@ -211,7 +229,8 @@ const data = {
         {
             title: {
                 en: 'Back-end:',
-                ru: 'Бэк-энд:'
+                ru: 'Бэк-энд:',
+                uk: 'Бек-енд:'
             },
             skillGroups: [
                 [
@@ -225,17 +244,20 @@ const data = {
                     },
                     {
                         en: 'PHP Debug',
-                        ru: 'PHP Дебаг'
+                        ru: 'PHP Дебаг',
+                        uk: 'PHP Дебаг'
                     },
                     {
                         en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
-                        ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)'
+                        ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
+                        uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
                     }
                 ],
                 [
                     {
                         en: 'Basic MySQL',
-                        ru: 'Базовый MySQL'
+                        ru: 'Базовый MySQL',
+                        uk: 'Базовий MySQL'
                     }
                 ]
             ]
@@ -243,7 +265,8 @@ const data = {
         {
             title: {
                 en: 'Misc:',
-                ru: 'Прочее:'
+                ru: 'Прочее:',
+                uk: 'Інше:'
             },
             skillGroups: [
                 [
@@ -265,11 +288,13 @@ const data = {
                 [
                     {
                         en: 'Semantic versioning',
-                        ru: 'Семант. верс.'
+                        ru: 'Семант. верс.',
+                        uk: 'Семант. верс.'
                     },
                     {
                         en: 'Keeping a changelog',
-                        ru: 'Ведение changelog'
+                        ru: 'Ведение changelog',
+                        uk: 'Ведення changelog'
                     }
                 ]
             ]

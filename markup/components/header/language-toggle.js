@@ -4,7 +4,8 @@
 
     const languages = [
         'en',
-        'ru'
+        'ru',
+        'uk'
     ];
 
     $langToggle.addEventListener('click', switchLanguages, false);
