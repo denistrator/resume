@@ -88,6 +88,10 @@ $links-size: 30px !default;
         padding: 0;
         transition: color .25s linear;
 
+        &:focus-visible {
+            outline-offset: -2px;
+        }
+
         &:before {
             display: table-cell;
             vertical-align: middle;
@@ -121,5 +125,15 @@ $links-size: 30px !default;
         &:before {
             content: "\e909";
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header-links-item {
+        transition: none;
+    }
+
+    .header-link {
+        transition: none;
     }
 }

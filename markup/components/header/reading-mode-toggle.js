@@ -8,5 +8,8 @@
 
         $page.classList.toggle('light');
         $page.classList.toggle('dark');
+
+        const isDark = $page.classList.contains('dark');
+        $readingModeToggle.setAttribute('aria-pressed', String(isDark));
     }
 })();
