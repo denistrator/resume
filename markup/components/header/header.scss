@@ -1,7 +1,6 @@
 $links-size: 40px !default;
 
 .header {
-    @extend %cf;
     padding-top: in-perc(100, 780);
     margin-bottom: 15px;
 
@@ -9,8 +8,11 @@ $links-size: 40px !default;
         padding-top: 20px;
     }
 
-    &-text {
-        float: left;
+    &-main {
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
     }
 
     &-name {
@@ -36,19 +38,22 @@ $links-size: 40px !default;
 
     &-links {
         @extend %nl;
-        font-size: 0;
-        text-align: right;
-        margin: -3px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
 
         &-item {
-            display: inline-block;
             overflow: hidden;
             border: 3px solid $text-primary;
-            margin: 3px;
             font-size: initial;
             max-width: $links-size;
             min-width: $links-size + 6;
             transition: max-width .45s linear;
+
+            &--email {
+                display: flex;
+            }
 
             &:hover {
                 .header-link {
@@ -120,6 +125,49 @@ $links-size: 40px !default;
     &-text {
         font-size: 20px;
         font-weight: 500;
+    }
+}
+
+.copy-email-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity .2s;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &::after {
+        content: '✓';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: 700;
+        color: #22c55e;
+        visibility: hidden;
+    }
+
+    .copy-email-icon {
+    }
+
+    &.copied {
+        opacity: 1;
+
+        .copy-email-icon {
+            visibility: hidden;
+        }
+
+        &::after {
+            visibility: visible;
+        }
     }
 }
 

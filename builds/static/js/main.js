@@ -1,6 +1,25 @@
 "use strict";
 
 (function () {
+  var btn = document.querySelector('.copy-email-btn');
+  if (!btn) return;
+  var emailLink = document.querySelector('a[href^="mailto:"]');
+  if (!emailLink) return;
+  var email = emailLink.href.replace('mailto:', '');
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText(email).then(function () {
+      btn.classList.add('copied');
+      btn.setAttribute('aria-label', 'Email copied!');
+      setTimeout(function () {
+        btn.classList.remove('copied');
+        btn.setAttribute('aria-label', 'Copy email to clipboard');
+      }, 2000);
+    });
+  });
+})();
+"use strict";
+
+(function () {
   var $root = document.querySelector('html'),
     $langToggle = document.querySelector('.lang-toggle');
   var languages = ['en', 'ru', 'uk'];
