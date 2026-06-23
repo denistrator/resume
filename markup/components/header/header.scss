@@ -26,12 +26,6 @@ $links-size: 40px !default;
         }
     }
 
-    &-languages {
-        margin: 2px 0 0;
-        font-size: 14px;
-        color: $text-secondary;
-    }
-
     &-links {
         @extend %nl;
         font-size: 0;
