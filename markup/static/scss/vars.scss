@@ -1,23 +1,57 @@
 @use "sass:math";
 
-// colors — light mode (text on light bg)
-$text-primary: #1a1a1a;
-$text-secondary: #4a4a4a;
-$text-muted: #4f4f4f;
+// === CSS Custom Properties for Theming ===
+:root {
+    // Light mode (default)
+    --color-bg: #f0eef1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #4a4a4a;
+    --color-text-muted: #4f4f4f;
+    --color-border: #0a0a0a;
+    --color-link: #2563eb;
+    --color-link-hover: #1d4ed8;
+    --color-focus: #33b5e5;
+    --color-skip-bg: #fff;
+    --color-skip-text: #000;
+    --color-skip-outline: #000;
+    --color-scrollbar-track: #f0eef1;
+    --color-scrollbar-thumb: #4f4f4f;
+    --color-skill-separator: #4a4a4a;
+    --color-section-border: #0a0a0a;
+    --transition-theme: 200ms ease;
+}
 
-// colors — dark mode (text on dark bg)
-$text-primary-dark: #ffffff;
-$text-secondary-dark: #d4d4d4;
-$text-muted-dark: #a0a0a0;
+[data-theme="dark"] {
+    --color-bg: #0a0a0a;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #d4d4d4;
+    --color-text-muted: #a0a0a0;
+    --color-border: #ffffff;
+    --color-link: #60a5fa;
+    --color-link-hover: #93c5fd;
+    --color-skip-bg: #1a1a1a;
+    --color-skip-text: #ffffff;
+    --color-skip-outline: #ffffff;
+    --color-scrollbar-track: #1a1a1a;
+    --color-scrollbar-thumb: #a0a0a0;
+    --color-skill-separator: #d4d4d4;
+    --color-section-border: #ffffff;
+}
 
-// legacy names (keep for backward compat)
-$light: #f0eef1;
-$light2: #d4d4d4;
-$dark: #0a0a0a;
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-theme: 0ms;
+    }
+}
 
-// links
-$link-color: #2563eb;
-$link-color-hover: #1d4ed8;
+// === SCSS Variables (non-visual, backward compat) ===
+$text-primary: var(--color-text-primary);
+$text-secondary: var(--color-text-secondary);
+$text-muted: var(--color-text-muted);
+$light: var(--color-bg);
+$dark: var(--color-border);
+$link-color: var(--color-link);
+$link-color-hover: var(--color-link-hover);
 $link-decoration: underline;
 
 // typography

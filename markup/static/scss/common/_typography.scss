@@ -1,15 +1,10 @@
 @use "sass:color";
 
-$body-color: $text-primary !default;
-$body-bg: #fff !default;
-
 $font-size-base: 17px !default;
 $line-height-base: 1.6 !default;
 $font-family-base: $font-family-base !default;
 $margin-bottom-p: 12px !default;
 
-$link-color: $link-color !default;
-$link-color-hover: $link-color-hover !default;
 $link-decoration: underline !default;
 $link-decoration-hover: none !default;
 
@@ -24,11 +19,12 @@ $heading-font-size-5: 16px !default;
 $heading-font-size-6: 14px !default;
 
 body {
-    color: $body-color;
-    background-color: $body-bg;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
     font-size: $font-size-base;
     line-height: $line-height-base;
     font-family: $font-family-base;
+    transition: color var(--transition-theme), background-color var(--transition-theme);
 }
 
 p,
@@ -43,7 +39,7 @@ a {
     text-decoration: $link-decoration;
 
     &:hover {
-        color: $link-color-hover;
+        color: var(--color-link-hover);
         text-decoration: $link-decoration-hover;
     }
 

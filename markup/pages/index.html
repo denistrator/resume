@@ -3,13 +3,13 @@
 
 <head>
     {{> head/head head.defaults}}
+    {{> before-page-content/theme-switcher}}
 </head>
 
 <body class="page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     %=symbols=%
     <div class="page-wrapper">
-        {{> before-page-content/theme-switcher}}
         <div class="container">
             {{> header/header}}
         </div>

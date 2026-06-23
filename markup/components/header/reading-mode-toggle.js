@@ -1,15 +1,18 @@
-(function () {
-    const $readingModeToggle = document.querySelector('.reading-mode-toggle');
+(() => {
+    const toggle = document.querySelector('.reading-mode-toggle');
+    if (!toggle) return;
 
-    $readingModeToggle.addEventListener('click', switchReadingMode, false);
+    const html = document.documentElement;
 
-    function switchReadingMode() {
-        const $page = document.querySelector('.page');
+    const currentTheme = html.getAttribute('data-theme') || 'light';
+    toggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
 
-        $page.classList.toggle('light');
-        $page.classList.toggle('dark');
+    toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
 
-        const isDark = $page.classList.contains('dark');
-        $readingModeToggle.setAttribute('aria-pressed', String(isDark));
-    }
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.setAttribute('aria-pressed', String(next === 'dark'));
+    });
 })();

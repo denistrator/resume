@@ -9,19 +9,19 @@
     margin-bottom: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
-    background-color: $dark;
+    color: var(--color-text-primary);
+    background-color: transparent;
     background-clip: content-box;
     counter-reset: section-number;
+    transition: color var(--transition-theme);
 
     @media (max-width: 767px) {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .light & {
-        color: $dark;
-        background-color: transparent;
+    [data-theme="dark"] & {
+        color: var(--color-text-primary);
     }
 
     &:before {
@@ -35,6 +35,7 @@
         background-color: inherit;
         pointer-events: none;
         transform: skewY(-2deg);
+        transition: border-color var(--transition-theme), background-color var(--transition-theme);
 
         @media print {
             display: none;
@@ -46,13 +47,9 @@
         }
 
         @media (min-width: 768px) {
-            border-color: $dark;
+            border-color: var(--color-section-border);
             right: 40px;
             left: 40px;
-        }
-
-        .light & {
-            background-color: transparent;
         }
     }
 

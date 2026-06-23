@@ -4,14 +4,13 @@
 @import "common/browser-ui";
 @import "common/typography";
 
-//noinspection CssOverwrittenProperties
 body {
     position: relative;
     min-height: 100%;
     min-height: 100vh;
 
     @media screen and (min-width: 768px) {
-        background-image: linear-gradient(-45deg, $light2 50%, $dark 50%);
+        background-image: linear-gradient(-45deg, var(--color-bg) 50%, var(--color-border) 50%);
     }
 }
 
@@ -19,10 +18,9 @@ ul {
     padding-left: 0;
 }
 
-//noinspection CssOverwrittenProperties
 .page-wrapper {
-    background-color: $light;
-    background-color: rgba($light, 0.98);
+    background-color: color-mix(in srgb, var(--color-bg) 98%, transparent);
+    transition: background-color var(--transition-theme);
 
     @media screen and (min-width: 768px) {
         box-shadow: 0 6px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);

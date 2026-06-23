@@ -64,20 +64,21 @@ img {
         overflow: visible;
         margin: 0;
         padding: 8px 16px;
-        background: #fff;
-        color: #000;
+        background: var(--color-skip-bg);
+        color: var(--color-skip-text);
         font-size: 16px;
         font-weight: 700;
         text-decoration: none;
-        outline: 2px solid #000;
+        outline: 2px solid var(--color-skip-outline);
         outline-offset: 2px;
+        transition: background-color var(--transition-theme), color var(--transition-theme);
     }
 }
 
 a,
 button {
     &:focus-visible {
-        outline: 2px solid #33b5e5;
+        outline: 2px solid var(--color-focus);
         outline-offset: 2px;
     }
 }
