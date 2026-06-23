@@ -5,6 +5,10 @@ $links-size: 40px !default;
     padding-top: in-perc(100, 780);
     margin-bottom: 15px;
 
+    @media print {
+        padding-top: 20px;
+    }
+
     &-text {
         float: left;
     }
@@ -20,6 +24,10 @@ $links-size: 40px !default;
     &-pos {
         margin: 4px 0 0;
         color: $text-secondary;
+
+        & + & {
+            margin-top: -3px;
+        }
 
         &:before {
             content: '//';
