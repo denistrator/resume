@@ -12,6 +12,10 @@
         padding-right: 15px;
     }
 
+    @media print {
+        display: none;
+    }
+
     &:before,
     &:after {
         content: '';

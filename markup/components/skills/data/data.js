@@ -17,7 +17,7 @@ const data = {
                 default: 'Magento 2:'
             },
             skillGroups: [
-                [{en: 'XML Layout', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
+                [{en: 'XML Layouts', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
                 [{en: 'Fallback/Inheritance system', ru: 'Fallback/Inheritance система', uk: 'Fallback/Inheritance система'}],
                 [{default: 'Ui lib / Blank / Luma'}],
                 [{en: 'Custom modules development', ru: 'Разработка модулей', uk: 'Розробка модулів'}],
@@ -28,11 +28,9 @@ const data = {
                 }],
                 [{en: 'PHP DI, Plugins ViewModels', ru: 'PHP DI, Плагины ViewModels', uk: 'PHP DI, Плагіни ViewModels'}],
                 [{en: 'Widgets (widget.xml)', ru: 'Виджеты (widget.xml)', uk: 'Віджети (widget.xml)'}],
-                [{default: 'Magewire'}],
-                [{en: 'Ui components', ru: 'Ui компоненты', uk: 'Ui компоненти'}],
-                [{en: 'RequireJS JS mixins', ru: 'RequireJS JS миксины', uk: 'RequireJS JS міксини'}],
+                [{en: 'UI components', ru: 'UI компоненты', uk: 'UI компоненти'}],
+                [{en: 'RequireJS / JS mixins', ru: 'RequireJS / JS миксины', uk: 'RequireJS / JS міксини'}],
                 [{en: 'Emails customisation', ru: 'Кастомизация писем', uk: 'Кастомізація листів'}],
-                [{en: 'RTL themes implementation', ru: 'Реализация RTL тем', uk: 'Реалізація RTL тем'}],
                 [{en: 'Magento 1 (themes, modules)', ru: 'Magento 1 (темы, модули)', uk: 'Magento 1 (теми, модулі)'}]
             ]
         },
@@ -46,7 +44,6 @@ const data = {
                 [{en: 'Accessibility / Semantic HTML5', ru: 'Доступность / Семантический HTML5', uk: 'Доступність / Семантичний HTML5'}],
                 [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
                 [{default: 'jQuery / Knockout'}],
-                [{default: 'RequireJS JS'}],
                 [{default: 'NPM / Grunt / Gulp'}],
                 [{default: 'SVG / Font Icons'}],
                 [{default: 'Pixel perfect'}],
@@ -66,7 +63,7 @@ const data = {
                     ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
                     uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
                 }],
-                [{en: 'Basic MySQL', ru: 'Базовый MySQL', uk: 'Базовий MySQL'}]
+                [{default: 'MySQL'}]
             ]
         },
         {
@@ -74,7 +71,7 @@ const data = {
                 default: 'Flow:'
             },
             skillGroups: [
-                [{default: 'Docker'}],
+                [{default: 'Docker / DDEV'}],
                 [{en: 'Git/GitHub Actions, CI/CD for Hyvä/Tailwind builds', ru: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind сборок', uk: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind збірок'}]
             ]
         },
