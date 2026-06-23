@@ -1,11 +1,15 @@
 <script>
-    (function () {
-        const userTime = new Date(),
-            $page = document.querySelector('.page');
-        if (userTime.getHours() > 10 && userTime.getHours() < 16) {
-            $page.classList.toggle('light');
-        } else {
-            $page.classList.toggle('dark');
-        }
+    (() => {
+        const html = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+        const theme = stored || (prefersDark.matches ? 'dark' : 'light');
+        html.setAttribute('data-theme', theme);
+
+        prefersDark.addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        });
     })();
 </script>

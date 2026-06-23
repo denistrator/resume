@@ -27,11 +27,8 @@
         & + & {
             &:before {
                 content: ' / ';
-                color: $text-muted;
-
-                .light & {
-                    color: $text-secondary;
-                }
+                color: var(--color-skill-separator);
+                transition: color var(--transition-theme);
             }
         }
     }

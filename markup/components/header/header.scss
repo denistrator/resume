@@ -25,7 +25,8 @@ $links-size: 40px !default;
 
     &-pos {
         margin: 4px 0 0;
-        color: $text-secondary;
+        color: var(--color-text-secondary);
+        transition: color var(--transition-theme);
 
         & + & {
             margin-top: -3px;
@@ -45,11 +46,11 @@ $links-size: 40px !default;
 
         &-item {
             overflow: hidden;
-            border: 3px solid $text-primary;
+            border: 3px solid var(--color-border);
             font-size: initial;
             max-width: $links-size;
             min-width: $links-size + 6;
-            transition: max-width .45s linear;
+            transition: max-width .45s linear, border-color var(--transition-theme);
 
             &--email {
                 display: flex;
@@ -144,7 +145,7 @@ $links-size: 40px !default;
     }
 
     &::after {
-        content: '✓';
+        content: '\2713';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -176,7 +177,7 @@ $links-size: 40px !default;
         display: none;
     }
 
-    .dark & {
+    [data-theme="dark"] & {
         .icon-sun {
             display: none;
         }

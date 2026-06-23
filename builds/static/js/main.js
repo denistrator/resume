@@ -34,14 +34,17 @@
 })();
 "use strict";
 
-(function () {
-  const $readingModeToggle = document.querySelector('.reading-mode-toggle');
-  $readingModeToggle.addEventListener('click', switchReadingMode, false);
-  function switchReadingMode() {
-    const $page = document.querySelector('.page');
-    $page.classList.toggle('light');
-    $page.classList.toggle('dark');
-    const isDark = $page.classList.contains('dark');
-    $readingModeToggle.setAttribute('aria-pressed', String(isDark));
-  }
+(() => {
+  const toggle = document.querySelector('.reading-mode-toggle');
+  if (!toggle) return;
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute('data-theme') || 'light';
+  toggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggle.setAttribute('aria-pressed', String(next === 'dark'));
+  });
 })();

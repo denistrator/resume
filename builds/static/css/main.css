@@ -248,6 +248,47 @@ button:-moz-focusring,
 /* Mixins and vars for sprite generation */
 /* Scss for used fonts */
 /* Vars, which are specific for current project */
+:root {
+  --color-bg: #f0eef1;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #4f4f4f;
+  --color-border: #0a0a0a;
+  --color-link: #2563eb;
+  --color-link-hover: #1d4ed8;
+  --color-focus: #33b5e5;
+  --color-skip-bg: #fff;
+  --color-skip-text: #000;
+  --color-skip-outline: #000;
+  --color-scrollbar-track: #f0eef1;
+  --color-scrollbar-thumb: #4f4f4f;
+  --color-skill-separator: #4a4a4a;
+  --color-section-border: #0a0a0a;
+  --transition-theme: 200ms ease;
+}
+
+[data-theme=dark] {
+  --color-bg: #0a0a0a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d4d4d4;
+  --color-text-muted: #a0a0a0;
+  --color-border: #ffffff;
+  --color-link: #60a5fa;
+  --color-link-hover: #93c5fd;
+  --color-skip-bg: #1a1a1a;
+  --color-skip-text: #ffffff;
+  --color-skip-outline: #ffffff;
+  --color-scrollbar-track: #1a1a1a;
+  --color-scrollbar-thumb: #a0a0a0;
+  --color-skill-separator: #d4d4d4;
+  --color-section-border: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-theme: 0ms;
+  }
+}
 /* Styles for UI-elements */
 /* Common styles for current project */
 html {
@@ -310,18 +351,19 @@ img {
   overflow: visible;
   margin: 0;
   padding: 8px 16px;
-  background: #fff;
-  color: #000;
+  background: var(--color-skip-bg);
+  color: var(--color-skip-text);
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  outline: 2px solid #000;
+  outline: 2px solid var(--color-skip-outline);
   outline-offset: 2px;
+  transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #33b5e5;
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
 
@@ -391,11 +433,15 @@ html[lang=uk] .lang-ru {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f0eef1;
+  background-color: var(--color-scrollbar-track);
+  -webkit-transition: background-color var(--transition-theme);
+  transition: background-color var(--transition-theme);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4f4f4f;
+  background-color: var(--color-scrollbar-thumb);
+  -webkit-transition: background-color var(--transition-theme);
+  transition: background-color var(--transition-theme);
 }
 
 ::-webkit-resizer {
@@ -408,12 +454,18 @@ html[lang=uk] .lang-ru {
   width: 8px;
 }
 
+* {
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+  scrollbar-width: thin;
+}
+
 body {
-  color: #1a1a1a;
-  background-color: #fff;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
   font-size: 17px;
   line-height: 1.6;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  transition: color var(--transition-theme), background-color var(--transition-theme);
 }
 
 p,
@@ -428,7 +480,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #1d4ed8;
+  color: var(--color-link-hover);
   text-decoration: none;
 }
 @media print {
@@ -475,7 +527,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    background-image: linear-gradient(-45deg, #d4d4d4 50%, #0a0a0a 50%);
+    background-image: linear-gradient(-45deg, var(--color-bg) 50%, var(--color-border) 50%);
   }
 }
 
@@ -484,8 +536,8 @@ ul {
 }
 
 .page-wrapper {
-  background-color: #f0eef1;
-  background-color: rgba(240, 238, 241, 0.98);
+  background-color: color-mix(in srgb, var(--color-bg) 98%, transparent);
+  transition: background-color var(--transition-theme);
 }
 @media screen and (min-width: 768px) {
   .page-wrapper {
@@ -522,8 +574,9 @@ ul {
   z-index: -1;
   left: 0;
   right: 0.5px;
-  border: 2px solid #0a0a0a;
+  border: 2px solid var(--color-border);
   pointer-events: none;
+  transition: border-color var(--transition-theme);
 }
 .footer:before {
   top: 0;
@@ -571,7 +624,8 @@ ul {
 }
 .header-pos {
   margin: 4px 0 0;
-  color: #4a4a4a;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-theme);
 }
 .header-pos + .header-pos {
   margin-top: -3px;
@@ -587,11 +641,11 @@ ul {
 }
 .header-links-item {
   overflow: hidden;
-  border: 3px solid #1a1a1a;
+  border: 3px solid var(--color-border);
   font-size: initial;
   max-width: 40px;
   min-width: 46px;
-  transition: max-width 0.45s linear;
+  transition: max-width 0.45s linear, border-color var(--transition-theme);
 }
 .header-links-item--email {
   display: flex;
@@ -699,10 +753,10 @@ ul {
 .reading-mode-toggle .icon-moon {
   display: none;
 }
-.dark .reading-mode-toggle .icon-sun {
+[data-theme=dark] .reading-mode-toggle .icon-sun {
   display: none;
 }
-.dark .reading-mode-toggle .icon-moon {
+[data-theme=dark] .reading-mode-toggle .icon-moon {
   display: table-cell;
 }
 
@@ -744,10 +798,11 @@ ul {
   margin-bottom: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
-  background-color: #0a0a0a;
+  color: var(--color-text-primary);
+  background-color: transparent;
   background-clip: content-box;
   counter-reset: section-number;
+  transition: color var(--transition-theme);
 }
 @media (max-width: 767px) {
   .sections {
@@ -755,9 +810,8 @@ ul {
     padding-right: 0;
   }
 }
-.light .sections {
-  color: #0a0a0a;
-  background-color: transparent;
+[data-theme=dark] .sections {
+  color: var(--color-text-primary);
 }
 .sections:before {
   content: "";
@@ -770,6 +824,7 @@ ul {
   background-color: inherit;
   pointer-events: none;
   transform: skewY(-2deg);
+  transition: border-color var(--transition-theme), background-color var(--transition-theme);
 }
 @media print {
   .sections:before {
@@ -784,13 +839,10 @@ ul {
 }
 @media (min-width: 768px) {
   .sections:before {
-    border-color: #0a0a0a;
+    border-color: var(--color-section-border);
     right: 40px;
     left: 40px;
   }
-}
-.light .sections:before {
-  background-color: transparent;
 }
 @media (max-width: 767px) {
   .sections-main, .sections-aside {
@@ -839,10 +891,8 @@ ul {
 }
 .section .desc {
   font-size: 14px;
-  color: #4f4f4f;
-}
-.dark .section .desc {
-  color: #d4d4d4;
+  color: var(--color-text-muted);
+  transition: color var(--transition-theme);
 }
 
 .skills-areas {
@@ -865,10 +915,8 @@ ul {
 }
 .skills-skill + .skills-skill:before {
   content: " / ";
-  color: #4f4f4f;
-}
-.light .skills-skill + .skills-skill:before {
-  color: #4a4a4a;
+  color: var(--color-skill-separator);
+  transition: color var(--transition-theme);
 }
 
 /* Additional style files. */
