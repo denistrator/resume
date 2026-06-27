@@ -20,6 +20,10 @@
             return;
         }
 
+        tooltip.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
         trigger.addEventListener('click', (e) => {
             e.stopPropagation();
             const isOpen = tooltip.classList.contains('is-open');

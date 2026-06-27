@@ -3,7 +3,6 @@ const data = {
         {
             name: { en: 'English', ru: 'Английский', uk: 'Англійська' },
             level: { en: 'B2 — Upper Intermediate', ru: 'B2 — Выше среднего', uk: 'B2 — Вище середнього' },
-            flag: '🇬🇧',
             toefl: {
                 total: 90,
                 maxTotal: 120,
@@ -19,13 +18,11 @@ const data = {
         },
         {
             name: { en: 'Ukrainian', ru: 'Украинский', uk: 'Українська' },
-            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' },
-            flag: '🇺🇦'
+            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' }
         },
         {
             name: { en: 'Russian', ru: 'Русский', uk: 'Російська' },
-            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' },
-            flag: '🇷🇺'
+            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' }
         }
     ]
 };

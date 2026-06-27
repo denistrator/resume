@@ -5,10 +5,15 @@
         <span class="lang-uk">Мови</span>
     </h2>
 
+    <p class="desc languages-desc">
+        <span class="lang-ru">Владение языками</span>
+        <span class="lang-en">Language proficiency</span>
+        <span class="lang-uk">Володіння мовами</span>
+    </p>
+
     <ul class="languages-list">
         {{#each languages}}
         <li class="languages-item">
-            <span class="languages-flag">{{flag}}</span>
             <span class="languages-name">
                 <span class="lang-ru">{{name.ru}}</span>
                 <span class="lang-en">{{name.en}}</span>
@@ -28,11 +33,9 @@
                 </span>
                 <span class="toefl-tooltip" role="tooltip" aria-hidden="true">
                     <span class="toefl-tooltip-header">
-                        <span class="lang-ru">Уровень CEFR {{toefl.cefr}} и TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
-                        <span class="lang-en">CEFR Level {{toefl.cefr}} and TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
-                        <span class="lang-uk">Рівень CEFR {{toefl.cefr}} та TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
+                        <span>TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
                     </span>
-                    <span class="toefl-tooltip-date">TOEFL (Magoosh) {{toefl.testDate}}</span>
+                    <span class="toefl-tooltip-date">{{toefl.testDate}}</span>
                     <span class="toefl-chart">
                         {{#each toefl.sections}}
                         <span class="toefl-row">
