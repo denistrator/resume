@@ -1,18 +1,15 @@
 <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>{{pageTitle}}</title>
 <meta content="{{pageDescription}}" name="description">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="telephone=no" name="format-detection">
-<meta name="HandheldFriendly" content="true">
-<meta name="theme-color" content="{{themeColor}}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0eef1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 
 <link rel="manifest" href="manifest.json">
 
 {{> head/favicon }}
-{{> head/preconnects }}
 
 <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css" media="all" inline>
-<link href="%=static=%css/icomoon.css" rel="stylesheet" media="all" inline>
 
 {{> head/js-checker }}

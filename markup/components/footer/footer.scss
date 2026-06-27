@@ -12,6 +12,10 @@
         padding-right: 15px;
     }
 
+    @media print {
+        display: none;
+    }
+
     &:before,
     &:after {
         content: '';
@@ -20,8 +24,9 @@
         z-index: -1;
         left: 0;
         right: .5px;
-        border: 1px solid $dark;
+        border: 2px solid var(--color-border);
         pointer-events: none;
+        transition: border-color var(--transition-theme);
     }
 
     &:before {
@@ -43,7 +48,7 @@
     &-offer,
     &-mail {
         margin: 8px 0;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 300;
     }
 

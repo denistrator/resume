@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .sections {
     @include cf;
     @extend .container;
@@ -7,19 +9,19 @@
     margin-bottom: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
-    background-color: $dark;
+    color: var(--color-text-primary);
+    background-color: transparent;
     background-clip: content-box;
     counter-reset: section-number;
+    transition: color var(--transition-theme);
 
     @media (max-width: 767px) {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .light & {
-        color: $dark;
-        background-color: transparent;
+    [data-theme="dark"] & {
+        color: var(--color-text-primary);
     }
 
     &:before {
@@ -29,10 +31,15 @@
         z-index: -1;
         top: 0;
         bottom: 0;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         background-color: inherit;
         pointer-events: none;
         transform: skewY(-2deg);
+        transition: border-color var(--transition-theme), background-color var(--transition-theme);
+
+        @media print {
+            display: none;
+        }
 
         @media (max-width: 767px) {
             right: 0;
@@ -40,13 +47,9 @@
         }
 
         @media (min-width: 768px) {
-            border-color: $dark;
+            border-color: var(--color-section-border);
             right: 40px;
             left: 40px;
-        }
-
-        .light & {
-            background-color: transparent;
         }
     }
 
@@ -67,13 +70,13 @@
 
     &-main {
         @media (min-width: 768px) {
-            width: (100% / 3 * 2);
+            width: (math.div(100%, 3) * 2);
         }
     }
 
     &-aside {
         @media (min-width: 768px) {
-            width: (100% / 3);
+            width: (math.div(100%, 3));
         }
     }
 }

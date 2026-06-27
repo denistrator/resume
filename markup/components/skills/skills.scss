@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .skills {
     &-areas {
         margin-top: 0;
@@ -10,14 +12,14 @@
 
     &-group {
         margin-top: 0;
-        font-size: 14px;
+        font-size: 15px;
         list-style: disc;
     }
 
     &-group-label {
         margin-top: 0;
         margin-bottom: 3px;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 400;
     }
 
@@ -25,11 +27,8 @@
         & + & {
             &:before {
                 content: ' / ';
-                color: $light2;
-
-                .light & {
-                    color: lighten($dark, 35%);
-                }
+                color: var(--color-skill-separator);
+                transition: color var(--transition-theme);
             }
         }
     }

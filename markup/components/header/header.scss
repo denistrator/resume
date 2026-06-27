@@ -1,17 +1,23 @@
-$links-size: 30px !default;
+$links-size: 40px !default;
 
 .header {
-    @extend %cf;
     padding-top: in-perc(100, 780);
     margin-bottom: 15px;
 
-    &-text {
-        float: left;
+    @media print {
+        padding-top: 20px;
+    }
+
+    &-main {
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
     }
 
     &-name {
         text-transform: uppercase;
-        font-size: 32px;
+        font-size: 38px;
         margin: 0;
         line-height: 1.2;
         font-weight: 300;
@@ -19,29 +25,36 @@ $links-size: 30px !default;
 
     &-pos {
         margin: 4px 0 0;
-        color: #4c4b4e;
+        color: var(--color-text-secondary);
+        transition: color var(--transition-theme);
+
+        & + & {
+            margin-top: -3px;
+        }
 
         &:before {
             content: '//';
-            speak: none;
         }
     }
 
     &-links {
         @extend %nl;
-        font-size: 0;
-        text-align: right;
-        margin: -3px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
 
         &-item {
-            display: inline-block;
             overflow: hidden;
-            border: 3px solid #000;
-            margin: 3px;
+            border: 3px solid var(--color-border);
             font-size: initial;
             max-width: $links-size;
             min-width: $links-size + 6;
-            transition: max-width .45s linear;
+            transition: max-width .45s linear, border-color var(--transition-theme);
+
+            &--email {
+                display: flex;
+            }
 
             &:hover {
                 .header-link {
@@ -88,38 +101,118 @@ $links-size: 30px !default;
         padding: 0;
         transition: color .25s linear;
 
-        &:before {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-            min-width: 30px;
-            font-size: 24px;
-
-            @media print {
-                display: none;
-            }
+        &:focus-visible {
+            outline-offset: -2px;
         }
 
         &-text {
             display: table-cell;
             vertical-align: middle;
             padding: 0 8px;
-            font-size: 13px;
+            font-size: 15px;
             font-family: $font-family-base;
         }
+    }
+
+    &-icon {
+        display: block;
+        min-width: $links-size;
+        height: $links-size;
+        padding: 2px;
     }
 }
 
 .lang-toggle {
     &-text {
-        font-size: 17px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.copy-email-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity .2s;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &::after {
+        content: '\2713';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: 700;
+        color: #22c55e;
+        visibility: hidden;
+    }
+
+    .copy-email-icon {
+    }
+
+    &.copied {
+        opacity: 1;
+
+        .copy-email-icon {
+            visibility: hidden;
+        }
+
+        &::after {
+            visibility: visible;
+        }
     }
 }
 
 .reading-mode-toggle {
-    .dark & {
-        &:before {
-            content: "\e909";
+    .icon-moon {
+        display: none;
+    }
+
+    [data-theme="dark"] & {
+        .icon-sun {
+            display: none;
         }
+
+        .icon-moon {
+            display: table-cell;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header-links-item {
+        transition: none;
+    }
+
+    .header-link {
+        transition: none;
+    }
+}
+
+@media print {
+    .header-links-item--mobile-open,
+    .reading-mode-toggle,
+    .lang-toggle {
+        display: none !important;
+    }
+
+    .header-links-item {
+        max-width: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding-right: 12px;
+    }
+
+    .header-link {
+        height: auto;
     }
 }

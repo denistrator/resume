@@ -1,10 +1,19 @@
 html[lang=ru] {
-    .lang-en {
+    .lang-en,
+    .lang-uk {
         display: none;
     }
 }
 
 html[lang=en] {
+    .lang-ru,
+    .lang-uk {
+        display: none;
+    }
+}
+
+html[lang=uk] {
+    .lang-en,
     .lang-ru {
         display: none;
     }

@@ -1,48 +1,101 @@
 "use strict";
 
-(function () {
-  var $list = document.querySelector('.portfolio-list'),
-    $listHiddenItems = $list.querySelectorAll('.portfolio-item.hidden'),
-    $listCollapsePos = $list.querySelector('.portfolio-collapse-pos'),
-    $listExpander = document.querySelector('.portfolio-expander'),
-    listCollapsedHeight = $listCollapsePos.offsetTop + $listCollapsePos.offsetHeight;
-  collapsePortfolioList();
-  $listExpander.addEventListener('click', expandPortfolioList);
-  function collapsePortfolioList() {
-    $list.style.height = listCollapsedHeight + 'px';
-  }
-  function expandPortfolioList() {
-    Array.from($listHiddenItems).forEach(function (e) {
-      e.classList.remove('hidden');
+(() => {
+  const btn = document.querySelector('.copy-email-btn');
+  if (!btn) return;
+  const emailLink = document.querySelector('a[href^="mailto:"]');
+  if (!emailLink) return;
+  const email = emailLink.href.replace('mailto:', '');
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(email).then(() => {
+      btn.classList.add('copied');
+      btn.setAttribute('aria-label', 'Email copied!');
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.setAttribute('aria-label', 'Copy email to clipboard');
+      }, 2000);
     });
-    $list.style.height = $list.scrollHeight + 'px';
-    $list.classList.add('expanded');
-    $listExpander.classList.add('hidden');
-  }
+  });
 })();
 "use strict";
 
 (function () {
-  var $root = document.querySelector('html'),
+  const $root = document.querySelector('html'),
     $langToggle = document.querySelector('.lang-toggle');
-  var languages = ['en', 'ru'];
+  const languages = ['en', 'ru', 'uk'];
   $langToggle.addEventListener('click', switchLanguages, false);
   function switchLanguages() {
     $root.setAttribute('lang', getNextLanguage());
   }
   function getNextLanguage() {
-    var currentLanguageIndex = languages.indexOf($root.getAttribute('lang'));
+    const currentLanguageIndex = languages.indexOf($root.getAttribute('lang'));
     return languages[currentLanguageIndex + 1] || languages[0];
   }
 })();
 "use strict";
 
-(function () {
-  var $readingModeToggle = document.querySelector('.reading-mode-toggle');
-  $readingModeToggle.addEventListener('click', switchReadingMode, false);
-  function switchReadingMode() {
-    var $page = document.querySelector('.page');
-    $page.classList.toggle('light');
-    $page.classList.toggle('dark');
+(() => {
+  const toggle = document.querySelector('.reading-mode-toggle');
+  if (!toggle) return;
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute('data-theme') || 'light';
+  toggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggle.setAttribute('aria-pressed', String(next === 'dark'));
+  });
+})();
+"use strict";
+
+(() => {
+  const triggers = document.querySelectorAll('.toefl-trigger');
+  if (!triggers.length) {
+    return;
   }
+  function closeAll() {
+    document.querySelectorAll('.toefl-tooltip.is-open').forEach(tip => {
+      tip.classList.remove('is-open');
+      tip.setAttribute('aria-hidden', 'true');
+    });
+    document.querySelectorAll('.toefl-trigger[aria-expanded="true"]').forEach(tr => {
+      tr.setAttribute('aria-expanded', 'false');
+    });
+  }
+  triggers.forEach(trigger => {
+    const tooltip = trigger.nextElementSibling;
+    if (!tooltip || !tooltip.classList.contains('toefl-tooltip')) {
+      return;
+    }
+    tooltip.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+    trigger.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = tooltip.classList.contains('is-open');
+      closeAll();
+      if (!isOpen) {
+        tooltip.classList.add('is-open');
+        tooltip.setAttribute('aria-hidden', 'false');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+    trigger.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        trigger.click();
+      }
+      if (e.key === 'Escape') {
+        closeAll();
+      }
+    });
+  });
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeAll();
+    }
+  });
 })();

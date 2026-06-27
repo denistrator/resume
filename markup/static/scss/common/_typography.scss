@@ -1,37 +1,35 @@
-$body-color: #000 !default;
-$body-bg: #fff !default;
+@use "sass:color";
 
-$font-size-base: 16px !default;
-$line-height-base: 1.4 !default;
-$font-family-base: Arial, sans-serif !default;
-$margin-bottom-p: 15px !default;
+$font-size-base: 17px !default;
+$line-height-base: 1.6 !default;
+$font-family-base: $font-family-base !default;
+$margin-bottom-p: 12px !default;
 
-$link-color: blue !default;
-$link-color-hover: lighten($link-color, 10%) !default;
-$link-decoration: none !default;
+$link-decoration: underline !default;
 $link-decoration-hover: none !default;
 
 $heading-font-family: inherit !default;
-$heading-font-weight: 700 !default;
+$heading-font-weight: $heading-font-weight !default;
 $heading-color: inherit !default;
-$heading-font-size-1: 36px !default;
-$heading-font-size-2: 30px !default;
+$heading-font-size-1: 40px !default;
+$heading-font-size-2: 32px !default;
 $heading-font-size-3: 24px !default;
-$heading-font-size-4: 18px !default;
-$heading-font-size-5: 14px !default;
-$heading-font-size-6: 12px !default;
+$heading-font-size-4: 20px !default;
+$heading-font-size-5: 16px !default;
+$heading-font-size-6: 14px !default;
 
 body {
-    color: $body-color;
-    background-color: $body-bg;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
     font-size: $font-size-base;
     line-height: $line-height-base;
     font-family: $font-family-base;
+    transition: color var(--transition-theme), background-color var(--transition-theme);
 }
 
 p,
 .p {
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 0;
     margin-bottom: $margin-bottom-p;
 }
@@ -41,7 +39,7 @@ a {
     text-decoration: $link-decoration;
 
     &:hover {
-        color: $link-color-hover;
+        color: var(--color-link-hover);
         text-decoration: $link-decoration-hover;
     }
 

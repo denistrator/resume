@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin nl {
     margin: 0;
     padding: 0;
@@ -37,7 +39,7 @@
 }
 
 @function in-perc($val, $width) {
-    @return ($val / $width * 100%);
+    @return (math.div($val, $width) * 100%);
 }
 
 @mixin visually-hidden {
@@ -46,4 +48,31 @@
     clip: rect(0 0 0 0);
     height: 1px; width: 1px;
     margin: -1px; padding: 0; border: 0;
+}
+
+%section-list {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+%section-list-item {
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+%section-list-item-title {
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+%section-list-item-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.6;
 }

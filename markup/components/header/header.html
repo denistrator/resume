@@ -1,92 +1,108 @@
 <header class="header">
-    <div class="header-text">
+    <div class="header-main">
         <h1 class="header-name">
             <span class="lang-ru">Денис</span>
             <span class="lang-en">Denis</span>
+            <span class="lang-uk">Денис</span>
             <br>
             <span class="lang-ru">Белевцов</span>
             <span class="lang-en">Belevtsov</span>
+            <span class="lang-uk">Белевцов</span>
         </h1>
-        <p class="header-pos">
-            <span class="lang-ru">Magento 2 Фронт-энд Разработчик с 2017</span>
-            <span class="lang-en">Magento 2 Front-end Developer since 2017</span>
-        </p>
-    </div>
-    <ul class="header-links">
-        <li class="header-links-item">
-            <a href="mailto:denistrator@yandex.ua" class="header-link icon-mail-black-envelope-symbol">
-                <span class="header-link-text"><span class="only-print">e-mail: </span>denistrator@yandex.ua</span>
-            </a>
-        </li>
-        <li class="header-links-item">
-            <a href="tel:+380953182503" class="header-link icon-phone-receiver">
-                <span class="header-link-text">+38 095 318 25 03</span>
-            </a>
-        </li>
-        <li class="header-links-item">
-            <a href="skype:denistrator?add" class="header-link icon-skype-logo">
-                <span class="header-link-text"><span class="only-print">skype: </span>denistrator</span>
-            </a>
-        </li>
-        <li class="header-links-item no-print">
-            <a href="https://vk.com/denistrator" target="_blank" class="header-link icon-vk" rel="noopener">
-                <span class="label">
-                    <span class="lang-ru">Моя страница в ВКонтакте</span>
-                    <span class="lang-en">My page in VKontakte</span>
-                </span>
-            </a>
-        </li>
-        <li class="header-links-item no-print">
-            <a href="https://github.com/denistrator/" target="_blank" class="header-link icon-github-logo" rel="noopener">
-                <span class="label">
+        <nav aria-label="Contact and actions">
+            <ul class="header-links">
+                <li class="header-links-item header-links-item--email">
+                    <a href="mailto:denistrators@gmail.com" class="header-link" aria-label="Email">
+                        {{Icon iconName="mail" className="header-icon" iconWidth="24" iconHeight="24"}}
+                        <span class="header-link-text"><span class="only-print">e-mail: </span>denistrators@gmail.com</span>
+                    </a>
+                    <button type="button" class="copy-email-btn no-print only-js" aria-label="Copy email to clipboard" tabindex="-1">
+                        {{Icon iconName="clipboard" className="copy-email-icon" iconWidth="16" iconHeight="16"}}
+                    </button>
+                </li>
+                <li class="header-links-item no-print">
+                    <a href="https://github.com/denistrator/" target="_blank" class="header-link" rel="noopener" aria-label="GitHub (opens in new tab)">
+                        {{Icon iconName="github" className="header-icon" iconWidth="24" iconHeight="24"}}
+                        <span class="label">
                     <span class="lang-ru">Моя страница на GitHub</span>
                     <span class="lang-en">My GitHub page</span>
+                    <span class="lang-uk">Моя сторінка на GitHub</span>
                 </span>
-            </a>
-        </li>
-        <li class="header-links-item no-print">
-            <a href="https://www.linkedin.com/in/denistrator" target="_blank" class="header-link icon-linkedin-logo" rel="noopener">
-                <span class="label">
-                    <span class="lang-ru">Моя страница на LinkedIn</span>
-                    <span class="lang-en">My LinkedIn page</span>
+                    </a>
+                </li>
+                <li class="header-links-item no-print">
+                    <a href="https://t.me/denistrator" target="_blank" class="header-link" rel="noopener" aria-label="Telegram (opens in new tab)">
+                        {{Icon iconName="telegram" className="header-icon" iconWidth="24" iconHeight="24"}}
+                        <span class="label">
+                    <span class="lang-ru">Мой Telegram</span>
+                    <span class="lang-en">My Telegram</span>
+                    <span class="lang-uk">Мій Telegram</span>
                 </span>
-            </a>
-        </li>
-        <li class="header-links-item header-links-item--mobile-open">
-            <div class="header-link icon-locate">
+                    </a>
+                </li>
+                <li class="header-links-item header-links-item--mobile-open">
+            <span class="header-link">
+                {{Icon iconName="locate" className="header-icon" iconWidth="24" iconHeight="24"}}
 				<span class="header-link-text">
-					<span class="lang-ru"><span class="only-print">г. </span>Харьков</span>
-					<span class="lang-en">Kharkiv<span class="only-print"> city</span></span>
+					<span class="lang-ru"><span class="only-print">г. </span>Удалённо, Одесса</span>
+					<span class="lang-en">Remote, Odessa<span class="only-print"> city</span></span>
+					<span class="lang-uk"><span class="only-print">м. </span>Віддалено, Одеса</span>
 				</span>
-            </div>
-        </li>
-        <li class="header-links-item no-print">
-            <div class="lang-en">
-                <a href="media/Belevtsov Denis - Resume-en.pdf" class="header-link icon-pdf-file-symbol">
-                    <div class="label">Download this resume in PDF</div>
-                </a>
-            </div>
-            <div class="lang-ru">
-                <a href="media/Belevtsov Denis - Resume-ru.pdf" class="header-link icon-pdf-file-symbol">
-                    <div class="label">Загрузить PDF версию этого резюме</div>
-                </a>
-            </div>
-        </li>
-        <li class="header-links-item no-print only-js">
-            <button class="reading-mode-toggle header-link icon-sun dark">
-                <span class="label">
+            </span>
+                </li>
+                <li class="header-links-item no-print">
+                    <div class="lang-en">
+                        <a href="media/Belevtsov Denis - Resume-en.pdf" class="header-link" aria-label="Download resume in PDF">
+                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
+                            <div class="label">Download this resume in PDF</div>
+                        </a>
+                    </div>
+                    <div class="lang-ru">
+                        <a href="media/Belevtsov Denis - Resume-ru.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
+                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
+                            <div class="label">Загрузить PDF версию этого резюме</div>
+                        </a>
+                    </div>
+                    <div class="lang-uk">
+                        <a href="media/Belevtsov Denis - Resume-uk.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
+                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
+                            <div class="label">Завантажити PDF версію цього резюме</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="header-links-item no-print only-js">
+                    <button class="reading-mode-toggle header-link" aria-pressed="false" aria-label="Toggle reading mode">
+                        {{Icon iconName="sun" className="header-icon icon-sun" iconWidth="24" iconHeight="24"}}
+                        {{Icon iconName="moon" className="header-icon icon-moon" iconWidth="24" iconHeight="24"}}
+                        <span class="label">
 					<span class="lang-ru">Переключить режим чтения (светлый или тёмный)</span>
 					<span class="lang-en">Toggle reading mode (light or dark)</span>
+					<span class="lang-uk">Перемкнути режим читання (світлий або темний)</span>
                 </span>
-            </button>
-        </li>
-        <li class="header-links-item no-print only-js">
-            <button class="lang-toggle header-link">
-                <strong class="lang-toggle-text">
+                    </button>
+                </li>
+                <li class="header-links-item no-print only-js">
+                    <button class="lang-toggle header-link" aria-label="Switch language">
+                <span class="lang-toggle-text">
                     <span class="lang-ru">Ru</span>
                     <span class="lang-en">En</span>
-                </strong>
-            </button>
-        </li>
-    </ul>
+                    <span class="lang-uk">Uk</span>
+                </span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <p class="header-pos">
+        <span class="lang-ru">Senior Magento Фронтенд Архитектор | Специалист Hyvä | Инженер Производительности</span>
+        <span class="lang-en">Senior Magento Frontend Architect | Hyvä Specialist | Performance Engineer</span>
+        <span class="lang-uk">Senior Magento Фронтенд Арітектор | Спеціаліст Hyvä | Інженер Продуктивності</span>
+    </p>
+
+    <p class="header-pos">
+        <span class="lang-ru">10+ лет опыта</span>
+        <span class="lang-en">10+ Years Experience</span>
+        <span class="lang-uk">10+ років досвіду</span>
+    </p>
 </header>
