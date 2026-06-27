@@ -1,7 +1,7 @@
 <section class="section languages">
     <h2 class="title languages-title section-title">
-        <span class="lang-en">Languages</span>
         <span class="lang-ru">Языки</span>
+        <span class="lang-en">Languages</span>
         <span class="lang-uk">Мови</span>
     </h2>
 
@@ -10,13 +10,13 @@
         <li class="languages-item">
             <span class="languages-flag">{{flag}}</span>
             <span class="languages-name">
-                <span class="lang-en">{{name.en}}</span>
                 <span class="lang-ru">{{name.ru}}</span>
+                <span class="lang-en">{{name.en}}</span>
                 <span class="lang-uk">{{name.uk}}</span>
             </span>
             <span class="languages-level">
-                <span class="lang-en">{{level.en}}</span>
                 <span class="lang-ru">{{level.ru}}</span>
+                <span class="lang-en">{{level.en}}</span>
                 <span class="lang-uk">{{level.uk}}</span>
             </span>
             {{#if toefl}}
@@ -28,8 +28,8 @@
                 </span>
                 <span class="toefl-tooltip" role="tooltip" aria-hidden="true">
                     <span class="toefl-tooltip-header">
-                        <span class="lang-en">CEFR Level {{toefl.cefr}} and TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
                         <span class="lang-ru">Уровень CEFR {{toefl.cefr}} и TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
+                        <span class="lang-en">CEFR Level {{toefl.cefr}} and TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
                         <span class="lang-uk">Рівень CEFR {{toefl.cefr}} та TOEFL iBT {{toefl.total}} / {{toefl.maxTotal}}</span>
                     </span>
                     <span class="toefl-tooltip-date">TOEFL (Magoosh) {{toefl.testDate}}</span>
@@ -37,8 +37,8 @@
                         {{#each toefl.sections}}
                         <span class="toefl-row">
                             <span class="toefl-row-label">
-                                <span class="lang-en">{{name.en}}</span>
                                 <span class="lang-ru">{{name.ru}}</span>
+                                <span class="lang-en">{{name.en}}</span>
                                 <span class="lang-uk">{{name.uk}}</span>
                             </span>
                             <span class="toefl-bar-track">
