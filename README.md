@@ -87,11 +87,10 @@ If not all of the dependencies have been installed, the last operation must be r
 After installing of all dependencies you need to open tars-config (detailed description of the options are [here](/docs/en/options.md)) and set up the project for yourself. In that config file, you can select the templater, css-preprocessor, using the notifications, folder names for different static and etc. After setting up the project, execute the following command:
 
 ```shell
-gulp init
+tars init
 ```
 
-**Attention, [TARS-CLI](https://github.com/tars/tars-cli) is the preferred 
-way to work with TARS. It is faster and more comfortable to work with TARS-CLI. [Init command is available in TARS-CLI too](https://github.com/tars/tars-cli/blob/master/docs/en/commands.md#tars-init).**
+**[TARS-CLI](https://github.com/tars/tars-cli) is the preferred way to work with TARS. [Init command is available in TARS-CLI too](https://github.com/tars/tars-cli/blob/master/docs/en/commands.md#tars-init).**
 
 This command will create the basic file structure, download tasks for selected templater and css-preprocessor. 
 Everything is ready, get to work! :)
@@ -99,20 +98,17 @@ Everything is ready, get to work! :)
 
 ## Basic commands
 
-**Attention, [TARS-CLI](https://github.com/tars/tars-cli) is the preferred
- way to work with TARS. It is faster and more comfortable to work with TARS-CLI. All commands are available and [described in TARS-CLI](https://github.com/tars/tars-cli/blob/master/docs/en/commands.md), so use only TARS-CLI for working with your project. TARS used Gulp to start tasks, when CLI was not created.**
+**[TARS-CLI](https://github.com/tars/tars-cli) is the preferred way to work with TARS.** All commands below use `tars` (from TARS-CLI). Without CLI, use `npx gulp` as a fallback.
 
-`gulp init` — initializes project with the specified settings in the tars-config. Creates a file structure.
+`tars init` — initializes project with the specified settings in the tars-config. Creates a file structure.
 
-`gulp re-init` — **This command is deprecated!** reinitialize the project with specified settings in the tars-config. It is advised to use this command if you initialize the project with incorrect options. **Attention, files from pages and static folder will be deleted.**
-
-`gulp` or `gulp build` — build project. Non-minimized files are used by default. Build type depends on command parameters.
+`tars` or `tars build` — build project. Non-minimized files are used by default. Build type depends on command parameters.
 Available parameters:
 
 * `--min` – minimized files are connected to html.
 * `--release` – minimized  files are connected to html whose names have hash. This mode is useful if you are trying to directly deploy ready markup to the server.
 
-`gulp dev` — initialize of builder in development mode. Dev-version of the project is created  without any minifications. It also launches watchers for project files.
+`tars dev` — initialize of builder in development mode. Dev-version of the project is created  without any minifications. It also launches watchers for project files.
 Available parameters:
 
 * `--lr` – initialize livereload (live page reloads with changes in project files), if it is included in the configuration of the project.
@@ -120,7 +116,7 @@ Available parameters:
 
 The link will be shown in the console. There also will be a link to the control panel for devices to which markup is shared.
 
-`gulp build-dev` — generation of dev-version of the project without watchers.
+`tars build-dev` — generation of dev-version of the project without watchers.
 
 These parameters are available in any mode of assembly:
 
