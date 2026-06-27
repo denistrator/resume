@@ -1,6 +1,8 @@
 (() => {
     const triggers = document.querySelectorAll('.toefl-trigger');
-    if (!triggers.length) return;
+    if (!triggers.length) {
+        return;
+    }
 
     function closeAll() {
         document.querySelectorAll('.toefl-tooltip.is-open').forEach((tip) => {
@@ -14,7 +16,9 @@
 
     triggers.forEach((trigger) => {
         const tooltip = trigger.nextElementSibling;
-        if (!tooltip || !tooltip.classList.contains('toefl-tooltip')) return;
+        if (!tooltip || !tooltip.classList.contains('toefl-tooltip')) {
+            return;
+        }
 
         trigger.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -40,6 +44,8 @@
 
     document.addEventListener('click', closeAll);
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeAll();
+        if (e.key === 'Escape') {
+            closeAll();
+        }
     });
 })();
