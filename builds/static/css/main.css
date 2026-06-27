@@ -212,7 +212,7 @@ button:-moz-focusring,
 /* Please, do not edit with file! */
 /* This file can be overwritten by update-project! */
 /* Mixins, which are specific for current project */
-.header-links {
+.languages-list, .header-links {
   margin: 0;
   padding: 0;
   text-indent: 0;
@@ -895,6 +895,167 @@ ul {
   transition: color var(--transition-theme);
 }
 
+.languages-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin-bottom: 8px;
+}
+.languages-item:last-child {
+  margin-bottom: 0;
+}
+.languages-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+.languages-name {
+  font-weight: 500;
+  font-size: 15px;
+}
+.languages-level {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  transition: color var(--transition-theme);
+}
+
+.toefl {
+  position: relative;
+  display: inline-flex;
+}
+.toefl-trigger {
+  display: inline-flex;
+  cursor: pointer;
+}
+.toefl-trigger:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.toefl-badge {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-link);
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1px 6px;
+  border-radius: 3px;
+  transition: color var(--transition-theme), background-color var(--transition-theme);
+  white-space: nowrap;
+}
+[data-theme=dark] .toefl-badge {
+  background: rgba(255, 255, 255, 0.08);
+}
+.toefl-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  z-index: 10;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  min-width: 240px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: color var(--transition-theme), background-color var(--transition-theme), border-color var(--transition-theme);
+}
+[data-theme=dark] .toefl-tooltip {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.toefl-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+  transform: rotate(45deg);
+  transition: background-color var(--transition-theme), border-color var(--transition-theme);
+}
+.toefl-tooltip.is-open {
+  display: block;
+}
+@media print {
+  .toefl-tooltip {
+    display: block;
+    position: static;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  .toefl-tooltip::before {
+    display: none;
+  }
+}
+.toefl-tooltip-header {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.toefl-tooltip-date {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+  transition: color var(--transition-theme);
+}
+.toefl-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.toefl-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 28px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.toefl-row-label {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-theme);
+}
+.toefl-bar-track {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+[data-theme=dark] .toefl-bar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+.toefl-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-link);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.toefl-row-score {
+  text-align: right;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .languages-level,
+  .toefl-badge,
+  .toefl-tooltip,
+  .toefl-tooltip::before,
+  .toefl-bar-fill {
+    transition: none;
+  }
+}
+@media print {
+  .toefl-trigger {
+    display: none;
+  }
+}
 .skills-areas {
   margin-top: 0;
   list-style: none;
