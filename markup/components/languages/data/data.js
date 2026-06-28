@@ -1,28 +1,28 @@
 const data = {
     languages: [
         {
-            name: { en: 'English', ru: 'Английский', uk: 'Англійська' },
-            level: { en: 'B2 — Upper Intermediate', ru: 'B2 — Выше среднего', uk: 'B2 — Вище середнього' },
+            name: {en: 'English', ru: 'Английский', uk: 'Англійська'},
+            level: {en: 'B2 — Upper Intermediate', ru: 'B2 — Выше среднего', uk: 'B2 — Вище середнього'},
             toefl: {
                 total: 90,
                 maxTotal: 120,
                 cefr: 'B2',
                 testDate: '27.06.2026',
                 sections: [
-                    { name: { en: 'Reading', ru: 'Чтение', uk: 'Читання' }, score: 4.5, percent: 75 },
-                    { name: { en: 'Listening', ru: 'Аудирование', uk: 'Аудіювання' }, score: 5.5, percent: 92 },
-                    { name: { en: 'Speaking', ru: 'Говорение', uk: 'Говоріння' }, score: 4, percent: 67 },
-                    { name: { en: 'Writing', ru: 'Письмо', uk: 'Письмо' }, score: 3, percent: 50 }
+                    {name: {en: 'Reading', ru: 'Чтение', uk: 'Читання'}, score: 4.5, percent: 75},
+                    {name: {en: 'Listening', ru: 'Аудирование', uk: 'Аудіювання'}, score: 5.5, percent: 92},
+                    {name: {en: 'Speaking', ru: 'Говорение', uk: 'Говоріння'}, score: 4, percent: 67},
+                    {name: {en: 'Writing', ru: 'Письмо', uk: 'Письмо'}, score: 3, percent: 50}
                 ]
             }
         },
         {
-            name: { en: 'Ukrainian', ru: 'Украинский', uk: 'Українська' },
-            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' }
+            name: {en: 'Ukrainian', ru: 'Украинский', uk: 'Українська'},
+            level: {en: 'Native', ru: 'Родной', uk: 'Рідна'}
         },
         {
-            name: { en: 'Russian', ru: 'Русский', uk: 'Російська' },
-            level: { en: 'Native', ru: 'Родной', uk: 'Рідна' }
+            name: {en: 'Russian', ru: 'Русский', uk: 'Російська'},
+            level: {en: 'Native', ru: 'Родной', uk: 'Рідна'}
         }
     ]
 };

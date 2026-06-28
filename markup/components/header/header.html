@@ -1,93 +1,57 @@
 <header class="header">
     <div class="header-main">
         <h1 class="header-name">
-            <span class="lang-ru">Денис</span>
-            <span class="lang-en">Denis</span>
-            <span class="lang-uk">Денис</span>
+            <span data-i18n="header.name">{{t 'header.name'}}</span>
             <br>
-            <span class="lang-ru">Белевцов</span>
-            <span class="lang-en">Belevtsov</span>
-            <span class="lang-uk">Белевцов</span>
+            <span data-i18n="header.surname">{{t 'header.surname'}}</span>
         </h1>
         <nav aria-label="Contact and actions">
             <ul class="header-links">
                 <li class="header-links-item header-links-item--email">
-                    <a href="mailto:denistrators@gmail.com" class="header-link" aria-label="Email">
+                    <a href="mailto:denistrators@gmail.com" class="header-link" data-i18n-attr="aria-label:header.emailAria" aria-label="{{t 'header.emailAria'}}">
                         {{Icon iconName="mail" className="header-icon" iconWidth="24" iconHeight="24"}}
                         <span class="header-link-text"><span class="only-print">e-mail: </span>denistrators@gmail.com</span>
                     </a>
-                    <button type="button" class="copy-email-btn no-print only-js" aria-label="Copy email to clipboard" tabindex="-1">
+                    <button type="button" class="copy-email-btn no-print only-js" data-i18n-attr="aria-label:header.copyEmailAria" aria-label="{{t 'header.copyEmailAria'}}" tabindex="-1">
                         {{Icon iconName="clipboard" className="copy-email-icon" iconWidth="16" iconHeight="16"}}
                     </button>
                 </li>
                 <li class="header-links-item no-print">
-                    <a href="https://github.com/denistrator/" target="_blank" class="header-link" rel="noopener" aria-label="GitHub (opens in new tab)">
+                    <a href="https://github.com/denistrator/" target="_blank" class="header-link" rel="noopener" data-i18n-attr="aria-label:header.githubAria" aria-label="{{t 'header.githubAria'}}">
                         {{Icon iconName="github" className="header-icon" iconWidth="24" iconHeight="24"}}
-                        <span class="label">
-                    <span class="lang-ru">Моя страница на GitHub</span>
-                    <span class="lang-en">My GitHub page</span>
-                    <span class="lang-uk">Моя сторінка на GitHub</span>
-                </span>
+                        <span class="label" data-i18n="header.githubLabel">{{t 'header.githubLabel'}}</span>
                     </a>
                 </li>
                 <li class="header-links-item no-print">
-                    <a href="https://t.me/denistrator" target="_blank" class="header-link" rel="noopener" aria-label="Telegram (opens in new tab)">
+                    <a href="https://t.me/denistrator" target="_blank" class="header-link" rel="noopener" data-i18n-attr="aria-label:header.telegramAria" aria-label="{{t 'header.telegramAria'}}">
                         {{Icon iconName="telegram" className="header-icon" iconWidth="24" iconHeight="24"}}
-                        <span class="label">
-                    <span class="lang-ru">Мой Telegram</span>
-                    <span class="lang-en">My Telegram</span>
-                    <span class="lang-uk">Мій Telegram</span>
-                </span>
+                        <span class="label" data-i18n="header.telegramLabel">{{t 'header.telegramLabel'}}</span>
                     </a>
                 </li>
                 <li class="header-links-item header-links-item--mobile-open">
-            <span class="header-link">
-                {{Icon iconName="locate" className="header-icon" iconWidth="24" iconHeight="24"}}
-				<span class="header-link-text">
-					<span class="lang-ru"><span class="only-print">г. </span>Удалённо, Одесса</span>
-					<span class="lang-en">Remote, Odessa<span class="only-print"> city</span></span>
-					<span class="lang-uk"><span class="only-print">м. </span>Віддалено, Одеса</span>
-				</span>
-            </span>
+                    <span class="header-link">
+                        {{Icon iconName="locate" className="header-icon" iconWidth="24" iconHeight="24"}}
+                        <span class="header-link-text">
+                            <span class="only-print" data-i18n="header.locationPrintPrefix">{{t 'header.locationPrintPrefix'}}</span><span data-i18n="header.locationText">{{t 'header.locationText'}}</span>
+                        </span>
+                    </span>
                 </li>
                 <li class="header-links-item no-print">
-                    <div class="lang-en">
-                        <a href="media/Belevtsov Denis - Resume-en.pdf" class="header-link" aria-label="Download resume in PDF">
-                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
-                            <div class="label">Download this resume in PDF</div>
-                        </a>
-                    </div>
-                    <div class="lang-ru">
-                        <a href="media/Belevtsov Denis - Resume-ru.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
-                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
-                            <div class="label">Загрузить PDF версию этого резюме</div>
-                        </a>
-                    </div>
-                    <div class="lang-uk">
-                        <a href="media/Belevtsov Denis - Resume-uk.pdf" class="header-link" aria-label="Завантажити резюме в PDF">
-                            {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
-                            <div class="label">Завантажити PDF версію цього резюме</div>
-                        </a>
-                    </div>
+                    <a href="media/Belevtsov Denis - Resume-{{langCode}}.pdf" class="header-link" data-i18n-attr="aria-label:header.pdfAria" aria-label="{{t 'header.pdfAria'}}">
+                        {{Icon iconName="pdf" className="header-icon" iconWidth="24" iconHeight="24"}}
+                        <div class="label" data-i18n="header.pdfLabel">{{t 'header.pdfLabel'}}</div>
+                    </a>
                 </li>
                 <li class="header-links-item no-print only-js">
-                    <button class="reading-mode-toggle header-link" aria-pressed="false" aria-label="Toggle reading mode">
+                    <button class="reading-mode-toggle header-link" aria-pressed="false" data-i18n-attr="aria-label:header.themeAria" aria-label="{{t 'header.themeAria'}}">
                         {{Icon iconName="sun" className="header-icon icon-sun" iconWidth="24" iconHeight="24"}}
                         {{Icon iconName="moon" className="header-icon icon-moon" iconWidth="24" iconHeight="24"}}
-                        <span class="label">
-					<span class="lang-ru">Переключить режим чтения (светлый или тёмный)</span>
-					<span class="lang-en">Toggle reading mode (light or dark)</span>
-					<span class="lang-uk">Перемкнути режим читання (світлий або темний)</span>
-                </span>
+                        <span class="label" data-i18n="header.themeLabel">{{t 'header.themeLabel'}}</span>
                     </button>
                 </li>
                 <li class="header-links-item no-print only-js">
-                    <button class="lang-toggle header-link" aria-label="Switch language">
-                <span class="lang-toggle-text">
-                    <span class="lang-ru">Ru</span>
-                    <span class="lang-en">En</span>
-                    <span class="lang-uk">Uk</span>
-                </span>
+                    <button class="lang-toggle header-link" data-i18n-attr="aria-label:header.langAria" aria-label="{{t 'header.langAria'}}">
+                        <span class="lang-toggle-text">{{langCode}}</span>
                     </button>
                 </li>
             </ul>
@@ -95,14 +59,10 @@
     </div>
 
     <p class="header-pos">
-        <span class="lang-ru">Senior Magento Фронтенд Архитектор | Специалист Hyvä | Инженер Производительности</span>
-        <span class="lang-en">Senior Magento Frontend Architect | Hyvä Specialist | Performance Engineer</span>
-        <span class="lang-uk">Senior Magento Фронтенд Арітектор | Спеціаліст Hyvä | Інженер Продуктивності</span>
+        <span data-i18n="header.title1">{{t 'header.title1'}}</span>
     </p>
 
     <p class="header-pos">
-        <span class="lang-ru">10+ лет опыта</span>
-        <span class="lang-en">10+ Years Experience</span>
-        <span class="lang-uk">10+ років досвіду</span>
+        <span data-i18n="header.title2">{{t 'header.title2'}}</span>
     </p>
 </header>

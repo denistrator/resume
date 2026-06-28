@@ -1,0 +1,122 @@
+{
+    "en": {
+        "head": {
+            "pageTitle": "Denis Belevtsov — Senior Magento 2 Frontend Developer (Hyvä)",
+            "pageDescription": "Senior Frontend Developer with 10+ years in Magento. Specializing in Hyvä Themes, Alpine.js, Tailwind CSS. Skills, experience, and achievements."
+        },
+        "header": {
+            "name": "Denis",
+            "surname": "Belevtsov",
+            "title1": "Senior Magento Frontend Architect | Hyvä Specialist | Performance Engineer",
+            "title2": "10+ Years Experience",
+            "locationText": "Remote, Odessa",
+            "locationPrintPrefix": " city",
+            "emailAria": "Email",
+            "copyEmailAria": "Copy email to clipboard",
+            "githubAria": "GitHub (opens in new tab)",
+            "githubLabel": "My GitHub page",
+            "telegramAria": "Telegram (opens in new tab)",
+            "telegramLabel": "My Telegram",
+            "pdfAria": "Download resume in PDF",
+            "pdfLabel": "Download this resume in PDF",
+            "themeAria": "Toggle reading mode (light or dark)",
+            "themeLabel": "Toggle reading mode (light or dark)",
+            "langAria": "Switch language"
+        },
+        "section": {
+            "skills": { "title": "Skills", "desc": "Know it, use it" },
+            "experience": { "title": "Work Experience", "desc": "Magento 2 Frontend Developer | 10+ Years Experience" },
+            "achievements": { "title": "Achievements", "desc": "Key results and contributions to projects" },
+            "languages": { "title": "Languages", "desc": "Language proficiency" }
+        },
+        "languages": {
+            "toeflAria": "TOEFL score details",
+            "toeflHeader": "CEFR Level B2 and TOEFL iBT 90 / 120",
+            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+        },
+        "footer": {
+            "name": "Denis Belevtsov",
+            "offer": "Open to suggestions"
+        }
+    },
+    "ru": {
+        "head": {
+            "pageTitle": "Денис Белевцов — Senior Magento 2 Фронтенд Разработчик (Hyvä)",
+            "pageDescription": "Senior Фронтенд Разработчик с 10+ годами опыта в Magento. Специализация на Hyvä Themes, Alpine.js, Tailwind CSS. Навыки, опыт и достижения."
+        },
+        "header": {
+            "name": "Денис",
+            "surname": "Белевцов",
+            "title1": "Senior Magento Фронтенд Архитектор | Специалист Hyvä | Инженер Производительности",
+            "title2": "10+ лет опыта",
+            "locationText": "Удалённо, Одесса",
+            "locationPrintPrefix": "г. ",
+            "emailAria": "Электронная почта",
+            "copyEmailAria": "Копировать email",
+            "githubAria": "GitHub (откроется в новой вкладке)",
+            "githubLabel": "Моя страница на GitHub",
+            "telegramAria": "Telegram (откроется в новой вкладке)",
+            "telegramLabel": "Мой Telegram",
+            "pdfAria": "Завантажити резюме в PDF",
+            "pdfLabel": "Загрузить PDF версию этого резюме",
+            "themeAria": "Переключить режим чтения (светлый или тёмный)",
+            "themeLabel": "Переключить режим чтения (светлый или тёмный)",
+            "langAria": "Переключить язык"
+        },
+        "section": {
+            "skills": { "title": "Навыки", "desc": "Могу, умею, практикую" },
+            "experience": { "title": "Работа", "desc": "Magento 2 Фронтенд Разработчик | 10+ лет опыта" },
+            "achievements": { "title": "Достижения", "desc": "Ключевые результаты и вклад в проекты" },
+            "languages": { "title": "Языки", "desc": "Владение языками" }
+        },
+        "languages": {
+            "toeflAria": "Детали оценки TOEFL",
+            "toeflHeader": "Уровень CEFR B2 и TOEFL iBT 90 / 120",
+            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+        },
+        "footer": {
+            "name": "Денис Белевцов",
+            "offer": "Открыт для предложений"
+        }
+    },
+    "uk": {
+        "head": {
+            "pageTitle": "Денис Белевцов — Senior Magento 2 Фронтенд Розробник (Hyvä)",
+            "pageDescription": "Senior Фронтенд Розробник з 10+ роками досвіду в Magento. Спеціалізація на Hyvä Themes, Alpine.js, Tailwind CSS. Навички, досвід та досягнення."
+        },
+        "header": {
+            "name": "Денис",
+            "surname": "Белевцов",
+            "title1": "Senior Magento Фронтенд Архітектор | Спеціаліст Hyvä | Інженер Продуктивності",
+            "title2": "10+ років досвіду",
+            "locationText": "Віддалено, Одеса",
+            "locationPrintPrefix": "м. ",
+            "emailAria": "Електронна пошта",
+            "copyEmailAria": "Копіювати email",
+            "githubAria": "GitHub (відкриється у новій вкладці)",
+            "githubLabel": "Моя сторінка на GitHub",
+            "telegramAria": "Telegram (відкриється у новій вкладці)",
+            "telegramLabel": "Мій Telegram",
+            "pdfAria": "Завантажити резюме в PDF",
+            "pdfLabel": "Завантажити PDF версію цього резюме",
+            "themeAria": "Перемкнути режим читання (світлий або темний)",
+            "themeLabel": "Перемкнути режим читання (світлий або темний)",
+            "langAria": "Перемкнути мову"
+        },
+        "section": {
+            "skills": { "title": "Навички", "desc": "Вмію, практикую" },
+            "experience": { "title": "Робота", "desc": "Magento 2 Фронтенд Розробник | 10+ років досвіду" },
+            "achievements": { "title": "Досягнення", "desc": "Ключові результати та внесок у проєкти" },
+            "languages": { "title": "Мови", "desc": "Володіння мовами" }
+        },
+        "languages": {
+            "toeflAria": "Деталі оцінки TOEFL",
+            "toeflHeader": "Рівень CEFR B2 та TOEFL iBT 90 / 120",
+            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+        },
+        "footer": {
+            "name": "Денис Белевцов",
+            "offer": "Відкритий для пропозицій"
+        }
+    }
+}

@@ -4,6 +4,18 @@
 <head>
     {{> head/head head.defaults}}
     {{> before-page-content/theme-switcher}}
+    <style>:root:not([data-lang-ready]){visibility:hidden}</style>
+    <script>
+        (function() {
+            var KEY = 'preferred-lang';
+            var saved = localStorage.getItem(KEY);
+            if (!saved || saved === 'en') {
+                document.documentElement.setAttribute('data-lang-ready', '');
+            } else {
+                window.__pendingLang = saved;
+            }
+        })();
+    </script>
 </head>
 
 <body class="page">

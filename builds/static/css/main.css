@@ -417,21 +417,6 @@ button:focus-visible {
   }
 }
 
-html[lang=ru] .lang-en,
-html[lang=ru] .lang-uk {
-  display: none;
-}
-
-html[lang=en] .lang-ru,
-html[lang=en] .lang-uk {
-  display: none;
-}
-
-html[lang=uk] .lang-en,
-html[lang=uk] .lang-ru {
-  display: none;
-}
-
 ::-webkit-scrollbar-track {
   background-color: var(--color-scrollbar-track);
   -webkit-transition: background-color var(--transition-theme);
