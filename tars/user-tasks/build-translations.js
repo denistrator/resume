@@ -1,13 +1,283 @@
 'use strict';
 
 const gulp = tars.packages.gulp;
+const through2 = tars.packages.through2;
+const File = tars.packages.gutil.File;
 const notifier = tars.helpers.notifier;
+const fs = require('fs');
+const path = require('path');
+
+const LANGS = ['en', 'ru', 'uk'];
+const componentsDir = path.resolve(process.cwd(), 'markup/components');
+const uiStringsPath = path.resolve(process.cwd(), 'markup/translations-ui.json');
+
+function loadDataFile(filePath) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fn = new Function(`${content}; return data;`);
+    return fn();
+}
+
+function extractSkillsTranslations(skillAreas) {
+    const result = {};
+
+    for (const [areaKey, area] of Object.entries(skillAreas)) {
+        if (!area.skillGroups) {
+            continue;
+        }
+
+        area.skillGroups.forEach((group, groupIndex) => {
+            group.forEach((item, itemIndex) => {
+                const key = `skills.${areaKey}.${groupIndex}.${itemIndex}`;
+
+                if (item.en || item.ru || item.uk) {
+                    result[key] = {};
+
+                    for (const lang of LANGS) {
+                        if (item[lang]) {
+                            result[key][lang] = item[lang];
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    return result;
+}
+
+function extractArrayTranslations(items, prefix, fields) {
+    const result = {};
+
+    items.forEach((item, index) => {
+        for (const field of fields) {
+            if (!item[field]) {
+                continue;
+            }
+
+            const key = `${prefix}.${index}.${field}`;
+            result[key] = {};
+
+            for (const lang of LANGS) {
+                if (item[field][lang]) {
+                    result[key][lang] = item[field][lang];
+                }
+            }
+        }
+    });
+
+    return result;
+}
+
+function extractLanguagesTranslations(languages) {
+    const listResult = {};
+    const sectionsResult = {};
+
+    languages.forEach((lang, index) => {
+        if (lang.name) {
+            listResult[`languagesList.${index}.name`] = {};
+
+            for (const l of LANGS) {
+                if (lang.name[l]) {
+                    listResult[`languagesList.${index}.name`][l] = lang.name[l];
+                }
+            }
+        }
+
+        if (lang.level) {
+            listResult[`languagesList.${index}.level`] = {};
+
+            for (const l of LANGS) {
+                if (lang.level[l]) {
+                    listResult[`languagesList.${index}.level`][l] = lang.level[l];
+                }
+            }
+        }
+
+        if (lang.toefl && lang.toefl.sections) {
+            lang.toefl.sections.forEach((section, sectionIndex) => {
+                if (section.name) {
+                    sectionsResult[`toeflSections.${sectionIndex}.name`] = {};
+
+                    for (const l of LANGS) {
+                        if (section.name[l]) {
+                            sectionsResult[`toeflSections.${sectionIndex}.name`][l] = section.name[l];
+                        }
+                    }
+                }
+            });
+        }
+    });
+
+    return Object.assign({}, listResult, sectionsResult);
+}
+
+function mergeTranslations(target, source) {
+    for (const lang of LANGS) {
+        if (!target[lang]) {
+            target[lang] = {};
+        }
+
+        if (!source[lang]) {
+            continue;
+        }
+
+        for (const [key, value] of Object.entries(source[lang])) {
+            target[lang][key] = value;
+        }
+    }
+}
+
+function flattenToNested(obj) {
+    const result = {};
+
+    for (const lang of LANGS) {
+        result[lang] = {};
+
+        if (!obj[lang]) {
+            continue;
+        }
+
+        for (const [flatKey, value] of Object.entries(obj[lang])) {
+            const parts = flatKey.split('.');
+            let current = result[lang];
+
+            for (let i = 0; i < parts.length - 1; i++) {
+                if (!current[parts[i]]) {
+                    current[parts[i]] = {};
+                }
+
+                current = current[parts[i]];
+            }
+
+            current[parts[parts.length - 1]] = value;
+        }
+    }
+
+    return result;
+}
+
+function collectComponentTranslations() {
+    const flat = {};
+
+    for (const lang of LANGS) {
+        flat[lang] = {};
+    }
+
+    const skillsPath = path.join(componentsDir, 'skills/data/data.js');
+
+    if (fs.existsSync(skillsPath)) {
+        const skillsData = loadDataFile(skillsPath);
+        const skillsTranslations = extractSkillsTranslations(skillsData.skillAreas);
+
+        for (const lang of LANGS) {
+            for (const [key, value] of Object.entries(skillsTranslations)) {
+                if (value[lang]) {
+                    flat[lang][key] = value[lang];
+                }
+            }
+        }
+    }
+
+    const experiencePath = path.join(componentsDir, 'experience/data/data.js');
+
+    if (fs.existsSync(experiencePath)) {
+        const experienceData = loadDataFile(experiencePath);
+        const experienceTranslations = extractArrayTranslations(
+            experienceData.experienceItem, 'experience', ['title', 'description']
+        );
+
+        for (const lang of LANGS) {
+            for (const [key, value] of Object.entries(experienceTranslations)) {
+                if (value[lang]) {
+                    flat[lang][key] = value[lang];
+                }
+            }
+        }
+    }
+
+    const achievementsPath = path.join(componentsDir, 'achievements/data/data.js');
+
+    if (fs.existsSync(achievementsPath)) {
+        const achievementsData = loadDataFile(achievementsPath);
+        const achievementsTranslations = extractArrayTranslations(
+            achievementsData.achievements, 'achievements', ['title', 'description']
+        );
+
+        for (const lang of LANGS) {
+            for (const [key, value] of Object.entries(achievementsTranslations)) {
+                if (value[lang]) {
+                    flat[lang][key] = value[lang];
+                }
+            }
+        }
+    }
+
+    const languagesPath = path.join(componentsDir, 'languages/data/data.js');
+
+    if (fs.existsSync(languagesPath)) {
+        const languagesData = loadDataFile(languagesPath);
+        const languagesTranslations = extractLanguagesTranslations(languagesData.languages);
+
+        for (const lang of LANGS) {
+            for (const [key, value] of Object.entries(languagesTranslations)) {
+                if (value[lang]) {
+                    flat[lang][key] = value[lang];
+                }
+            }
+        }
+    }
+
+    return flat;
+}
+
+function generateTranslations() {
+    let uiStrings = {};
+
+    if (fs.existsSync(uiStringsPath)) {
+        uiStrings = JSON.parse(fs.readFileSync(uiStringsPath, 'utf8'));
+    }
+
+    const componentFlat = collectComponentTranslations();
+    const componentNested = flattenToNested(componentFlat);
+
+    const result = {};
+
+    for (const lang of LANGS) {
+        result[lang] = Object.assign({}, uiStrings[lang] || {}, componentNested[lang] || {});
+    }
+
+    return result;
+}
 
 module.exports = function() {
     return gulp.task('build-translations', function(done) {
-        return gulp
-            .src('./markup/translations.json')
-            .pipe(gulp.dest(tars.config.devPath))
-            .pipe(notifier.success('Translations file copied'));
+        let translations;
+
+        try {
+            translations = generateTranslations();
+        } catch (error) {
+            notifier.error('Failed to generate translations', error);
+            done();
+            return;
+        }
+
+        const jsonContent = JSON.stringify(translations, null, 2);
+        const file = new File({
+            base: './',
+            path: './translations.json',
+            contents: Buffer.from(jsonContent)
+        });
+
+        return through2.obj(
+            function(chunk, enc, callback) {
+                callback();
+            },
+            function(callback) {
+                const destPath = path.resolve(process.cwd(), tars.config.devPath, 'translations.json');
+                fs.writeFileSync(destPath, jsonContent);
+                notifier.success('Translations generated from data.js files');
+                callback();
+            }
+        );
     });
 };
