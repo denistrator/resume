@@ -4,13 +4,19 @@ const Handlebars = tars.packages.handlebars;
 const fs = require('fs');
 const path = require('path');
 
-const translationsPath = path.resolve(process.cwd(), 'markup/translations.json');
-let translations = {};
+const translationsPath = path.resolve(process.cwd(), tars.config.devPath, 'translations.json');
+let translations = null;
 
-try {
-    translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
-} catch (e) {
-    console.warn('Could not load translations.json:', e.message);
+function loadTranslations() {
+    if (translations !== null) {
+        return;
+    }
+
+    try {
+        translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+    } catch (e) {
+        translations = {};
+    }
 }
 
 let currentLang = 'en';
@@ -30,6 +36,7 @@ const handlebarsHelpers = {
             return '';
         }
 
+        loadTranslations();
         const lang = currentLang;
         const langData = translations[lang];
 
