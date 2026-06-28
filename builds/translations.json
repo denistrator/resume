@@ -1,5 +1,9 @@
 {
   "en": {
+    "head": {
+      "pageTitle": "Denis Belevtsov — Senior Magento 2 Frontend Developer (Hyvä)",
+      "pageDescription": "Senior Frontend Developer with 10+ years in Magento. Specializing in Hyvä Themes, Alpine.js, Tailwind CSS. Skills, experience, and achievements."
+    },
     "header": {
       "name": "Denis",
       "surname": "Belevtsov",
@@ -191,6 +195,10 @@
     }
   },
   "ru": {
+    "head": {
+      "pageTitle": "Денис Белевцов — Senior Magento 2 Фронтенд Разработчик (Hyvä)",
+      "pageDescription": "Senior Фронтенд Разработчик с 10+ годами опыта в Magento. Специализация на Hyvä Themes, Alpine.js, Tailwind CSS. Навыки, опыт и достижения."
+    },
     "header": {
       "name": "Денис",
       "surname": "Белевцов",
@@ -382,6 +390,10 @@
     }
   },
   "uk": {
+    "head": {
+      "pageTitle": "Денис Белевцов — Senior Magento 2 Фронтенд Розробник (Hyvä)",
+      "pageDescription": "Senior Фронтенд Розробник з 10+ роками досвіду в Magento. Спеціалізація на Hyvä Themes, Alpine.js, Tailwind CSS. Навички, досвід та досягнення."
+    },
     "header": {
       "name": "Денис",
       "surname": "Белевцов",
