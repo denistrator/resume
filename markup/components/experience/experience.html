@@ -1,27 +1,15 @@
 <section class="section experience">
-    <h2 class="title section-title">
-        <span class="lang-ru">Работа</span>
-        <span class="lang-en">Work Experience</span>
-        <span class="lang-uk">Робота</span>
+    <h2 class="title section-title" data-i18n="section.experience.title">
+        {{t 'section.experience.title'}}
     </h2>
-    <p class="desc">
-        <span class="lang-ru">Magento 2 Фронтенд Разработчик | 10+ лет опыта</span>
-        <span class="lang-en">Magento 2 Frontend Developer | 10+ Years Experience</span>
-        <span class="lang-uk">Magento 2 Фронтенд Розробник | 10+ років досвіду</span>
+    <p class="desc" data-i18n="section.experience.desc">
+        {{t 'section.experience.desc'}}
     </p>
     <ul class="experience-list">
         {{#each experienceItem}}
         <li class="experience-item">
-            <h3 class="experience-title">
-                <span class="lang-en">{{{title.en}}}</span>
-                <span class="lang-ru">{{{title.ru}}}</span>
-                <span class="lang-uk">{{{title.uk}}}</span>
-            </h3>
-            <p class="experience-desc">
-                <span class="lang-en">{{{description.en}}}</span>
-                <span class="lang-ru">{{{description.ru}}}</span>
-                <span class="lang-uk">{{{description.uk}}}</span>
-            </p>
+            <h3 class="experience-title" data-i18n="experience.{{@index}}.title">{{{title.en}}}</h3>
+            <p class="experience-desc" data-i18n="experience.{{@index}}.description">{{{description.en}}}</p>
         </li>
         {{/each}}
     </ul>

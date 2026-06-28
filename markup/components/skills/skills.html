@@ -1,34 +1,26 @@
 <section class="section skills">
-    <h2 class="title skills-title section-title">
-        <span class="lang-ru">Навыки</span>
-        <span class="lang-en">Skills</span>
-        <span class="lang-uk">Навички</span>
+    <h2 class="title skills-title section-title" data-i18n="section.skills.title">
+        {{t 'section.skills.title'}}
     </h2>
 
-    <p class="desc skills-desc">
-        <span class="lang-ru">Могу, умею, практикую</span>
-        <span class="lang-en">Know it, use it</span>
-        <span class="lang-uk">Вмію, практикую</span>
+    <p class="desc skills-desc" data-i18n="section.skills.desc">
+        {{t 'section.skills.desc'}}
     </p>
 
     <ul class="skills-areas">
         {{#each skillAreas}}
         <li class="skills-area">
             <h3 class="skills-group-label">
-                {{#if title.default}} {{title.default}} {{/if}}
-                {{#if title.en}} <span class="lang-en">{{title.en}}</span> {{/if}}
-                {{#if title.ru}} <span class="lang-ru">{{title.ru}}</span> {{/if}}
-                {{#if title.uk}} <span class="lang-uk">{{title.uk}}</span> {{/if}}
+                {{#if title.default}}{{title.default}}{{/if}}
+                {{#if title.en}}<span data-i18n="skills.{{@key}}.title">{{{title.en}}}</span>{{/if}}
             </h3>
             <ul class="skills-group">
                 {{#each skillGroups}}
                 <li class="skills-item">
                     {{#each this}}
                     <span class="skills-skill">
-                        {{#if default}} {{{default}}} {{/if}}
-                        {{#if en}} <span class="lang-en">{{{en}}}</span> {{/if}}
-                        {{#if ru}} <span class="lang-ru">{{{ru}}}</span> {{/if}}
-                        {{#if uk}} <span class="lang-uk">{{{uk}}}</span> {{/if}}
+                        {{#if default}}{{{default}}}{{/if}}
+                        {{#if en}}<span data-i18n="skills.{{@../../key}}.{{@../index}}.{{@index}}">{{{en}}}</span>{{/if}}
                     </span>
                     {{/each}}
                 </li>
