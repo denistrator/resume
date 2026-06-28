@@ -1,7 +1,7 @@
 const data = {
     skillAreas: {
         hyvä: {
-            title: { default: 'Hyvä:' },
+            title: {default: 'Hyvä:'},
             skillGroups: [
                 [{default: 'Hyvä Themes'}],
                 [{default: 'Alpine.js'}],
@@ -11,11 +11,11 @@ const data = {
             ]
         },
         magento2: {
-            title: { default: 'Magento 2:' },
+            title: {default: 'Magento 2:'},
             skillGroups: [
                 [{en: 'XML Layouts', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
-                [{en: 'Fallback/Inheritance system', ru: 'Fallback/Inheritance система', uk: 'Fallback/Inheritance система'}],
-                [{default: 'Ui lib / Blank / Luma'}],
+                [{default: 'Fallback'}, {en: 'Inheritance system', ru: 'Inheritance система', uk: 'Inheritance система'}],
+                [{default: 'UI lib'}, {default: 'Blank'}, {default: 'Luma'}],
                 [{en: 'Custom modules development', ru: 'Разработка модулей', uk: 'Розробка модулів'}],
                 [{
                     en: '3rd-party modules customisation <br/> (Mirasvit, Amasty, Ubertheme, etc)',
@@ -25,25 +25,28 @@ const data = {
                 [{en: 'PHP DI, Plugins ViewModels', ru: 'PHP DI, Плагины ViewModels', uk: 'PHP DI, Плагіни ViewModels'}],
                 [{en: 'Widgets (widget.xml)', ru: 'Виджеты (widget.xml)', uk: 'Віджети (widget.xml)'}],
                 [{en: 'UI components', ru: 'UI компоненты', uk: 'UI компоненти'}],
-                [{en: 'RequireJS / JS mixins', ru: 'RequireJS / JS миксины', uk: 'RequireJS / JS міксини'}],
+                [{default: 'RequireJS'}, {en: 'JS mixins', ru: 'JS миксины', uk: 'JS міксини'}],
                 [{en: 'Emails customisation', ru: 'Кастомизация писем', uk: 'Кастомізація листів'}],
                 [{en: 'Magento 1 (themes, modules)', ru: 'Magento 1 (темы, модули)', uk: 'Magento 1 (теми, модулі)'}]
             ]
         },
         frontend: {
-            title: { en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд:' },
+            title: {en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд:'},
             skillGroups: [
-                [{en: 'Accessibility / Semantic HTML5', ru: 'Доступность / Семантический HTML5', uk: 'Доступність / Семантичний HTML5'}],
+                [
+                    {en: 'Accessibility', ru: 'Доступность', uk: 'Доступність'},
+                    {en: 'Semantic HTML5', ru: 'Семантический HTML5', uk: 'Семантичний HTML5'}
+                ],
                 [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
-                [{default: 'jQuery / Knockout'}],
-                [{default: 'NPM / Grunt / Gulp'}],
-                [{default: 'SVG / Font Icons'}],
+                [{default: 'jQuery'}, {default: 'Knockout'}],
+                [{default: 'NPM'}, {default: 'Grunt'}, {default: 'Gulp'}],
+                [{default: 'SVG'}, {default: 'Font Icons'}],
                 [{default: 'Pixel perfect'}],
                 [{en: 'Optimization for Google Pagespeed', ru: 'Оптимизация для Google Pagespeed', uk: 'Оптимізація для Google Pagespeed'}]
             ]
         },
         backend: {
-            title: { en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд:' },
+            title: {en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд:'},
             skillGroups: [
                 [{default: 'Composer'}],
                 [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
@@ -55,14 +58,14 @@ const data = {
             ]
         },
         flow: {
-            title: { default: 'Flow:' },
+            title: {default: 'Flow:'},
             skillGroups: [
-                [{default: 'Docker / DDEV'}],
+                [{default: 'Docker'}, {default: 'DDEV'}],
                 [{en: 'Git/GitHub Actions, CI/CD for Hyvä/Tailwind builds', ru: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind сборок', uk: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind збірок'}]
             ]
         },
         misc: {
-            title: { en: 'Misc:', ru: 'Прочее:', uk: 'Інше:' },
+            title: {en: 'Misc:', ru: 'Прочее:', uk: 'Інше:'},
             skillGroups: [
                 [{default: 'Jira'}],
                 [{en: 'Semantic versioning', ru: 'Семант. верс.', uk: 'Семант. верс.'}, {en: 'Keeping a changelog', ru: 'Ведение changelog', uk: 'Ведення changelog'}]
