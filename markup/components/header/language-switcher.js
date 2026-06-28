@@ -52,7 +52,7 @@
             const value = getNestedValue(langData, key);
 
             if (value !== void 0) {
-                element.textContent = value;
+                element.innerHTML = value;
             }
         });
 
