@@ -1,8 +1,6 @@
 'use strict';
 
 const gulp = tars.packages.gulp;
-const through2 = tars.packages.through2;
-const File = tars.packages.gutil.File;
 const notifier = tars.helpers.notifier;
 const fs = require('fs');
 const path = require('path');
@@ -262,22 +260,9 @@ module.exports = function() {
         }
 
         const jsonContent = JSON.stringify(translations, null, 2);
-        const file = new File({
-            base: './',
-            path: './translations.json',
-            contents: Buffer.from(jsonContent)
-        });
-
-        return through2.obj(
-            function(chunk, enc, callback) {
-                callback();
-            },
-            function(callback) {
-                const destPath = path.resolve(process.cwd(), tars.config.devPath, 'translations.json');
-                fs.writeFileSync(destPath, jsonContent);
-                notifier.success('Translations generated from data.js files');
-                callback();
-            }
-        );
+        const destPath = path.resolve(process.cwd(), tars.config.devPath, 'translations.json');
+        fs.writeFileSync(destPath, jsonContent);
+        notifier.success('Translations generated from data.js files');
+        done();
     });
 };

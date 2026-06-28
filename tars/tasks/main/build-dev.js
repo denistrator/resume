@@ -33,7 +33,8 @@ module.exports = () => {
                 'images:move-general-img',
                 'js:move-separate',
             ],
-            ['js:processing', 'html:compile-templates', 'build-translations'],
+            'build-translations',
+            ['js:processing', 'html:compile-templates'],
             cb,
         );
     });
