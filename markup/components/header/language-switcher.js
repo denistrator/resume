@@ -6,6 +6,10 @@
     let translations = null;
     let currentLang = DEFAULT_LANG;
 
+    function revealPage() {
+        document.documentElement.setAttribute('data-lang-ready', '');
+    }
+
     const toggle = document.querySelector('.lang-toggle');
 
     if (!toggle) {
@@ -109,13 +113,16 @@
         switchLanguage(next);
     });
 
-    const savedLang = localStorage.getItem(STORAGE_KEY);
+    const savedLang = window.__pendingLang || localStorage.getItem(STORAGE_KEY);
 
     if (savedLang && LANGS.includes(savedLang) && savedLang !== DEFAULT_LANG) {
         loadTranslations().then(() => {
             if (translations && translations[savedLang]) {
                 applyTranslations(savedLang);
             }
+            revealPage();
         });
+    } else {
+        revealPage();
     }
 })();
