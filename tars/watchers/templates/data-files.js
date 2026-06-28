@@ -26,6 +26,7 @@ module.exports = () => {
         }
 
         runSequence(
+            'build-translations',
             'html:concat-mocks-data',
             'html:compile-templates',
             () => {}
