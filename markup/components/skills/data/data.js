@@ -1,9 +1,7 @@
 const data = {
-    skillAreas: [
-        {
-            title: {
-                default: 'Hyvä:'
-            },
+    skillAreas: {
+        hyvä: {
+            title: { default: 'Hyvä:' },
             skillGroups: [
                 [{default: 'Hyvä Themes'}],
                 [{default: 'Alpine.js'}],
@@ -12,10 +10,8 @@ const data = {
                 [{default: 'Magewire'}]
             ]
         },
-        {
-            title: {
-                default: 'Magento 2:'
-            },
+        magento2: {
+            title: { default: 'Magento 2:' },
             skillGroups: [
                 [{en: 'XML Layouts', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
                 [{en: 'Fallback/Inheritance system', ru: 'Fallback/Inheritance система', uk: 'Fallback/Inheritance система'}],
@@ -34,12 +30,8 @@ const data = {
                 [{en: 'Magento 1 (themes, modules)', ru: 'Magento 1 (темы, модули)', uk: 'Magento 1 (теми, модулі)'}]
             ]
         },
-        {
-            title: {
-                en: 'Front-end:',
-                ru: 'Фронт-энд:',
-                uk: 'Фронт-енд:'
-            },
+        frontend: {
+            title: { en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд:' },
             skillGroups: [
                 [{en: 'Accessibility / Semantic HTML5', ru: 'Доступность / Семантический HTML5', uk: 'Доступність / Семантичний HTML5'}],
                 [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
@@ -50,12 +42,8 @@ const data = {
                 [{en: 'Optimization for Google Pagespeed', ru: 'Оптимизация для Google Pagespeed', uk: 'Оптимізація для Google Pagespeed'}]
             ]
         },
-        {
-            title: {
-                en: 'Back-end:',
-                ru: 'Бэк-энд:',
-                uk: 'Бек-енд:'
-            },
+        backend: {
+            title: { en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд:' },
             skillGroups: [
                 [{default: 'Composer'}],
                 [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
@@ -66,25 +54,19 @@ const data = {
                 [{default: 'MySQL'}]
             ]
         },
-        {
-            title: {
-                default: 'Flow:'
-            },
+        flow: {
+            title: { default: 'Flow:' },
             skillGroups: [
                 [{default: 'Docker / DDEV'}],
                 [{en: 'Git/GitHub Actions, CI/CD for Hyvä/Tailwind builds', ru: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind сборок', uk: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind збірок'}]
             ]
         },
-        {
-            title: {
-                en: 'Misc:',
-                ru: 'Прочее:',
-                uk: 'Інше:'
-            },
+        misc: {
+            title: { en: 'Misc:', ru: 'Прочее:', uk: 'Інше:' },
             skillGroups: [
                 [{default: 'Jira'}],
                 [{en: 'Semantic versioning', ru: 'Семант. верс.', uk: 'Семант. верс.'}, {en: 'Keeping a changelog', ru: 'Ведение changelog', uk: 'Ведення changelog'}]
             ]
         }
-    ]
+    }
 };
