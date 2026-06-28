@@ -1,0 +1,199 @@
+.languages {
+    &-list {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    &-item {
+
+    }
+
+    &-name {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    &-level {
+        font-size: 13px;
+        color: var(--color-text-muted);
+        transition: color var(--transition-theme);
+    }
+}
+
+.toefl {
+    position: relative;
+
+    &-trigger {
+        display: inline-flex;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+            border-radius: 3px;
+        }
+    }
+
+    &-badge {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--color-link);
+        background: rgba(0, 0, 0, 0.04);
+        padding: 1px 6px;
+        border-radius: 3px;
+        transition: color var(--transition-theme), background-color var(--transition-theme);
+        white-space: nowrap;
+
+        [data-theme="dark"] & {
+            background: rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    &-tooltip {
+        display: none;
+        transition: color var(--transition-theme), background-color var(--transition-theme), border-color var(--transition-theme);
+
+        @media print {
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--color-text-muted);
+
+            @media print {
+                padding-bottom: 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+            z-index: 10;
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            padding: 12px 14px;
+            min-width: 240px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            @media print {
+                position: static;
+                background-color: transparent;
+                border: 0;
+                padding: 0;
+                min-width: 0;
+                box-shadow: none;
+                margin-top: 2px;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -6px;
+                left: 12px;
+                width: 10px;
+                height: 10px;
+                background: var(--color-bg);
+                border-left: 1px solid var(--color-border);
+                border-top: 1px solid var(--color-border);
+                transform: rotate(45deg);
+                transition: background-color var(--transition-theme), border-color var(--transition-theme);
+            }
+        }
+
+        [data-theme="dark"] & {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    &-tooltip-header {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    &-tooltip-date {
+        display: block;
+        font-size: 11px;
+        color: var(--color-text-muted);
+        margin-bottom: 10px;
+        transition: color var(--transition-theme);
+    }
+
+    &-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        @media print {
+            display: none;
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 80px 1fr 28px;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    &-row-label {
+        color: var(--color-text-secondary);
+        transition: color var(--transition-theme);
+    }
+
+    &-bar-track {
+        height: 8px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        overflow: hidden;
+
+        [data-theme="dark"] & {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &-bar-fill {
+        display: block;
+        height: 100%;
+        background: var(--color-link);
+        border-radius: 4px;
+        transition: width 0.4s ease;
+    }
+
+    &-row-score {
+        text-align: right;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .languages-level,
+    .toefl-badge,
+    .toefl-tooltip,
+    .toefl-tooltip::before,
+    .toefl-bar-fill {
+        transition: none;
+    }
+}
+
+@media print {
+    .toefl-trigger {
+        display: none;
+    }
+}

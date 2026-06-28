@@ -17,7 +17,7 @@
             if (acc && typeof acc === 'object') {
                 return acc[part];
             }
-            return undefined;
+            return void 0;
         }, obj);
     }
 
@@ -47,7 +47,7 @@
             const key = element.getAttribute('data-i18n');
             const value = getNestedValue(langData, key);
 
-            if (value !== undefined) {
+            if (value !== void 0) {
                 element.textContent = value;
             }
         });
@@ -61,7 +61,7 @@
                 if (attr && key) {
                     const value = getNestedValue(langData, key.trim());
 
-                    if (value !== undefined) {
+                    if (value !== void 0) {
                         element.setAttribute(attr.trim(), value);
                     }
                 }
