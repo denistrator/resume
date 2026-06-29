@@ -1,12 +1,12 @@
 @use "sass:color";
 
-$font-size-base: 17px !default;
-$line-height-base: 1.6 !default;
+$font-size-base: 16px !default;
+$line-height-base: 1.65 !default;
 $font-family-base: $font-family-base !default;
-$margin-bottom-p: 12px !default;
+$margin-bottom-p: 14px !default;
 
-$link-decoration: underline !default;
-$link-decoration-hover: none !default;
+$link-decoration: none !default;
+$link-decoration-hover: underline !default;
 
 $heading-font-family: inherit !default;
 $heading-font-weight: $heading-font-weight !default;
@@ -35,8 +35,9 @@ p,
 }
 
 a {
-    color: inherit;
+    color: var(--color-link);
     text-decoration: $link-decoration;
+    transition: color var(--transition-theme);
 
     &:hover {
         color: var(--color-link-hover);
@@ -44,7 +45,7 @@ a {
     }
 
     @media print {
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
