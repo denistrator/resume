@@ -31,11 +31,10 @@
         z-index: -1;
         top: 0;
         bottom: 0;
-        border: 2px solid transparent;
+        border: none;
         background-color: inherit;
         pointer-events: none;
-        transform: skewY(-2deg);
-        transition: border-color var(--transition-theme), background-color var(--transition-theme);
+        transition: background-color var(--transition-theme);
 
         @media print {
             display: none;
@@ -47,7 +46,6 @@
         }
 
         @media (min-width: 768px) {
-            border-color: var(--color-section-border);
             right: 40px;
             left: 40px;
         }

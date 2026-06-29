@@ -24,24 +24,20 @@
         z-index: -1;
         left: 0;
         right: .5px;
-        border: 2px solid var(--color-border);
+        border: none;
         pointer-events: none;
-        transition: border-color var(--transition-theme);
+        transition: background-color var(--transition-theme);
     }
 
     &:before {
         top: 0;
         bottom: 30%;
-        border-bottom-width: 0;
-        transform: skewY(-2deg);
-        transform-origin: left;
     }
 
     &:after {
         top: 30%;
         bottom: 0;
         left: 0;
-        border-top-width: 0;
     }
 
     &-name,
