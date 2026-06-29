@@ -63,7 +63,7 @@ img {
         clip: auto;
         overflow: visible;
         margin: 0;
-        padding: 8px 16px;
+        padding: 10px 20px;
         background: var(--color-skip-bg);
         color: var(--color-skip-text);
         font-size: 16px;
@@ -79,7 +79,8 @@ a,
 button {
     &:focus-visible {
         outline: 2px solid var(--color-focus);
-        outline-offset: 2px;
+        outline-offset: 3px;
+        border-radius: 2px;
     }
 }
 
