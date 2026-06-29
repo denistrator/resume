@@ -3,8 +3,8 @@
 .section {
     $a: 28px;
     padding-left: $a;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     page-break-inside: avoid;
 
     &-title {
@@ -14,18 +14,21 @@
             user-select: none;
             font-size: 70%;
             margin-left: -($a + 4px);
+            color: var(--color-text-muted);
         }
     }
 
     .title {
         margin: 0;
-        font-size: 28px;
-        line-height: 1.2;
+        font-size: 26px;
+        line-height: 1.25;
+        letter-spacing: 0.01em;
     }
 
     .desc {
-        font-size: 14px;
+        font-size: 13px;
         color: var(--color-text-muted);
         transition: color var(--transition-theme);
+        letter-spacing: 0.01em;
     }
 }

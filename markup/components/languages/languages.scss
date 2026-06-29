@@ -36,16 +36,16 @@
 
     &-badge {
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 600;
         color: var(--color-link);
-        background: rgba(0, 0, 0, 0.04);
-        padding: 1px 6px;
-        border-radius: 3px;
+        background: rgba(217, 119, 6, 0.1);
+        padding: 2px 8px;
+        border-radius: 4px;
         transition: color var(--transition-theme), background-color var(--transition-theme);
         white-space: nowrap;
 
         [data-theme="dark"] & {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(251, 191, 36, 0.12);
         }
     }
 
