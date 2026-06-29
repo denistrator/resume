@@ -1,69 +1,26 @@
 @use "sass:math";
 
 .sections {
-    @include cf;
     @extend .container;
-    position: relative;
-    z-index: 1;
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     color: var(--color-text-primary);
     background-color: transparent;
     background-clip: content-box;
     counter-reset: section-number;
     transition: color var(--transition-theme);
 
-    @media (max-width: 767px) {
-        padding-left: 0;
-        padding-right: 0;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 30px;
     }
 
     [data-theme="dark"] & {
         color: var(--color-text-primary);
-    }
-
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        border: none;
-        background-color: inherit;
-        pointer-events: none;
-        transition: background-color var(--transition-theme);
-
-        @media print {
-            display: none;
-        }
-
-        @media (max-width: 767px) {
-            right: 0;
-            left: 0;
-        }
-
-        @media (min-width: 768px) {
-            right: 40px;
-            left: 40px;
-        }
-    }
-
-    &-main,
-    &-aside {
-        @media (max-width: 767px) {
-            padding-left: in-perc(60, 1070);
-            padding-right: in-perc(60, 1070);
-            width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            float: left;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
     }
 
     &-main {

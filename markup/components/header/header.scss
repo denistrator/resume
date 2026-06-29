@@ -13,6 +13,10 @@ $links-size: 40px !default;
         display: flex;
         justify-content: space-between;
         gap: 12px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     &-name {
@@ -45,8 +49,11 @@ $links-size: 40px !default;
         @extend %nl;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
         gap: 10px;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
 
         &-item {
             overflow: hidden;
@@ -85,7 +92,7 @@ $links-size: 40px !default;
             }
 
             &--mobile-open {
-                @media screen and (max-width: 768px) {
+                @media (max-width: 767px) {
                     &:hover {
                         max-width: 302px;
                     }
