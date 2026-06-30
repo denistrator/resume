@@ -104,7 +104,9 @@
         const pdfLink = document.querySelector('a[href*="Resume-"]');
 
         if (pdfLink) {
-            pdfLink.href = pdfLink.href.replace(/Resume-\w+\.pdf/, `Resume-${lang}.pdf`);
+            const basePath = pdfLink.href.substring(0, pdfLink.href.lastIndexOf('/') + 1);
+            const baseName = pdfLink.href.substring(pdfLink.href.lastIndexOf('/') + 1).replace(/Resume-\w+\.pdf/, '');
+            pdfLink.href = `${basePath}${baseName}Resume-${lang}.pdf`;
         }
     }
 
