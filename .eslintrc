@@ -1,7 +1,5 @@
 {
-
     "root": true,
-
     "env": {
         "node": true,
         "browser": true,
@@ -9,19 +7,14 @@
         "jquery": true,
         "es6": true
     },
-
     "globals": {
         "tars": true
     },
-
     "extends": "eslint:recommended",
-
-
     "parserOptions": {
-        "ecmaVersion": 2020,
+        "ecmaVersion": 2022,
         "sourceType": "module"
     },
-
     "rules": {
         "indent": [2, 4, {"SwitchCase": 1}],
         "brace-style": [2, "1tbs"],
@@ -57,14 +50,13 @@
         "no-mixed-spaces-and-tabs": [2, false],
         "no-multi-spaces": 2,
         "no-multi-str": 2,
-        "no-native-reassign": 2,
+        "no-global-assign": 2,
         "no-nested-ternary": 2,
         "no-new-func": 2,
         "no-new-object": 2,
         "no-new-wrappers": 2,
         "no-octal": 2,
         "no-octal-escape": 2,
-        "no-process-exit": 2,
         "no-proto": 2,
         "no-redeclare": 2,
         "no-return-assign": 2,
@@ -72,7 +64,7 @@
         "no-sequences": 2,
         "no-shadow": 2,
         "no-shadow-restricted-names": 2,
-        "no-spaced-func": 2,
+        "func-call-spacing": 2,
         "no-trailing-spaces": 2,
         "no-undef": 2,
         "no-undef-init": 2,
@@ -92,20 +84,12 @@
         "space-unary-ops": [2, {"words": true, "nonwords": false}],
         "spaced-comment": [2, "always", { "exceptions": ["-"]}],
         "strict": 0,
-        "valid-jsdoc": [0, {"requireReturnDescription": false, "requireReturn": false}],
         "wrap-iife": [2, "inside"],
         "yoda": [2, "never"],
-
-        // Previously on by default in node environment
-        "no-catch-shadow": 0,
-        "no-console": 0,
         "no-mixed-requires": 2,
         "no-new-require": 2,
         "no-path-concat": 2,
-        "global-strict": [0, "always"],
         "handle-callback-err": [2, "err"],
-
-        // ES6
         "arrow-spacing": [2, {"before": true, "after": true}],
         "constructor-super": 2,
         "no-confusing-arrow": 2,
