@@ -15,4 +15,15 @@
         localStorage.setItem('theme', next);
         toggle.setAttribute('aria-pressed', String(next === 'dark'));
     });
+
+    let themeBeforePrint;
+
+    window.addEventListener('beforeprint', () => {
+        themeBeforePrint = html.getAttribute('data-theme') || 'light';
+        html.setAttribute('data-theme', 'light');
+    });
+
+    window.addEventListener('afterprint', () => {
+        html.setAttribute('data-theme', themeBeforePrint);
+    });
 })();
