@@ -31,7 +31,7 @@
         "languages": {
             "toeflAria": "TOEFL score details",
             "toeflHeader": "CEFR Level B2 and TOEFL iBT 90 / 120",
-            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+            "toeflDate": "TOEFL 27.06.2026"
         },
         "footer": {
             "name": "Denis Belevtsov",
@@ -70,7 +70,7 @@
         "languages": {
             "toeflAria": "Детали оценки TOEFL",
             "toeflHeader": "Уровень CEFR B2 и TOEFL iBT 90 / 120",
-            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+            "toeflDate": "TOEFL 27.06.2026"
         },
         "footer": {
             "name": "Денис Белевцов",
@@ -109,7 +109,7 @@
         "languages": {
             "toeflAria": "Деталі оцінки TOEFL",
             "toeflHeader": "Рівень CEFR B2 та TOEFL iBT 90 / 120",
-            "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+            "toeflDate": "TOEFL 27.06.2026"
         },
         "footer": {
             "name": "Денис Белевцов",

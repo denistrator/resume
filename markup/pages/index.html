@@ -7,8 +7,8 @@
     <style>:root:not([data-lang-ready]){visibility:hidden}</style>
     <script>
         (function() {
-            var KEY = 'preferred-lang';
-            var saved = localStorage.getItem(KEY);
+            const KEY = 'preferred-lang';
+            const saved = localStorage.getItem(KEY);
             if (!saved || saved === 'en') {
                 document.documentElement.setAttribute('data-lang-ready', '');
             } else {

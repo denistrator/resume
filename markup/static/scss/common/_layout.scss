@@ -1,11 +1,11 @@
 .page-wrapper {
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
-        margin: in-perc(30, 1920);
+        margin: in-percent(30, 1920);
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -17,8 +17,8 @@
     max-width: 1060px;
 
     @media (max-width: 767px) {
-        padding-left: in-perc(60, 1070);
-        padding-right: in-perc(60, 1070);
+        padding-left: in-percent(60, 1070);
+        padding-right: in-percent(60, 1070);
     }
 
     @media (min-width: 768px) {

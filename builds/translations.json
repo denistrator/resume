@@ -43,7 +43,7 @@
     "languages": {
       "toeflAria": "TOEFL score details",
       "toeflHeader": "CEFR Level B2 and TOEFL iBT 90 / 120",
-      "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+      "toeflDate": "TOEFL 27.06.2026"
     },
     "footer": {
       "name": "Denis Belevtsov",
@@ -91,7 +91,7 @@
           "0": "RTL Implementation"
         },
         "6": {
-          "0": "Optimization for Google Pagespeed"
+          "0": "Optimization for Google PageSpeed"
         }
       },
       "backend": {
@@ -237,7 +237,7 @@
     "languages": {
       "toeflAria": "Детали оценки TOEFL",
       "toeflHeader": "Уровень CEFR B2 и TOEFL iBT 90 / 120",
-      "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+      "toeflDate": "TOEFL 27.06.2026"
     },
     "footer": {
       "name": "Денис Белевцов",
@@ -285,7 +285,7 @@
           "0": "Реализация RTL"
         },
         "6": {
-          "0": "Оптимизация для Google Pagespeed"
+          "0": "Оптимизация для Google PageSpeed"
         }
       },
       "backend": {
@@ -431,7 +431,7 @@
     "languages": {
       "toeflAria": "Деталі оцінки TOEFL",
       "toeflHeader": "Рівень CEFR B2 та TOEFL iBT 90 / 120",
-      "toeflDate": "TOEFL (Magoosh) 27.06.2026"
+      "toeflDate": "TOEFL 27.06.2026"
     },
     "footer": {
       "name": "Денис Белевцов",
@@ -479,7 +479,7 @@
           "0": "Реалізація RTL"
         },
         "6": {
-          "0": "Оптимізація для Google Pagespeed"
+          "0": "Оптимізація для Google PageSpeed"
         }
       },
       "backend": {

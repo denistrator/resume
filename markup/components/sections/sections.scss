@@ -19,19 +19,14 @@
         gap: 30px;
     }
 
-    [data-theme="dark"] & {
-        color: var(--color-text-primary);
-    }
-
     &-main {
-        @media (min-width: 768px) {
-            width: (math.div(100%, 3) * 2);
-        }
+
     }
 
     &-aside {
         @media (min-width: 768px) {
-            width: (math.div(100%, 3));
+            width: 245px;
+            flex-shrink: 0;
         }
     }
 }
