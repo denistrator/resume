@@ -126,21 +126,7 @@ if (
     );
 }
 
-if (
-    !tars.config.svg.active || tars.config.svg.workflow !== 'symbols' ||
-    tars.config.svg.symbolsConfig.loadingType !== 'separate-file-with-link' ||
-    !tars.config.svg.symbolsConfig.usePolyfillForExternalSymbols
-) {
-    patterns.push(
-        {
-            match: '<script src="%=static=%js/separate-js/svg4everybody.min.js"></script>',
-            replacement: ''
-        }, {
-            match: '<script>svg4everybody();</script>',
-            replacement: ''
-        }
-    );
-}
+
 
 /**
  * Add some specific functions for Jade/Pug-processing
