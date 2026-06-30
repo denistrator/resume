@@ -34,7 +34,7 @@ jobs:
               run: npm ci
 
             - name: Install TARS CLI
-              run: npm install -g tars-cli
+              run: npm install -g tars-cli --ignore-scripts
 
             - name: Build production
               run: tars build --min
