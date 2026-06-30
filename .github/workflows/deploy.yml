@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - master
+    # Optional: adds a manual "Run workflow" button in GitHub UI
+    workflow_dispatch:
 
 permissions:
     contents: read
@@ -12,7 +14,7 @@ permissions:
 
 concurrency:
     group: pages
-    cancel-in-progress: true
+    cancel-in-progress: true # Best for rapid push & build cycles
 
 jobs:
     deploy:
@@ -23,26 +25,31 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v4
+            -   name: Checkout code
+                uses: actions/checkout@v4
 
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 20
+            -   name: Setup Node.js
+                uses: actions/setup-node@v4
+                with:
+                    node-version: 20
 
-            - name: Install dependencies
-              run: npm ci
+            -   name: Install dependencies
+                run: npm ci
 
-            - name: Install TARS CLI
-              run: npm install -g tars-cli --ignore-scripts
+            -   name: Install TARS CLI
+                run: npm install -g tars-cli --ignore-scripts
 
-            - name: Build production
-              run: tars build --min
+            -   name: Build production
+                run: tars build --min
 
-            - uses: actions/configure-pages@v5
+            -   name: Setup Pages
+                uses: actions/configure-pages@v5
 
-            - uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./builds
+            -   name: Upload artifact
+                uses: actions/upload-pages-artifact@v3
+                with:
+                    path: ./builds
 
-            - uses: actions/deploy-pages@v4
-              id: deployment
+            -   name: Deploy to GitHub Pages
+                id: deployment
+                uses: actions/deploy-pages@v5
