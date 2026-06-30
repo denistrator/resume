@@ -45,15 +45,6 @@
     }
 }
 
-// === SCSS Variables (non-visual, backward compat) ===
-$text-primary: var(--color-text-primary);
-$text-secondary: var(--color-text-secondary);
-$text-muted: var(--color-text-muted);
-$light: var(--color-bg);
-$dark: var(--color-border);
-$link-color: var(--color-link);
-$link-color-hover: var(--color-link-hover);
-
 // typography
 $font-family-base: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
 $font-size-base: 16px;
