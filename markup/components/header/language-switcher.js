@@ -132,7 +132,8 @@
         switchLanguage(next);
     });
 
-    const savedLang = window.__pendingLang || localStorage.getItem(STORAGE_KEY);
+    /** @type {string|null} Language set by inline pre-init script via data-pending-lang attribute */
+    const savedLang = document.documentElement.getAttribute('data-pending-lang') || localStorage.getItem(STORAGE_KEY);
 
     if (savedLang && LANGS.includes(savedLang) && savedLang !== DEFAULT_LANG) {
         loadTranslations().then(() => {

@@ -6,13 +6,19 @@
     {{> before-page-content/theme-switcher}}
     <style>:root:not([data-lang-ready]){visibility:hidden}</style>
     <script>
+        /**
+         * Language pre-initialization script.
+         * Sets data-lang-ready attribute when no translation needed (English default),
+         * or stores pending language in data-pending-lang attribute for language-switcher.js to process.
+         * Contract: language-switcher.js reads data-pending-lang on init.
+         */
         (function() {
             const KEY = 'preferred-lang';
             const saved = localStorage.getItem(KEY);
             if (!saved || saved === 'en') {
                 document.documentElement.setAttribute('data-lang-ready', '');
             } else {
-                window.__pendingLang = saved;
+                document.documentElement.setAttribute('data-pending-lang', saved);
             }
         })();
     </script>
