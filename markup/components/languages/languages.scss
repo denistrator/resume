@@ -38,19 +38,29 @@
         font-size: 12px;
         font-weight: 600;
         color: var(--color-link);
-        background: rgba(217, 119, 6, 0.1);
+        background-color: rgba(217, 119, 6, 0.1);
         padding: 2px 8px;
         border-radius: 4px;
         transition: color var(--transition-theme), background-color var(--transition-theme);
         white-space: nowrap;
 
+        &:hover {
+            color: var(--color-link-hover);
+            background-color: rgba(217, 119, 6, 0.2);
+        }
+
         [data-theme="dark"] & {
             background: rgba(251, 191, 36, 0.12);
+
+            &:hover {
+                background: rgba(251, 191, 36, 0.2);
+            }
         }
     }
 
     &-tooltip {
         display: none;
+        max-width: 400px;
         transition: color var(--transition-theme), background-color var(--transition-theme), border-color var(--transition-theme);
 
         @media print {
@@ -79,6 +89,10 @@
             padding: 12px 14px;
             min-width: 240px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            [data-theme="dark"] & {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
 
             @media print {
                 position: static;
@@ -109,10 +123,6 @@
             }
         }
 
-        [data-theme="dark"] & {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-
         &.is-open {
             display: block;
         }
@@ -137,10 +147,6 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
-
-        @media print {
-            display: none;
-        }
     }
 
     &-row {
@@ -189,11 +195,5 @@
     .toefl-tooltip::before,
     .toefl-bar-fill {
         transition: none;
-    }
-}
-
-@media print {
-    .toefl-trigger {
-        display: none;
     }
 }

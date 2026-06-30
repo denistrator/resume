@@ -1,102 +1,73 @@
 @charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
+/*
+Sections
+========
+*/
 body {
-  margin: 0;
+  margin: 0; /* Remove the margin in all browsers. */
 }
 
+/*
+Text-level semantics
+====================
+*/
 /**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
+Add the correct font weight in Chrome and Safari.
+*/
 b,
 strong {
   font-weight: bolder;
 }
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
 /**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
+Add the correct font size in all browsers.
+*/
 /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-/* Embedded content
-   ========================================================================== */
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+/*
+Tabular data
+============
+*/
 /**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+/*
+Forms
+=====
+*/
 /**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
 button,
 input,
 optgroup,
@@ -109,26 +80,8 @@ textarea {
 }
 
 /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
+Correct the inability to style clickable types in iOS and Safari.
+*/
 button,
 [type=button],
 [type=reset],
@@ -137,75 +90,32 @@ button,
 }
 
 /**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
 /**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
+Add the correct vertical alignment in Chrome and Firefox.
+*/
 /**
- * Correct the padding in Firefox.
- */
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
 /**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
 /**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
+Remove the inner padding in Chrome and Safari on macOS.
+*/
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-/* Interactive
-   ========================================================================== */
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
 /*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
+Interactive
+===========
+*/
 /*
- * Add the correct display in all browsers.
- */
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-/**
- * Add the correct display in IE 10.
- */
+Add the correct display in Chrome and Safari.
+*/
 /* Libraries, which is used in current project. */
 /* Libraries, which is used in current project. */
 /* Some styles, which is used for correct sprite-generation, vars, mixins and etc */
@@ -254,7 +164,7 @@ button:-moz-focusring,
   --color-text-secondary: #57534e;
   --color-text-muted: #78716c;
   --color-border: #aca6a2;
-  --color-link: #d97706;
+  --color-link: #774103;
   --color-link-hover: #b45309;
   --color-focus: #fbbf24;
   --color-skip-bg: #fffbeb;
@@ -387,7 +297,7 @@ button:focus-visible {
     content: none !important;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .page-wrapper {
     position: absolute;
     top: 0;
@@ -476,43 +386,41 @@ a:hover {
   }
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: 500;
   color: inherit;
 }
 
-h1, .h1 {
+h1 {
   font-size: 40px;
 }
 
-h2, .h2 {
+h2 {
   font-size: 32px;
 }
 
-h3, .h3 {
+h3 {
   font-size: 24px;
 }
 
-h4, .h4 {
+h4 {
   font-size: 20px;
 }
 
-h5, .h5 {
+h5 {
   font-size: 16px;
 }
 
-h6, .h6 {
+h6 {
   font-size: 14px;
 }
 
 body {
   position: relative;
-  min-height: 100%;
   min-height: 100vh;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   body {
     background-image: linear-gradient(-45deg, var(--color-bg) 50%, var(--color-border) 50%);
   }
@@ -526,7 +434,7 @@ ul {
   background-color: color-mix(in srgb, var(--color-bg) 98%, transparent);
   transition: background-color var(--transition-theme);
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .page-wrapper {
     box-shadow: 0 6px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
@@ -538,17 +446,13 @@ ul {
   text-align: center;
   margin-bottom: 50px;
 }
-@media print {
-  .footer {
-    display: none;
-  }
-}
 .footer-name, .footer-offer, .footer-mail {
   margin: 8px 0;
   font-size: 16px;
   font-weight: 300;
 }
 .footer-name {
+  display: block;
   text-transform: uppercase;
 }
 
@@ -622,7 +526,7 @@ ul {
 [data-theme=dark] .header-links-item:hover .header-link {
   background-color: rgba(251, 191, 36, 0.08);
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .header-links-item:hover {
     max-width: 302px;
   }
@@ -768,17 +672,10 @@ ul {
     gap: 30px;
   }
 }
-[data-theme=dark] .sections {
-  color: var(--color-text-primary);
-}
-@media (min-width: 768px) {
-  .sections-main {
-    width: 66.6666666667%;
-  }
-}
 @media (min-width: 768px) {
   .sections-aside {
-    width: 33.3333333333%;
+    width: 245px;
+    flex-shrink: 0;
   }
 }
 
@@ -841,17 +738,25 @@ ul {
   font-size: 12px;
   font-weight: 600;
   color: var(--color-link);
-  background: rgba(217, 119, 6, 0.1);
+  background-color: rgba(217, 119, 6, 0.1);
   padding: 2px 8px;
   border-radius: 4px;
   transition: color var(--transition-theme), background-color var(--transition-theme);
   white-space: nowrap;
 }
+.toefl-badge:hover {
+  color: var(--color-link-hover);
+  background-color: rgba(217, 119, 6, 0.2);
+}
 [data-theme=dark] .toefl-badge {
   background: rgba(251, 191, 36, 0.12);
 }
+[data-theme=dark] .toefl-badge:hover {
+  background: rgba(251, 191, 36, 0.2);
+}
 .toefl-tooltip {
   display: none;
+  max-width: 400px;
   transition: color var(--transition-theme), background-color var(--transition-theme), border-color var(--transition-theme);
 }
 @media print {
@@ -885,6 +790,9 @@ ul {
     min-width: 240px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
+  [data-theme=dark] .toefl-tooltip {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
 }
 @media print and (min-width: 768px) {
   .toefl-tooltip {
@@ -915,9 +823,6 @@ ul {
     transition: background-color var(--transition-theme), border-color var(--transition-theme);
   }
 }
-[data-theme=dark] .toefl-tooltip {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
 .toefl-tooltip.is-open {
   display: block;
 }
@@ -938,11 +843,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 6px;
-}
-@media print {
-  .toefl-chart {
-    display: none;
-  }
 }
 .toefl-row {
   display: grid;
@@ -984,11 +884,6 @@ ul {
   .toefl-tooltip::before,
   .toefl-bar-fill {
     transition: none;
-  }
-}
-@media print {
-  .toefl-trigger {
-    display: none;
   }
 }
 .skills-areas {

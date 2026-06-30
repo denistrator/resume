@@ -1,6 +1,6 @@
 const data = {
     skillAreas: {
-        hyvä: {
+        hyva: {
             title: {default: 'Hyvä:'},
             skillGroups: [
                 [{default: 'Hyvä Themes'}],
@@ -42,7 +42,7 @@ const data = {
                 [{default: 'NPM'}, {default: 'Grunt'}, {default: 'Gulp'}],
                 [{default: 'SVG'}, {default: 'Font Icons'}],
                 [{default: 'Pixel perfect'}],
-                [{en: 'Optimization for Google Pagespeed', ru: 'Оптимизация для Google Pagespeed', uk: 'Оптимізація для Google Pagespeed'}]
+                [{en: 'Optimization for Google PageSpeed', ru: 'Оптимизация для Google PageSpeed', uk: 'Оптимізація для Google PageSpeed'}]
             ]
         },
         backend: {

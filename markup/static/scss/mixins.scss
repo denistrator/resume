@@ -38,7 +38,7 @@
     @return $number;
 }
 
-@function in-perc($val, $width) {
+@function in-percent($val, $width) {
     @return (math.div($val, $width) * 100%);
 }
 

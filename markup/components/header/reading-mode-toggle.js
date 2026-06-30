@@ -4,7 +4,7 @@
 
     const html = document.documentElement;
 
-    const currentTheme = html.getAttribute('data-theme') || 'light';
+    const currentTheme = html.getAttribute('data-theme') || localStorage.getItem('theme') || 'light';
     toggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
 
     toggle.addEventListener('click', () => {

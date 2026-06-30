@@ -14,7 +14,7 @@
             <span class="languages-level" data-i18n="languagesList.{{@index}}.level">{{level.en}}</span>
             {{#if toefl}}
             <span class="toefl">
-                <span class="toefl-trigger" tabindex="0" role="button"
+                <span class="toefl-trigger no-print" tabindex="0" role="button"
                       aria-expanded="false"
                       data-i18n-attr="aria-label:languages.toeflAria"
                       aria-label="{{t 'languages.toeflAria'}}">
@@ -27,7 +27,7 @@
                     <span class="toefl-tooltip-date" data-i18n="languages.toeflDate">
                         {{t 'languages.toeflDate'}}
                     </span>
-                    <span class="toefl-chart">
+                    <span class="toefl-chart no-print">
                         {{#each toefl.sections}}
                         <span class="toefl-row">
                             <span class="toefl-row-label" data-i18n="toeflSections.{{@index}}.name">{{name.en}}</span>

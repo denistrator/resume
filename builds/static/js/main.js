@@ -40,13 +40,33 @@
       return void 0;
     }, obj);
   }
+  function sanitize(html) {
+    return html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/&lt;br\s*\/?&gt;/gi, '<br>');
+  }
+  function sanitizeStrings(obj) {
+    if (typeof obj === 'string') {
+      return sanitize(obj);
+    }
+    if (Array.isArray(obj)) {
+      return obj.map(sanitizeStrings);
+    }
+    if (obj && typeof obj === 'object') {
+      const result = {};
+      for (const key of Object.keys(obj)) {
+        result[key] = sanitizeStrings(obj[key]);
+      }
+      return result;
+    }
+    return obj;
+  }
   async function loadTranslations() {
     if (translations) {
       return translations;
     }
     try {
       const response = await fetch('translations.json');
-      translations = await response.json();
+      const raw = await response.json();
+      translations = sanitizeStrings(raw);
       return translations;
     } catch (error) {
       console.error('Failed to load translations:', error);
@@ -62,7 +82,7 @@
       const key = element.getAttribute('data-i18n');
       const value = getNestedValue(langData, key);
       if (value !== void 0) {
-        element.innerHTML = value;
+        element.innerHTML = sanitize(value);
       }
     });
     document.querySelectorAll('[data-i18n-attr]').forEach(element => {
@@ -86,7 +106,9 @@
     }
     const pdfLink = document.querySelector('a[href*="Resume-"]');
     if (pdfLink) {
-      pdfLink.href = pdfLink.href.replace(/Resume-\w+\.pdf/, `Resume-${lang}.pdf`);
+      const basePath = pdfLink.href.substring(0, pdfLink.href.lastIndexOf('/') + 1);
+      const baseName = pdfLink.href.substring(pdfLink.href.lastIndexOf('/') + 1).replace(/Resume-\w+\.pdf/, '');
+      pdfLink.href = `${basePath}${baseName}Resume-${lang}.pdf`;
     }
   }
   async function switchLanguage(lang) {
@@ -108,7 +130,9 @@
     const next = getNextLang();
     switchLanguage(next);
   });
-  const savedLang = window.__pendingLang || localStorage.getItem(STORAGE_KEY);
+
+  /** @type {string|null} Language set by inline pre-init script via data-pending-lang attribute */
+  const savedLang = document.documentElement.getAttribute('data-pending-lang') || localStorage.getItem(STORAGE_KEY);
   if (savedLang && LANGS.includes(savedLang) && savedLang !== DEFAULT_LANG) {
     loadTranslations().then(() => {
       if (translations && translations[savedLang]) {
@@ -126,7 +150,7 @@
   const toggle = document.querySelector('.reading-mode-toggle');
   if (!toggle) return;
   const html = document.documentElement;
-  const currentTheme = html.getAttribute('data-theme') || 'light';
+  const currentTheme = html.getAttribute('data-theme') || localStorage.getItem('theme') || 'light';
   toggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
   toggle.addEventListener('click', () => {
     const current = html.getAttribute('data-theme') || 'light';

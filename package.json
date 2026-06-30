@@ -1,7 +1,7 @@
 {
-  "name": "awesome_project",
+  "name": "denis-resume",
   "version": "1.0.0",
-  "description": "Your awesome project description",
+  "description": "Senior Magento 2 Frontend Developer resume",
   "main": "gulpfile.js",
   "directories": {},
   "engines": {
@@ -11,7 +11,8 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "autoprefixer": "^10.5.2",
-    "comment-json": "^5.0.0"
+    "comment-json": "^5.0.0",
+    "modern-normalize": "^3.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -23,6 +24,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Denis Belevtsov",
   "license": "ISC"
 }
