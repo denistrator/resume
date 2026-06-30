@@ -20,7 +20,6 @@
 "use strict";
 
 (() => {
-  const DOMPurify = window.DOMPurify;
   const STORAGE_KEY = 'preferred-lang';
   const LANGS = ['en', 'ru', 'uk'];
   const DEFAULT_LANG = 'en';
@@ -41,9 +40,12 @@
       return void 0;
     }, obj);
   }
+  function sanitize(html) {
+    return html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/&lt;br\s*\/?&gt;/gi, '<br>');
+  }
   function sanitizeStrings(obj) {
     if (typeof obj === 'string') {
-      return DOMPurify.sanitize(obj);
+      return sanitize(obj);
     }
     if (Array.isArray(obj)) {
       return obj.map(sanitizeStrings);
@@ -80,7 +82,7 @@
       const key = element.getAttribute('data-i18n');
       const value = getNestedValue(langData, key);
       if (value !== void 0) {
-        element.innerHTML = DOMPurify.sanitize(value);
+        element.innerHTML = sanitize(value);
       }
     });
     document.querySelectorAll('[data-i18n-attr]').forEach(element => {
