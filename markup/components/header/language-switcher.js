@@ -26,6 +26,23 @@
         }, obj);
     }
 
+    function sanitizeStrings(obj) {
+        if (typeof obj === 'string') {
+            return DOMPurify.sanitize(obj);
+        }
+        if (Array.isArray(obj)) {
+            return obj.map(sanitizeStrings);
+        }
+        if (obj && typeof obj === 'object') {
+            const result = {};
+            for (const key of Object.keys(obj)) {
+                result[key] = sanitizeStrings(obj[key]);
+            }
+            return result;
+        }
+        return obj;
+    }
+
     async function loadTranslations() {
         if (translations) {
             return translations;
@@ -33,7 +50,8 @@
 
         try {
             const response = await fetch('translations.json');
-            translations = await response.json();
+            const raw = await response.json();
+            translations = sanitizeStrings(raw);
             return translations;
         } catch (error) {
             console.error('Failed to load translations:', error);
