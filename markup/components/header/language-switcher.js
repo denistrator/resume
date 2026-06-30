@@ -1,4 +1,5 @@
 (() => {
+    const DOMPurify = window.DOMPurify;
     const STORAGE_KEY = 'preferred-lang';
     const LANGS = ['en', 'ru', 'uk'];
     const DEFAULT_LANG = 'en';
@@ -52,7 +53,7 @@
             const value = getNestedValue(langData, key);
 
             if (value !== void 0) {
-                element.innerHTML = value;
+                element.innerHTML = DOMPurify.sanitize(value);
             }
         });
 
