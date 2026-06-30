@@ -1,7 +1,7 @@
 const data = {
     skillAreas: {
         hyva: {
-            title: {default: 'Hyvä:'},
+            title: {default: 'Hyvä'},
             skillGroups: [
                 [{default: 'Hyvä Themes'}],
                 [{default: 'Alpine.js'}],
@@ -11,7 +11,7 @@ const data = {
             ]
         },
         magento2: {
-            title: {default: 'Magento 2:'},
+            title: {default: 'Magento 2'},
             skillGroups: [
                 [{en: 'XML Layouts', ru: 'XML Лейаут', uk: 'XML Розмітка'}],
                 [{default: 'Fallback'}, {en: 'Inheritance system', ru: 'Inheritance система', uk: 'Inheritance система'}],
@@ -31,7 +31,7 @@ const data = {
             ]
         },
         frontend: {
-            title: {en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд:'},
+            title: {en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд'},
             skillGroups: [
                 [
                     {en: 'Accessibility', ru: 'Доступность', uk: 'Доступність'},
@@ -46,7 +46,7 @@ const data = {
             ]
         },
         backend: {
-            title: {en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд:'},
+            title: {en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд'},
             skillGroups: [
                 [{default: 'Composer'}],
                 [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
@@ -58,14 +58,14 @@ const data = {
             ]
         },
         flow: {
-            title: {default: 'Flow:'},
+            title: {default: 'Flow'},
             skillGroups: [
                 [{default: 'Docker'}, {default: 'DDEV'}],
                 [{en: 'Git/GitHub Actions, CI/CD for Hyvä/Tailwind builds', ru: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind сборок', uk: 'Git/GitHub Actions, CI/CD для Hyvä/Tailwind збірок'}]
             ]
         },
         misc: {
-            title: {en: 'Misc:', ru: 'Прочее:', uk: 'Інше:'},
+            title: {en: 'Misc:', ru: 'Прочее:', uk: 'Інше'},
             skillGroups: [
                 [{default: 'Jira'}],
                 [{en: 'Semantic versioning', ru: 'Семант. верс.', uk: 'Семант. верс.'}, {en: 'Keeping a changelog', ru: 'Ведение changelog', uk: 'Ведення changelog'}]
