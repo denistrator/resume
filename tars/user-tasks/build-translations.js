@@ -15,30 +15,47 @@ function loadDataFile(filePath) {
     return fn();
 }
 
-function extractSkillsTranslations(skillAreas) {
+function extractSkillsTranslations(items) {
     const result = {};
 
-    for (const [areaKey, area] of Object.entries(skillAreas)) {
-        if (!area.skillGroups) {
-            continue;
+    items.forEach((item, itemIndex) => {
+        if (item.name && (item.name.en || item.name.ru || item.name.uk)) {
+            const nameKey = `skills.${itemIndex}.name`;
+            result[nameKey] = {};
+
+            for (const lang of LANGS) {
+                if (item.name[lang]) {
+                    result[nameKey][lang] = item.name[lang];
+                }
+            }
         }
 
-        area.skillGroups.forEach((group, groupIndex) => {
-            group.forEach((item, itemIndex) => {
-                const key = `skills.${areaKey}.${groupIndex}.${itemIndex}`;
-
-                if (item.en || item.ru || item.uk) {
-                    result[key] = {};
+        if (item.skills) {
+            item.skills.forEach((skill, skillIndex) => {
+                if (skill.name && (skill.name.en || skill.name.ru || skill.name.uk)) {
+                    const skillNameKey = `skills.${itemIndex}.${skillIndex}.name`;
+                    result[skillNameKey] = {};
 
                     for (const lang of LANGS) {
-                        if (item[lang]) {
-                            result[key][lang] = item[lang];
+                        if (skill.name[lang]) {
+                            result[skillNameKey][lang] = skill.name[lang];
+                        }
+                    }
+                }
+
+                if (skill.extra && (skill.extra.en || skill.extra.ru || skill.extra.uk)) {
+                    const extraKey = `skills.${itemIndex}.${skillIndex}.extra`;
+                    result[extraKey] = {};
+
+                    for (const lang of LANGS) {
+                        if (skill.extra[lang]) {
+                            result[extraKey][lang] = skill.extra[lang];
                         }
                     }
                 }
             });
-        });
-    }
+        }
+    });
 
     return result;
 }
@@ -216,7 +233,7 @@ function collectComponentTranslations() {
     if (fs.existsSync(skillsPath)) {
         const skillsData = loadDataFile(skillsPath);
 
-        mergeFlatToTarget(flat, extractSkillsTranslations(skillsData.skillAreas));
+        mergeFlatToTarget(flat, extractSkillsTranslations(skillsData.items));
     }
 
     const languagesPath = path.join(componentsDir, 'languages/data/data.js');

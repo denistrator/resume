@@ -2,27 +2,28 @@
     <h2 class="title skills-title section-title" data-i18n="section.skills.title">
         {{t 'section.skills.title'}}
     </h2>
-
     <p class="desc skills-desc" data-i18n="section.skills.desc">
         {{t 'section.skills.desc'}}
     </p>
-
     <ul class="skills-areas">
-        {{#each skillAreas}}
+        {{#each skills.items}}
         <li class="skills-area">
             <h3 class="skills-group-label">
-                {{#if title.default}}{{title.default}}{{/if}}
-                {{#if title.en}}<span data-i18n="skills.{{@key}}.title">{{{title.en}}}</span>{{/if}}
+                {{#if name.default}}{{name.default}}{{/if}}
+                {{#if name.en}}<span data-i18n="skills.{{@index}}.name">{{{name.en}}}</span>{{/if}}
             </h3>
             <ul class="skills-group">
-                {{#each skillGroups}}
+                {{#each skills}}
                 <li class="skills-item">
-                    {{#each this}}
                     <span class="skills-skill">
-                        {{#if default}}{{{default}}}{{/if}}
-                        {{#if en}}<span data-i18n="skills.{{@../../key}}.{{@../index}}.{{@index}}">{{{en}}}</span>{{/if}}
+                        {{#if name.default}}{{{name.default}}}{{/if}}
+                        {{#if name.en}}<span data-i18n="skills.{{@../index}}.{{@index}}.name">{{{name.en}}}</span>{{/if}}
                     </span>
-                    {{/each}}
+                    {{#if extra}}
+                    <span class="skills-skill-extra">
+                        {{#if extra.en}}<span data-i18n="skills.{{@../index}}.{{@index}}.extra">{{{extra.en}}}</span>{{/if}}
+                    </span>
+                    {{/if}}
                 </li>
                 {{/each}}
             </ul>
