@@ -8,8 +8,8 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "autoprefixer": "^10.5.2",
     "comment-json": "^5.0.0",
     "modern-normalize": "^3.0.1"
