@@ -1,5 +1,15 @@
 const data = {
-    softSkills: [
+    title: {
+        en: 'Soft Skills',
+        ru: 'Гибкие навыки',
+        uk: 'Гнучкі навички'
+    },
+    description: {
+        en: 'Professional Soft Skills',
+        ru: 'Профессиональные гибкие навыки',
+        uk: 'Професійні гнучкі навички'
+    },
+    items: [
         {
             title: {
                 en: 'Technical Leadership & Mentorship',

@@ -6,7 +6,7 @@
         {{t 'section.softSkills.desc'}}
     </p>
     <ul class="soft-skills-list">
-        {{#each softSkills}}
+        {{#each softSkills.items}}
         <li class="soft-skills-item">
             <h3 class="soft-skills-title" data-i18n="softSkills.{{@index}}.title">{{{title.en}}}</h3>
             <p class="soft-skills-desc" data-i18n="softSkills.{{@index}}.description">{{{description.en}}}</p>
