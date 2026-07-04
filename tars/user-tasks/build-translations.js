@@ -165,7 +165,7 @@ function mergeFlatToTarget(target, flat) {
 }
 
 const ARRAY_COMPONENTS = [
-    {dir: 'experience', dataKey: 'experience'},
+    {dir: 'experience', dataKey: 'items', prefix: 'experience'},
     {dir: 'achievements', dataKey: 'items', prefix: 'achievements'},
     {dir: 'soft-skills', dataKey: 'softSkills'}
 ];

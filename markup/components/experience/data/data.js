@@ -1,5 +1,15 @@
 const data = {
-    experience: [
+    title: {
+        en: 'Work Experience',
+        ru: 'Работа',
+        uk: 'Робота'
+    },
+    description: {
+        en: 'Magento 2 Frontend Developer | 10+ Years Experience',
+        ru: 'Magento 2 Фронтенд Разработчик | 10+ лет опыта',
+        uk: 'Magento 2 Фронтенд Розробник | 10+ років досвіду'
+    },
+    items: [
         {
             title: {
                 en: 'Themes Architecture',

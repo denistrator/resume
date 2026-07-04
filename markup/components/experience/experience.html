@@ -6,7 +6,7 @@
         {{t 'section.experience.desc'}}
     </p>
     <ul class="experience-list">
-        {{#each experience}}
+        {{#each experience.items}}
         <li class="experience-item">
             <h3 class="experience-title" data-i18n="experience.{{@index}}.title">{{{title.en}}}</h3>
             <p class="experience-desc" data-i18n="experience.{{@index}}.description">{{{description.en}}}</p>
