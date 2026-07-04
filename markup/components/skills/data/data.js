@@ -50,7 +50,7 @@ const data = {
             skillGroups: [
                 [{default: 'Composer'}],
                 [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
-                    en: 'PHP DOM <br/> (parsing &amp; modifying html on server side)',
+                    en: 'PHP DOM <br/> (parsing & modifying html on server side)',
                     ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
                     uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
                 }],

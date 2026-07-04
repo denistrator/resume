@@ -25,6 +25,7 @@
         "section": {
             "skills": { "title": "Skills", "desc": "Know it, use it" },
             "experience": { "title": "Work Experience", "desc": "Magento 2 Frontend Developer | 10+ Years Experience" },
+            "softSkills": { "title": "Soft Skills", "desc": "Professional Soft Skills" },
             "achievements": { "title": "Achievements", "desc": "Key results and contributions to projects" },
             "languages": { "title": "Languages", "desc": "Language proficiency" }
         },
@@ -64,6 +65,7 @@
         "section": {
             "skills": { "title": "Навыки", "desc": "Могу, умею, практикую" },
             "experience": { "title": "Работа", "desc": "Magento 2 Фронтенд Разработчик | 10+ лет опыта" },
+            "softSkills": { "title": "Гибкие навыки", "desc": "Профессиональные гибкие навыки" },
             "achievements": { "title": "Достижения", "desc": "Ключевые результаты и вклад в проекты" },
             "languages": { "title": "Языки", "desc": "Владение языками" }
         },
@@ -103,6 +105,7 @@
         "section": {
             "skills": { "title": "Навички", "desc": "Вмію, практикую" },
             "experience": { "title": "Робота", "desc": "Magento 2 Фронтенд Розробник | 10+ років досвіду" },
+            "softSkills": { "title": "Гнучкі навички", "desc": "Професійні гнучкі навички" },
             "achievements": { "title": "Досягнення", "desc": "Ключові результати та внесок у проєкти" },
             "languages": { "title": "Мови", "desc": "Володіння мовами" }
         },

@@ -1,5 +1,5 @@
 const data = {
-    experienceItem: [
+    experience: [
         {
             title: {
                 en: 'Themes Architecture',

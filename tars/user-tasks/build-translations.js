@@ -154,6 +154,22 @@ function flattenToNested(obj) {
     return result;
 }
 
+function mergeFlatToTarget(target, flat) {
+    for (const lang of LANGS) {
+        for (const [key, value] of Object.entries(flat)) {
+            if (value[lang]) {
+                target[lang][key] = value[lang];
+            }
+        }
+    }
+}
+
+const ARRAY_COMPONENTS = [
+    {dir: 'experience', dataKey: 'experience'},
+    {dir: 'achievements', dataKey: 'achievements'},
+    {dir: 'soft-skills', dataKey: 'softSkills'}
+];
+
 function collectComponentTranslations() {
     const flat = {};
 
@@ -161,68 +177,31 @@ function collectComponentTranslations() {
         flat[lang] = {};
     }
 
+    for (const {dir, dataKey} of ARRAY_COMPONENTS) {
+        const filePath = path.join(componentsDir, dir, 'data/data.js');
+
+        if (fs.existsSync(filePath)) {
+            const data = loadDataFile(filePath);
+            const translations = extractArrayTranslations(data[dataKey], dataKey, ['title', 'description']);
+
+            mergeFlatToTarget(flat, translations);
+        }
+    }
+
     const skillsPath = path.join(componentsDir, 'skills/data/data.js');
 
     if (fs.existsSync(skillsPath)) {
         const skillsData = loadDataFile(skillsPath);
-        const skillsTranslations = extractSkillsTranslations(skillsData.skillAreas);
 
-        for (const lang of LANGS) {
-            for (const [key, value] of Object.entries(skillsTranslations)) {
-                if (value[lang]) {
-                    flat[lang][key] = value[lang];
-                }
-            }
-        }
-    }
-
-    const experiencePath = path.join(componentsDir, 'experience/data/data.js');
-
-    if (fs.existsSync(experiencePath)) {
-        const experienceData = loadDataFile(experiencePath);
-        const experienceTranslations = extractArrayTranslations(
-            experienceData.experienceItem, 'experience', ['title', 'description']
-        );
-
-        for (const lang of LANGS) {
-            for (const [key, value] of Object.entries(experienceTranslations)) {
-                if (value[lang]) {
-                    flat[lang][key] = value[lang];
-                }
-            }
-        }
-    }
-
-    const achievementsPath = path.join(componentsDir, 'achievements/data/data.js');
-
-    if (fs.existsSync(achievementsPath)) {
-        const achievementsData = loadDataFile(achievementsPath);
-        const achievementsTranslations = extractArrayTranslations(
-            achievementsData.achievements, 'achievements', ['title', 'description']
-        );
-
-        for (const lang of LANGS) {
-            for (const [key, value] of Object.entries(achievementsTranslations)) {
-                if (value[lang]) {
-                    flat[lang][key] = value[lang];
-                }
-            }
-        }
+        mergeFlatToTarget(flat, extractSkillsTranslations(skillsData.skillAreas));
     }
 
     const languagesPath = path.join(componentsDir, 'languages/data/data.js');
 
     if (fs.existsSync(languagesPath)) {
         const languagesData = loadDataFile(languagesPath);
-        const languagesTranslations = extractLanguagesTranslations(languagesData.languages);
 
-        for (const lang of LANGS) {
-            for (const [key, value] of Object.entries(languagesTranslations)) {
-                if (value[lang]) {
-                    flat[lang][key] = value[lang];
-                }
-            }
-        }
+        mergeFlatToTarget(flat, extractLanguagesTranslations(languagesData.languages));
     }
 
     return flat;
@@ -247,8 +226,8 @@ function generateTranslations() {
     return result;
 }
 
-module.exports = function() {
-    return gulp.task('build-translations', function(done) {
+module.exports = function () {
+    return gulp.task('build-translations', function (done) {
         let translations;
 
         try {
