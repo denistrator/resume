@@ -6,7 +6,7 @@
         {{t 'section.achievements.desc'}}
     </p>
     <ul class="achievements-list">
-        {{#each achievements}}
+        {{#each achievements.items}}
         <li class="achievements-item">
             <h3 class="achievements-title" data-i18n="achievements.{{@index}}.title">{{{title.en}}}</h3>
             <p class="achievements-desc" data-i18n="achievements.{{@index}}.description">{{{description.en}}}</p>

@@ -166,7 +166,7 @@ function mergeFlatToTarget(target, flat) {
 
 const ARRAY_COMPONENTS = [
     {dir: 'experience', dataKey: 'experience'},
-    {dir: 'achievements', dataKey: 'achievements'},
+    {dir: 'achievements', dataKey: 'items', prefix: 'achievements'},
     {dir: 'soft-skills', dataKey: 'softSkills'}
 ];
 
@@ -177,12 +177,13 @@ function collectComponentTranslations() {
         flat[lang] = {};
     }
 
-    for (const {dir, dataKey} of ARRAY_COMPONENTS) {
+    for (const {dir, dataKey, prefix} of ARRAY_COMPONENTS) {
         const filePath = path.join(componentsDir, dir, 'data/data.js');
 
         if (fs.existsSync(filePath)) {
             const data = loadDataFile(filePath);
-            const translations = extractArrayTranslations(data[dataKey], dataKey, ['title', 'description']);
+            const key = prefix || dataKey;
+            const translations = extractArrayTranslations(data[dataKey], key, ['title', 'description']);
 
             mergeFlatToTarget(flat, translations);
         }

@@ -1,5 +1,15 @@
 const data = {
-    achievements: [
+    title: {
+        en: 'Achievements',
+        ru: 'Достижения',
+        uk: 'Досягнення'
+    },
+    description: {
+        en: 'Key results and contributions to projects',
+        ru: 'Ключевые результаты и вклад в проекты',
+        uk: 'Ключові результати та внесок у проєкти'
+    },
+    items: [
         {
             title: {
                 en: 'Performance Restoration',
