@@ -27,9 +27,9 @@ module.exports = () => {
                 watchedPath.indexOf(`markup${path.sep}pages`) > -1 &&
                 (event === 'unlink' || event === 'add')
             ) {
-                runSequence('html:concat-mocks-data', 'html:compile-templates', () => {});
+                runSequence('build-translations', 'html:concat-mocks-data', 'html:compile-templates', () => {});
             } else {
-                runSequence('html:compile-templates', () => {});
+                runSequence('build-translations', 'html:compile-templates', () => {});
             }
         });
 };

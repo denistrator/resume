@@ -80,7 +80,7 @@
             const value = getNestedValue(langData, key);
 
             if (value !== void 0) {
-                element.innerHTML = sanitize(value);
+                element.innerHTML = value;
             }
         });
 
