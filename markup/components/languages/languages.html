@@ -2,16 +2,14 @@
     <h2 class="title languages-title section-title" data-i18n="section.languages.title">
         {{t 'section.languages.title'}}
     </h2>
-
     <p class="desc languages-desc" data-i18n="section.languages.desc">
         {{t 'section.languages.desc'}}
     </p>
-
     <ul class="languages-list">
-        {{#each languages}}
+        {{#each languages.items}}
         <li class="languages-item">
-            <span class="languages-name" data-i18n="languagesList.{{@index}}.name">{{name.en}}</span>
-            <span class="languages-level" data-i18n="languagesList.{{@index}}.level">{{level.en}}</span>
+            <span class="languages-name" data-i18n="languages.{{@index}}.name">{{name.en}}</span>
+            <span class="languages-level" data-i18n="languages.{{@index}}.level">{{level.en}}</span>
             {{#if toefl}}
             <span class="toefl">
                 <span class="toefl-trigger no-print" tabindex="0" role="button"

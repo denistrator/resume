@@ -1,5 +1,15 @@
 const data = {
-    languages: [
+    title: {
+        en: 'Languages',
+        ru: 'Языки',
+        uk: 'Мови'
+    },
+    description: {
+        en: 'Language proficiency',
+        ru: 'Владение языками',
+        uk: 'Володіння мовами'
+    },
+    items: [
         {
             name: {en: 'English', ru: 'Английский', uk: 'Англійська'},
             level: {en: 'B2 — Upper Intermediate', ru: 'B2 — Выше среднего', uk: 'B2 — Вище середнього'},

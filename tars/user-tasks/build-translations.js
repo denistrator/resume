@@ -66,27 +66,49 @@ function extractArrayTranslations(items, prefix, fields) {
     return result;
 }
 
-function extractLanguagesTranslations(languages) {
+function extractLanguagesTranslations(data) {
     const listResult = {};
     const sectionsResult = {};
 
-    languages.forEach((lang, index) => {
+    if (data.title) {
+        listResult['section.languages.title'] = {};
+
+        for (const l of LANGS) {
+            if (data.title[l]) {
+                listResult['section.languages.title'][l] = data.title[l];
+            }
+        }
+    }
+
+    if (data.description) {
+        listResult['section.languages.desc'] = {};
+
+        for (const l of LANGS) {
+            if (data.description[l]) {
+                listResult['section.languages.desc'][l] = data.description[l];
+            }
+        }
+    }
+
+    const items = data.items || [];
+
+    items.forEach((lang, index) => {
         if (lang.name) {
-            listResult[`languagesList.${index}.name`] = {};
+            listResult[`languages.${index}.name`] = {};
 
             for (const l of LANGS) {
                 if (lang.name[l]) {
-                    listResult[`languagesList.${index}.name`][l] = lang.name[l];
+                    listResult[`languages.${index}.name`][l] = lang.name[l];
                 }
             }
         }
 
         if (lang.level) {
-            listResult[`languagesList.${index}.level`] = {};
+            listResult[`languages.${index}.level`] = {};
 
             for (const l of LANGS) {
                 if (lang.level[l]) {
-                    listResult[`languagesList.${index}.level`][l] = lang.level[l];
+                    listResult[`languages.${index}.level`][l] = lang.level[l];
                 }
             }
         }
@@ -202,7 +224,7 @@ function collectComponentTranslations() {
     if (fs.existsSync(languagesPath)) {
         const languagesData = loadDataFile(languagesPath);
 
-        mergeFlatToTarget(flat, extractLanguagesTranslations(languagesData.languages));
+        mergeFlatToTarget(flat, extractLanguagesTranslations(languagesData));
     }
 
     return flat;
