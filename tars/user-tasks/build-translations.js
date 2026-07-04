@@ -83,6 +83,25 @@ function extractArrayTranslations(items, prefix, fields) {
     return result;
 }
 
+function extractHeaderTranslations(data) {
+    const result = {};
+
+    for (const [key, value] of Object.entries(data)) {
+        if (value && (value.en || value.ru || value.uk)) {
+            const flatKey = `header.${key}`;
+            result[flatKey] = {};
+
+            for (const lang of LANGS) {
+                if (value[lang]) {
+                    result[flatKey][lang] = value[lang];
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
 function extractLanguagesTranslations(data) {
     const listResult = {};
     const sectionsResult = {};
@@ -242,6 +261,14 @@ function collectComponentTranslations() {
         const languagesData = loadDataFile(languagesPath);
 
         mergeFlatToTarget(flat, extractLanguagesTranslations(languagesData));
+    }
+
+    const headerPath = path.join(componentsDir, 'header/data/data.js');
+
+    if (fs.existsSync(headerPath)) {
+        const headerData = loadDataFile(headerPath);
+
+        mergeFlatToTarget(flat, extractHeaderTranslations(headerData.header));
     }
 
     return flat;
