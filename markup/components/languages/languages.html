@@ -1,34 +1,32 @@
 <section class="section languages">
-    <h2 class="title languages-title section-title" data-i18n="section.languages.title">
-        {{t 'section.languages.title'}}
+    <h2 class="title languages-title section-title" data-i18n="languages.title">
+        {{t 'languages.title' }}
     </h2>
-    <p class="desc languages-desc" data-i18n="section.languages.desc">
-        {{t 'section.languages.desc'}}
+    <p class="desc languages-desc" data-i18n="languages.description">
+        {{t 'languages.description' }}
     </p>
     <ul class="languages-list">
         {{#each languages.items}}
         <li class="languages-item">
-            <span class="languages-name" data-i18n="languages.{{@index}}.name">{{name.en}}</span>
-            <span class="languages-level" data-i18n="languages.{{@index}}.level">{{level.en}}</span>
+            <span class="languages-name" data-i18n="languages.items.{{@index}}.name">{{name.en}}</span>
+            <span class="languages-level" data-i18n="languages.items.{{@index}}.level">{{level.en}}</span>
             {{#if toefl}}
             <span class="toefl">
                 <span class="toefl-trigger no-print" tabindex="0" role="button"
-                      aria-expanded="false"
-                      data-i18n-attr="aria-label:languages.toeflAria"
-                      aria-label="{{t 'languages.toeflAria'}}">
-                    <span class="toefl-badge">TOEFL {{toefl.total}}/{{toefl.maxTotal}}</span>
+                      aria-expanded="false">
+                    <span class="toefl-badge">{{toefl.label}}</span>
                 </span>
                 <span class="toefl-tooltip" role="tooltip" aria-hidden="true">
-                    <span class="toefl-tooltip-header" data-i18n="languages.toeflHeader">
-                        {{t 'languages.toeflHeader'}}
+                    <span class="toefl-tooltip-header" data-i18n="languages.items.{{@index}}.toefl.title">
+                        {{ toefl.title.en }}
                     </span>
-                    <span class="toefl-tooltip-date" data-i18n="languages.toeflDate">
-                        {{t 'languages.toeflDate'}}
+                    <span class="toefl-tooltip-date">
+                        {{ toefl.date }}
                     </span>
                     <span class="toefl-chart no-print">
                         {{#each toefl.sections}}
                         <span class="toefl-row">
-                            <span class="toefl-row-label" data-i18n="toeflSections.{{@index}}.name">{{name.en}}</span>
+                            <span class="toefl-row-label" data-i18n="languages.items.{{@../index}}.toefl.sections.{{@index}}.name">{{name.en}}</span>
                             <span class="toefl-bar-track">
                                 <span class="toefl-bar-fill" style="width: {{percent}}%"></span>
                             </span>

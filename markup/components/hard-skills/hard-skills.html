@@ -1,0 +1,38 @@
+<section class="section skills">
+    <h2 class="title skills-title section-title" data-i18n="hardSkills.title">
+        {{t 'hardSkills.title'}}
+    </h2>
+    <p class="desc skills-desc" data-i18n="hardSkills.description">
+        {{t 'hardSkills.description'}}
+    </p>
+    <ul class="skills-areas">
+        {{#with (lookup this "hard-skills")}}
+        {{#each groups}}
+        <li class="skills-area">
+            <h3 class="skills-group-label" data-i18n="hardSkills.groups.{{@index}}.title">
+                {{#if title.default}}
+                {{{title.default}}}
+                {{else}}
+                {{{title.en}}}
+                {{/if}}
+            </h3>
+            <ul class="skills-group">
+                {{#each list}}
+                <li class="skills-item">
+                    {{#each this}}
+                    <span class="skills-skill" data-i18n="hardSkills.groups.{{@../../index}}.list.{{@../index}}.{{@index}}">
+                                {{#if default}}
+                                    {{{default}}}
+                                {{else}}
+                                    {{{en}}}
+                                {{/if}}
+                            </span>
+                    {{/each}}
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+        {{/with}}
+    </ul>
+</section>

@@ -21,9 +21,9 @@ const data = {
             uk: '10+ років досвіду'
         },
         locationText: {
-            en: 'Remote, Odessa',
-            ru: 'Удалённо, Одесса',
-            uk: 'Віддалено, Одеса'
+            en: 'Remote, Odessa, Ukraine',
+            ru: 'Удалённо, Одесса, Украина',
+            uk: 'Віддалено, Одеса, Україна'
         },
         emailAria: {
             en: 'Email',
@@ -57,7 +57,7 @@ const data = {
         },
         pdfAria: {
             en: 'Download resume in PDF',
-            ru: 'Завантажити резюме в PDF',
+            ru: 'Скачать резюме в PDF',
             uk: 'Завантажити резюме в PDF'
         },
         pdfLabel: {

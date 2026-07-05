@@ -56,7 +56,7 @@ function isI18nObject(obj) {
 
 function extractI18nFields(obj, prefix) {
     if (isI18nObject(obj)) {
-        return { [prefix]: obj };
+        return {[prefix]: obj};
     }
 
     const result = {};
@@ -87,7 +87,7 @@ function collectComponentTranslations() {
         flat[lang] = {};
     }
 
-    const entries = fs.readdirSync(componentsDir, { withFileTypes: true })
+    const entries = fs.readdirSync(componentsDir, {withFileTypes: true})
         .filter(d => d.isDirectory() && !d.name.startsWith('_'))
         .map(d => d.name);
 
@@ -100,11 +100,12 @@ function collectComponentTranslations() {
 
         const data = loadDataFile(dataPath);
         const componentPrefix = toCamelCase(componentName);
-        const dataKeys = Object.keys(data);
-        const isWrapper = dataKeys.length === 1 && dataKeys[0] === componentName;
-        const effectiveData = isWrapper ? data[componentName] : data;
 
-        for (const [sectionKey, sectionData] of Object.entries(effectiveData)) {
+        if (data[componentName] === undefined) {
+            throw new Error(`Data file for component "${componentName}" must export an object with a key matching the component name.`);
+        }
+
+        for (const [sectionKey, sectionData] of Object.entries(data[componentName])) {
             if (!sectionData || typeof sectionData !== 'object') {
                 continue;
             }
