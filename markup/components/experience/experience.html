@@ -1,15 +1,15 @@
 <section class="section experience">
-    <h2 class="title section-title" data-i18n="section.experience.title">
-        {{t 'section.experience.title'}}
+    <h2 class="title section-title" data-i18n="experience.title">
+        {{t 'experience.title'}}
     </h2>
-    <p class="desc" data-i18n="section.experience.desc">
-        {{t 'section.experience.desc'}}
+    <p class="desc" data-i18n="experience.description">
+        {{t 'experience.description'}}
     </p>
     <ul class="experience-list">
-        {{#each experience}}
+        {{#each experience.items}}
         <li class="experience-item">
-            <h3 class="experience-title" data-i18n="experience.{{@index}}.title">{{{title.en}}}</h3>
-            <p class="experience-desc" data-i18n="experience.{{@index}}.description">{{{description.en}}}</p>
+            <h3 class="experience-title" data-i18n="experience.items.{{@index}}.title">{{{title.en}}}</h3>
+            <p class="experience-desc" data-i18n="experience.items.{{@index}}.description">{{{description.en}}}</p>
         </li>
         {{/each}}
     </ul>

@@ -7,122 +7,123 @@ const path = require('path');
 
 const LANGS = ['en', 'ru', 'uk'];
 const componentsDir = path.resolve(process.cwd(), 'markup/components');
-const uiStringsPath = path.resolve(process.cwd(), 'markup/translations-ui.json');
 
 function loadDataFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const fn = new Function(`${content}; return data;`);
-    return fn();
+    return expandDefaults(fn());
 }
 
-function extractSkillsTranslations(skillAreas) {
-    const result = {};
+function expandDefaults(obj) {
+    if (!obj || typeof obj !== 'object') {
+        return obj;
+    }
 
-    for (const [areaKey, area] of Object.entries(skillAreas)) {
-        if (!area.skillGroups) {
-            continue;
+    if (Array.isArray(obj)) {
+        return obj.map(item => expandDefaults(item));
+    }
+
+    if ('default' in obj && Object.keys(obj).length === 1) {
+        const result = {};
+
+        for (const lang of LANGS) {
+            result[lang] = obj.default;
         }
 
-        area.skillGroups.forEach((group, groupIndex) => {
-            group.forEach((item, itemIndex) => {
-                const key = `skills.${areaKey}.${groupIndex}.${itemIndex}`;
+        return result;
+    }
 
-                if (item.en || item.ru || item.uk) {
-                    result[key] = {};
+    const result = {};
 
-                    for (const lang of LANGS) {
-                        if (item[lang]) {
-                            result[key][lang] = item[lang];
-                        }
-                    }
-                }
-            });
-        });
+    for (const [key, value] of Object.entries(obj)) {
+        result[key] = expandDefaults(value);
     }
 
     return result;
 }
 
-function extractArrayTranslations(items, prefix, fields) {
+function toCamelCase(str) {
+    return str.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+}
+
+function isI18nObject(obj) {
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
+        return false;
+    }
+    const keys = Object.keys(obj);
+    return keys.length > 0 && keys.every(k => LANGS.includes(k));
+}
+
+function extractI18nFields(obj, prefix) {
+    if (isI18nObject(obj)) {
+        return {[prefix]: obj};
+    }
+
     const result = {};
 
-    items.forEach((item, index) => {
-        for (const field of fields) {
-            if (!item[field]) {
+    for (const [key, value] of Object.entries(obj)) {
+        if (isI18nObject(value)) {
+            result[`${prefix}.${key}`] = value;
+        } else if (Array.isArray(value)) {
+            value.forEach((item, index) => {
+                if (isI18nObject(item)) {
+                    result[`${prefix}.${key}.${index}`] = item;
+                } else if (item && typeof item === 'object') {
+                    Object.assign(result, extractI18nFields(item, `${prefix}.${key}.${index}`));
+                }
+            });
+        } else if (value && typeof value === 'object') {
+            Object.assign(result, extractI18nFields(value, `${prefix}.${key}`));
+        }
+    }
+
+    return result;
+}
+
+function collectComponentTranslations() {
+    const flat = {};
+
+    for (const lang of LANGS) {
+        flat[lang] = {};
+    }
+
+    const entries = fs.readdirSync(componentsDir, {withFileTypes: true})
+        .filter(d => d.isDirectory() && !d.name.startsWith('_'))
+        .map(d => d.name);
+
+    for (const componentName of entries) {
+        const dataPath = path.join(componentsDir, componentName, 'data/data.js');
+
+        if (!fs.existsSync(dataPath)) {
+            continue;
+        }
+
+        const data = loadDataFile(dataPath);
+        const componentPrefix = toCamelCase(componentName);
+
+        if (data[componentName] === undefined) {
+            throw new Error(`Data file for component "${componentName}" must export an object with a key matching the component name.`);
+        }
+
+        for (const [sectionKey, sectionData] of Object.entries(data[componentName])) {
+            if (!sectionData || typeof sectionData !== 'object') {
                 continue;
             }
 
-            const key = `${prefix}.${index}.${field}`;
-            result[key] = {};
+            const prefix = `${componentPrefix}.${sectionKey}`;
+            const translations = extractI18nFields(sectionData, prefix);
 
-            for (const lang of LANGS) {
-                if (item[field][lang]) {
-                    result[key][lang] = item[field][lang];
-                }
-            }
-        }
-    });
-
-    return result;
-}
-
-function extractLanguagesTranslations(languages) {
-    const listResult = {};
-    const sectionsResult = {};
-
-    languages.forEach((lang, index) => {
-        if (lang.name) {
-            listResult[`languagesList.${index}.name`] = {};
-
-            for (const l of LANGS) {
-                if (lang.name[l]) {
-                    listResult[`languagesList.${index}.name`][l] = lang.name[l];
-                }
-            }
-        }
-
-        if (lang.level) {
-            listResult[`languagesList.${index}.level`] = {};
-
-            for (const l of LANGS) {
-                if (lang.level[l]) {
-                    listResult[`languagesList.${index}.level`][l] = lang.level[l];
-                }
-            }
-        }
-
-        if (lang.toefl && lang.toefl.sections) {
-            lang.toefl.sections.forEach((section, sectionIndex) => {
-                if (section.name) {
-                    sectionsResult[`toeflSections.${sectionIndex}.name`] = {};
-
-                    for (const l of LANGS) {
-                        if (section.name[l]) {
-                            sectionsResult[`toeflSections.${sectionIndex}.name`][l] = section.name[l];
-                        }
+            for (const [key, value] of Object.entries(translations)) {
+                for (const lang of LANGS) {
+                    if (value[lang]) {
+                        flat[lang][key] = value[lang];
                     }
                 }
-            });
-        }
-    });
-
-    return Object.assign({}, listResult, sectionsResult);
-}
-
-function mergeTranslations(target, source) {
-    for (const lang of LANGS) {
-        if (!target[lang]) {
-            target[lang] = {};
-        }
-
-        if (!source[lang]) {
-            continue;
-        }
-
-        for (const [key, value] of Object.entries(source[lang])) {
-            target[lang][key] = value;
+            }
         }
     }
+
+    return flat;
 }
 
 function flattenToNested(obj) {
@@ -154,76 +155,11 @@ function flattenToNested(obj) {
     return result;
 }
 
-function mergeFlatToTarget(target, flat) {
-    for (const lang of LANGS) {
-        for (const [key, value] of Object.entries(flat)) {
-            if (value[lang]) {
-                target[lang][key] = value[lang];
-            }
-        }
-    }
-}
-
-const ARRAY_COMPONENTS = [
-    {dir: 'experience', dataKey: 'experience'},
-    {dir: 'achievements', dataKey: 'achievements'},
-    {dir: 'soft-skills', dataKey: 'softSkills'}
-];
-
-function collectComponentTranslations() {
-    const flat = {};
-
-    for (const lang of LANGS) {
-        flat[lang] = {};
-    }
-
-    for (const {dir, dataKey} of ARRAY_COMPONENTS) {
-        const filePath = path.join(componentsDir, dir, 'data/data.js');
-
-        if (fs.existsSync(filePath)) {
-            const data = loadDataFile(filePath);
-            const translations = extractArrayTranslations(data[dataKey], dataKey, ['title', 'description']);
-
-            mergeFlatToTarget(flat, translations);
-        }
-    }
-
-    const skillsPath = path.join(componentsDir, 'skills/data/data.js');
-
-    if (fs.existsSync(skillsPath)) {
-        const skillsData = loadDataFile(skillsPath);
-
-        mergeFlatToTarget(flat, extractSkillsTranslations(skillsData.skillAreas));
-    }
-
-    const languagesPath = path.join(componentsDir, 'languages/data/data.js');
-
-    if (fs.existsSync(languagesPath)) {
-        const languagesData = loadDataFile(languagesPath);
-
-        mergeFlatToTarget(flat, extractLanguagesTranslations(languagesData.languages));
-    }
-
-    return flat;
-}
-
 function generateTranslations() {
-    let uiStrings = {};
-
-    if (fs.existsSync(uiStringsPath)) {
-        uiStrings = JSON.parse(fs.readFileSync(uiStringsPath, 'utf8'));
-    }
-
     const componentFlat = collectComponentTranslations();
     const componentNested = flattenToNested(componentFlat);
 
-    const result = {};
-
-    for (const lang of LANGS) {
-        result[lang] = Object.assign({}, uiStrings[lang] || {}, componentNested[lang] || {});
-    }
-
-    return result;
+    return componentNested;
 }
 
 module.exports = function () {

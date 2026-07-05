@@ -1,16 +1,18 @@
 <section class="section soft-skills">
-    <h2 class="title section-title" data-i18n="section.softSkills.title">
-        {{t 'section.softSkills.title'}}
+    <h2 class="title section-title" data-i18n="softSkills.title">
+        {{t 'softSkills.title'}}
     </h2>
-    <p class="desc" data-i18n="section.softSkills.desc">
-        {{t 'section.softSkills.desc'}}
+    <p class="desc" data-i18n="softSkills.description">
+        {{t 'softSkills.description'}}
     </p>
     <ul class="soft-skills-list">
-        {{#each softSkills}}
+        {{#with (lookup this "soft-skills")}}
+        {{#each items}}
         <li class="soft-skills-item">
-            <h3 class="soft-skills-title" data-i18n="softSkills.{{@index}}.title">{{{title.en}}}</h3>
-            <p class="soft-skills-desc" data-i18n="softSkills.{{@index}}.description">{{{description.en}}}</p>
+            <h3 class="soft-skills-title" data-i18n="softSkills.items.{{@index}}.title">{{{title.en}}}</h3>
+            <p class="soft-skills-desc" data-i18n="softSkills.items.{{@index}}.description">{{{description.en}}}</p>
         </li>
         {{/each}}
+        {{/with}}
     </ul>
 </section>
