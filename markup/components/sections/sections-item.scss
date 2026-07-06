@@ -3,9 +3,33 @@
 .section {
     $a: 28px;
     padding-left: $a;
-    padding-top: 12px;
+    padding-top: 20px;
     padding-bottom: 12px;
-    page-break-inside: avoid;
+    page-break-inside: auto;
+
+    @media (min-width: 768px) {
+        padding-left: 50px;
+        padding-right: 20px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+        [data-theme="dark"] & {
+            box-shadow: 0 0 12px rgba(251, 191, 36, .2);
+        }
+
+        @media print {
+            box-shadow: none;
+        }
+    }
+
+    & + & {
+        @media (min-width: 768px) {
+            margin-top: 15px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-top: 25px;
+        }
+    }
 
     &-title {
         &:before {

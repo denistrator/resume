@@ -1,7 +1,7 @@
 const data = {
     ['hard-skills']: {
         title: {
-            en: 'Skills',
+            en: 'Hard Skills',
             ru: 'Навыки',
             uk: 'Навички'
         },

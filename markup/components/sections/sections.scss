@@ -1,8 +1,34 @@
 @use "sass:math";
 
+%section-list {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+%section-list-item {
+    margin-bottom: 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+%section-list-item-title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+%section-list-item-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
 .sections {
     @extend .container;
-    margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -16,7 +42,12 @@
 
     @media (min-width: 768px) {
         flex-direction: row;
+        align-items: flex-start;
         gap: 30px;
+    }
+
+    @media (min-width: 1280px) {
+        gap: 50px;
     }
 
     &-main {
@@ -25,8 +56,32 @@
 
     &-aside {
         @media (min-width: 768px) {
-            width: 245px;
+            position: relative;
+            width: 290px;
             flex-shrink: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                right: -15px;
+                border-right: 1px dashed var(--color-border);
+
+                [data-theme="dark"] & {
+                    border-right-color: rgba(from var(--color-link) r g b / 20%);
+                }
+
+                @media print {
+                    display: none;
+                }
+            }
+        }
+
+        @media (min-width: 1280px) {
+            &::before {
+                right: -25px;
+            }
         }
     }
 }
