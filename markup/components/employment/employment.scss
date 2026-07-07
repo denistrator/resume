@@ -1,0 +1,29 @@
+.employment {
+    &-list {
+
+    }
+
+    &-item {
+
+    }
+
+    &-title {
+        margin-top: 0;
+        margin-bottom: 3px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    &-date {
+        font-size: 13px;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    &-company {
+        margin-top: 2px;
+        font-size: 14px;
+        color: var(--color-text-secondary);
+    }
+}
