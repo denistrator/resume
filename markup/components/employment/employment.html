@@ -1,0 +1,28 @@
+<section class="section employment">
+    <h2 class="title section-title" data-i18n="employment.title">
+        {{t 'employment.title'}}
+    </h2>
+    <p class="desc" data-i18n="employment.description">
+        {{t 'employment.description'}}
+    </p>
+    <ul class="employment-list">
+        {{#with (lookup this "employment")}}
+        {{#each items}}
+        <li class="employment-item">
+            <div class="employment-header">
+                <h3 class="employment-title" data-i18n="employment.items.{{@index}}.title">{{{title.en}}}</h3>
+                <span class="employment-date">
+                    <time data-i18n-attr="datetime:employment.items.{{@index}}.startDate" datetime="{{startDate}}">{{startDate}}</time>
+                    {{#if endDate}} — <time data-i18n-attr="datetime:employment.items.{{@index}}.endDate" datetime="{{endDate}}">{{endDate}}</time>{{else}} — <span data-i18n="employment.items.{{@index}}.present">present</span>{{/if}}
+                </span>
+            </div>
+            {{#if company}}
+            <p class="employment-company" data-i18n="employment.items.{{@index}}.company">
+                {{{company.en}}}{{#if location}}, {{{location.en}}}{{/if}}
+            </p>
+            {{/if}}
+        </li>
+        {{/each}}
+        {{/with}}
+    </ul>
+</section>
