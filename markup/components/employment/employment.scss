@@ -1,0 +1,35 @@
+.employment {
+    &-list {
+        @extend %section-list;
+    }
+
+    &-item {
+        @extend %section-list-item;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    &-title {
+        @extend %section-list-item-title;
+        margin-bottom: 0;
+    }
+
+    &-date {
+        font-size: 13px;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    &-company {
+        margin-top: 2px;
+        font-size: 14px;
+        color: var(--color-text-secondary);
+    }
+}
