@@ -9,21 +9,24 @@
         {{#each languages.items}}
         <li class="languages-item">
             <span class="languages-name" data-i18n="languages.items.{{@index}}.name">{{name.en}}</span>
+            {{#unless toefl}}
             <span class="languages-level" data-i18n="languages.items.{{@index}}.level">{{level.en}}</span>
+            {{/unless}}
+
             {{#if toefl}}
             <span class="toefl">
-                <span class="toefl-trigger no-print" tabindex="0" role="button"
+                <span class="toefl-trigger" tabindex="0" role="button"
                       aria-expanded="false">
-                    <span class="toefl-badge">{{toefl.label}}</span>
+                    <span class="toefl-badge" data-i18n="languages.items.{{@index}}.level">{{level.en}}</span>
                 </span>
-                <span class="toefl-tooltip" role="tooltip" aria-hidden="true">
+                <span class="toefl-tooltip no-print" role="tooltip" aria-hidden="true">
                     <span class="toefl-tooltip-header" data-i18n="languages.items.{{@index}}.toefl.title">
                         {{ toefl.title.en }}
                     </span>
                     <span class="toefl-tooltip-date">
                         {{ toefl.date }}
                     </span>
-                    <span class="toefl-chart no-print">
+                    <span class="toefl-chart">
                         {{#each toefl.sections}}
                         <span class="toefl-row">
                             <span class="toefl-row-label" data-i18n="languages.items.{{@../index}}.toefl.sections.{{@index}}.name">{{name.en}}</span>

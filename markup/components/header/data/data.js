@@ -11,9 +11,7 @@ const data = {
             uk: 'Белевцов'
         },
         title1: {
-            en: 'Senior Magento Frontend Architect | Hyvä Specialist | Performance Engineer',
-            ru: 'Senior Magento Фронтенд Архитектор | Специалист Hyvä | Инженер Производительности',
-            uk: 'Senior Magento Фронтенд Архітектор | Спеціаліст Hyvä | Інженер Продуктивності'
+            default: 'Senior Magento Frontend Architect | Hyvä Expert | Performance Engineer'
         },
         title2: {
             en: '10+ Years Experience',

@@ -14,10 +14,10 @@ const data = {
             {
                 title: {default: 'Hyvä'},
                 list: [
-                    [{default: 'Hyvä Themes'}],
+                    [{default: 'Hyvä Themes and UI'}],
+                    [{default: 'Hyvä Compatibility Modules'}],
                     [{default: 'Alpine.js'}],
                     [{default: 'Tailwind CSS'}],
-                    [{default: 'Hyvä UI'}],
                     [{default: 'Magewire'}]
                 ]
             },
@@ -44,15 +44,11 @@ const data = {
             {
                 title: {en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд'},
                 list: [
-                    [
-                        {en: 'Accessibility', ru: 'Доступность', uk: 'Доступність'},
-                        {en: 'Semantic HTML5', ru: 'Семантический HTML5', uk: 'Семантичний HTML5'}
-                    ],
+                    {en: 'Accessibility (WCAG)', ru: 'Доступность (WCAG)', uk: 'Доступність (WCAG)'},
                     [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
                     [{default: 'jQuery'}, {default: 'Knockout'}],
                     [{default: 'NPM'}, {default: 'Grunt'}, {default: 'Gulp'}],
                     [{default: 'SVG'}, {default: 'Font Icons'}],
-                    [{default: 'Pixel perfect'}],
                     [{en: 'Optimization for Google PageSpeed', ru: 'Оптимизация для Google PageSpeed', uk: 'Оптимізація для Google PageSpeed'}]
                 ]
             },
@@ -60,7 +56,7 @@ const data = {
                 title: {en: 'Back-end:', ru: 'Бэк-энд:', uk: 'Бек-енд'},
                 list: [
                     [{default: 'Composer'}],
-                    [{default: 'PHP'}, {en: 'PHP Debug', ru: 'PHP Дебаг', uk: 'PHP Дебаг'}, {
+                    [{default: 'PHP'}, {default: 'Xdebug'}, {
                         en: 'PHP DOM <br/> (parsing & modifying html on server side)',
                         ru: 'PHP DOM <br/> (работа с html dom на стороне сервера)',
                         uk: 'PHP DOM <br/> (робота з html dom на стороні сервера)'
@@ -79,7 +75,7 @@ const data = {
                 title: {en: 'Misc:', ru: 'Прочее:', uk: 'Інше'},
                 list: [
                     [{default: 'Jira'}],
-                    [{en: 'Semantic versioning', ru: 'Семант. верс.', uk: 'Семант. верс.'}, {en: 'Keeping a changelog', ru: 'Ведение changelog', uk: 'Ведення changelog'}]
+                    [{default: 'Linux'}, {default: 'MacOS'}, {default: 'Win WSL'}],
                 ]
             }
         ]

@@ -37,7 +37,7 @@
             counter-increment: section-number;
             user-select: none;
             font-size: 70%;
-            margin-left: -$a;
+            margin-left: -$a - 6;
             color: var(--color-text-muted);
         }
     }

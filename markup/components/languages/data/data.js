@@ -15,7 +15,6 @@ const data = {
                 name: {en: 'English', ru: 'Английский', uk: 'Англійська'},
                 level: {en: 'B2 — Upper Intermediate', ru: 'B2 — Выше среднего', uk: 'B2 — Вище середнього'},
                 toefl: {
-                    label: 'TOEFL 90 / 120',
                     title: {
                         en: 'CEFR Level B2 and TOEFL iBT 90 / 120',
                         ru: 'Уровень CEFR B2 и TOEFL iBT 90 / 120',

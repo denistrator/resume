@@ -56,6 +56,10 @@
                 background: rgba(251, 191, 36, 0.2);
             }
         }
+
+        @media print {
+            color: var(--color-text-muted);
+        }
     }
 
     &-tooltip {
