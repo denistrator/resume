@@ -174,7 +174,7 @@ module.exports = function () {
             return;
         }
 
-        const jsonContent = JSON.stringify(translations, null, 2);
+        const jsonContent = tars.isDevMode ? JSON.stringify(translations, null, 2) : JSON.stringify(translations);
         const destPath = path.resolve(process.cwd(), tars.config.devPath, 'translations.json');
         fs.writeFileSync(destPath, jsonContent);
         notifier.success('Translations generated from data.js files');
