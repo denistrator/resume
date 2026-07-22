@@ -44,7 +44,7 @@ const data = {
             {
                 title: {en: 'Front-end:', ru: 'Фронт-энд:', uk: 'Фронт-енд'},
                 list: [
-                    {en: 'Accessibility (WCAG)', ru: 'Доступность (WCAG)', uk: 'Доступність (WCAG)'},
+                    [{en: 'Accessibility (WCAG)', ru: 'Доступность (WCAG)', uk: 'Доступність (WCAG)'}],
                     [{en: 'RTL Implementation', ru: 'Реализация RTL', uk: 'Реалізація RTL'}],
                     [{default: 'jQuery'}, {default: 'Knockout'}],
                     [{default: 'NPM'}, {default: 'Grunt'}, {default: 'Gulp'}],
