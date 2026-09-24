@@ -9,6 +9,7 @@ on:
 
 permissions:
     contents: read
+    deployments: write
     pages: write
     id-token: write
 
@@ -41,6 +42,14 @@ jobs:
 
             -   name: Build production
                 run: tars build --min
+
+            -   name: Deploy to Cloudflare Pages
+                uses: cloudflare/wrangler-action@v4
+                with:
+                    apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                    accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                    command: pages deploy ./builds --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
+                    gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
             -   name: Setup Pages
                 uses: actions/configure-pages@v5
