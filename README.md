@@ -118,6 +118,8 @@ The link will be shown in the console. There also will be a link to the control 
 
 `tars build-dev` — generation of dev-version of the project without watchers.
 
+`tars start check-public-repository` — checks tracked Git files for sensitive files and credential-like content. Without TARS-CLI, run `npx gulp check-public-repository`. The check uses staged file contents and reports only file paths and rule names.
+
 These parameters are available in any mode of assembly:
 
 * `--ie8` – to include in the build styles for ie8.

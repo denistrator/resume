@@ -12,6 +12,7 @@ module.exports = () => {
         'main:build',
         gulp.series('main:build-dev', (done) => {
             runSequence(
+                'check-public-repository',
                 ['html:modify-html', 'images:minify-images'],
                 'main:create-build',
                 ['css:compress-css'],

@@ -44,3 +44,19 @@ If you need notification, your task must be ended as follows:
 The string which is passed to notifier will be displayed in notifications
 
 You can also call the callback, or return the main thread, if you want to perform tasks in a certain order. Read more [here](http://frontender.info/handling-sync-tasks-with-gulp-js).
+
+## Public repository check
+
+The project includes a custom task that checks tracked Git files for sensitive files and credential-like content. Run it with TARS-CLI:
+
+```shell
+tars start check-public-repository
+```
+
+Without TARS-CLI, run the task directly through Gulp:
+
+```shell
+npx gulp check-public-repository
+```
+
+The task reads file contents from Git's index, so it checks the staged version of tracked files and ignores unstaged and untracked content. Findings show only the file path and rule name. The task exits with an error if it finds an issue or cannot read the Git index.
