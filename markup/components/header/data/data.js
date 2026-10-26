@@ -53,6 +53,16 @@ const data = {
             ru: 'Мой профиль в LinkedIn',
             uk: 'Мій профіль у LinkedIn'
         },
+        djinniAria: {
+            en: 'Djinni (opens in new tab)',
+            ru: 'Djinni (откроется в новой вкладке)',
+            uk: 'Djinni (відкриється у новій вкладці)'
+        },
+        djinniLabel: {
+            en: 'My Djinni profile',
+            ru: 'Мой профиль на Djinni',
+            uk: 'Мій профіль на Djinni'
+        },
         telegramAria: {
             en: 'Telegram (opens in new tab)',
             ru: 'Telegram (откроется в новой вкладке)',
