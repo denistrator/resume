@@ -43,6 +43,16 @@ const data = {
             ru: 'Моя страница на GitHub',
             uk: 'Моя сторінка на GitHub'
         },
+        linkedinAria: {
+            en: 'LinkedIn (opens in new tab)',
+            ru: 'LinkedIn (откроется в новой вкладке)',
+            uk: 'LinkedIn (відкриється у новій вкладці)'
+        },
+        linkedinLabel: {
+            en: 'My LinkedIn profile',
+            ru: 'Мой профиль в LinkedIn',
+            uk: 'Мій профіль у LinkedIn'
+        },
         telegramAria: {
             en: 'Telegram (opens in new tab)',
             ru: 'Telegram (откроется в новой вкладке)',
