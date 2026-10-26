@@ -18,6 +18,7 @@ in English, Russian and Ukrainian.
 
 The site is generated as static HTML, CSS and JavaScript. A customized TARS 1.15.1 build system
 uses Gulp 4, Handlebars, SCSS, PostCSS/Autoprefixer, Babel and Terser.
+UI icons come from the `@phosphor-icons/core` npm package and are embedded as inline SVGs at build time.
 Browser scripts use plain JavaScript and are concatenated from component files.
 No application server or database is required to host the output.
 
@@ -57,7 +58,7 @@ markup/
   static/
     scss/entry/main.scss        Stylesheet entry
     scss/vars.scss              Theme tokens and typography variables
-    img/                        Images and SVG inputs
+    img/                        Content images
     misc/                       Files copied to the site root, including PDF downloads
 tars/                           Build tasks, helpers and watchers
 docs/                           Project documentation
@@ -79,6 +80,11 @@ apply language changes. See the [localization guide](docs/i18n-pattern.md) for d
 Update section markup and interactions in their component folders. Register component SCSS in
 `markup/static/scss/entry/partials/_components.scss`; use `vars.scss` for theme values.
 Component browser scripts are included automatically by the active concatenation workflow.
+Use Phosphor regular icon names in the `PhosphorIcon` helper, for example
+`{{PhosphorIcon iconName="linkedin-logo" className="header-icon" iconWidth="24" iconHeight="24"}}`.
+Only referenced Phosphor icons are embedded; no manual SVG copies or browser icon library are needed.
+Local SVGs are also supported through `markup/static/img/svg/` and the original `Icon` helper,
+using the TARS symbols sprite injected into each page.
 
 PDF resumes in `markup/static/misc/media/` are maintained separately from the website content.
 Update each language version when changing the resume; the build copies PDFs without regenerating them.

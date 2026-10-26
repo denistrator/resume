@@ -10,7 +10,7 @@ Node is required for authoring/building, not for serving the result.
 
 TARS 1.15.1 is vendored and customized in this repository. Gulp 4 orchestrates tasks;
 Handlebars produces HTML; Dart Sass and PostCSS/Autoprefixer produce CSS;
-Babel, gulp-concat and Terser produce browser JavaScript. The configured Webpack bundler
+Babel, gulp-concat and Terser produce browser JavaScript. Phosphor supplies UI SVG icons at build time. The configured Webpack bundler
 is only used if the JS workflow changes from `concat` to `modular`.
 
 ## Source map
@@ -60,7 +60,7 @@ HTML initially renders in English through `{{t}}` or explicit `.en` fields in lo
 See [localization](i18n-pattern.md) for exact schema and constraints.
 
 The document head runs JS detection, language pre-init and theme selection before body rendering.
-The body injects the SVG symbols token, header, main content and footer, then references the
+The body injects the SVG symbols token and includes the header, main content and footer, then references the
 asynchronous concatenated JS bundle. `sections/sections.html` places languages, hard skills and
 employment in the sidebar, with experience, achievements and soft skills in the main column.
 
@@ -139,7 +139,24 @@ Shared styles provide skip/focus affordances, `.only-js`, `.only-print` and `.no
 with print rules alongside component styles. Inspect print preview as well as screen layouts
 when changing dimensions or positioning.
 
-SVG symbols are configured for injection via `%=symbols=%`.
+UI icons are regular-weight SVGs from the pinned `@phosphor-icons/core` dev dependency.
+The custom `PhosphorIcon` Handlebars helper resolves the requested
+package SVG, and inlines it with the caller's class and dimensions. Package `viewBox` and
+`currentColor` are preserved; decorative icons have `aria-hidden="true"` and `focusable="false"`.
+Links and buttons supply their accessible names. Names are validated as kebab-case and unknown
+icons fail template compilation. Only referenced Phosphor SVGs are inlined; no Phosphor JavaScript or
+full-library Phosphor sprite is shipped. Local TARS symbols are injected separately.
+
+Templates use package names such as `envelope`, `github-logo`, `linkedin-logo`, `telegram-logo`,
+`map-pin` and `file-pdf`. To add an icon, use its regular-weight package name with `{{PhosphorIcon}}`;
+there is no selection list or copy task. The standard TARS SVG symbols workflow is also active. Local SVGs in
+`markup/static/img/svg/` are optimized, assembled into a sprite and injected through
+`%=symbols=%` in page templates. The built-in `Icon` helper uses generated `__iconsData`
+metadata and renders `<use>` references. SVG watchers regenerate the sprite, metadata and HTML
+when local source files change. No unused local SVGs are retained; add custom artwork only
+when it is referenced through `Icon`. The header uses Phosphor through `PhosphorIcon`. The package license is retained under
+`markup/static/misc/licenses/phosphor-icons.txt` and copied to the published site.
+
 Image and misc copying are handled separately; a source in `misc/media/` is served as `media/`,
 not `static/misc/media/`. Deployment publishes the complete `builds/` directory.
 For operational dependencies and observed failure modes, see [operations](operations.md).

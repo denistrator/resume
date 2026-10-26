@@ -60,6 +60,15 @@ Keep unrelated local/untracked files untouched.
 
 ## Runtime and content contracts
 
+Header UI icons come from the pinned `@phosphor-icons/core` npm package, using regular-weight SVGs.
+The custom `PhosphorIcon` helper in `tars/user-tasks/html/helpers/handlebars-helpers.js` inlines only
+referenced icons at build time. Use package names directly, for example
+`{{PhosphorIcon iconName="linkedin-logo" className="header-icon" iconWidth="24" iconHeight="24"}}`.
+Use the built-in `Icon` helper for local SVG symbols from `markup/static/img/svg/`.
+The TARS SVG symbols workflow is enabled, with injection through `%=symbols=%` in page templates.
+Keep Phosphor icons in `PhosphorIcon` and custom/local symbols in `Icon`; both are supported.
+Keep the Phosphor license in `markup/static/misc/licenses/phosphor-icons.txt` synchronized on upgrades.
+
 The page includes head/pre-init scripts, header, sections, and footer. The sidebar contains
 languages, hard skills and employment; the main column contains experience, achievements
 and soft skills. Preserve semantic headings, skip link, focus states, responsive and print behavior.

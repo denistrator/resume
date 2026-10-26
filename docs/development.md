@@ -66,6 +66,27 @@ for local styles. Inspect the import order in [architecture](architecture.md) be
 The project uses Sass imports and builder-generated sprite files; do not migrate its preprocessor
 structure as an incidental part of a content edit.
 
+Use Phosphor's regular SVGs for UI icons through the existing Handlebars helper:
+
+```handlebars
+{{PhosphorIcon iconName="linkedin-logo" className="header-icon" iconWidth="24" iconHeight="24"}}
+```
+
+Use names from `@phosphor-icons/core/assets/regular/`. The helper reads the npm package at build
+time and embeds only the requested SVG. Existing CSS sizes and colors the SVG through `currentColor`.
+
+For local SVG symbols, place source files in `markup/static/img/svg/` and use the original helper:
+
+```handlebars
+{{Icon iconName="custom-logo" className="header-icon" iconWidth="24" iconHeight="24"}}
+```
+
+This example requires adding `custom-logo.svg` first; keep only local SVGs the site uses.
+The enabled TARS symbols workflow generates metadata and a sprite; page templates inject it
+with `%=symbols=%`. Watch mode rebuilds symbols and HTML when these files change.
+When updating the package, also refresh its license notice in
+`markup/static/misc/licenses/phosphor-icons.txt`.
+
 Put content images in `markup/static/img/` and files that need root-relative output placement
 in `markup/static/misc/`. Keep the `Resume-<language>.pdf` filename suffix expected by the switcher.
 `webp-lossless` converts content PNGs to WebP in the source folder when explicitly invoked;

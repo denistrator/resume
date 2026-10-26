@@ -31,6 +31,22 @@ function getNestedValue(obj, keyPath) {
 }
 
 const handlebarsHelpers = {
+    PhosphorIcon(options) {
+        const { iconName, className = `icon__${iconName}`, iconWidth = 24, iconHeight = 24 } = options.hash;
+
+        if (typeof iconName !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(iconName)) {
+            throw new Error('PhosphorIcon requires a Phosphor icon name in kebab-case.');
+        }
+
+        const iconPath = require.resolve(`@phosphor-icons/core/assets/regular/${iconName}.svg`);
+        const svg = fs.readFileSync(iconPath, 'utf8');
+        const escape = Handlebars.escapeExpression;
+        const attributes = `class="${escape(className)}" width="${escape(iconWidth)}" ` +
+            `height="${escape(iconHeight)}" aria-hidden="true" focusable="false"`;
+
+        return new Handlebars.SafeString(svg.replace('<svg ', `<svg ${attributes} `));
+    },
+
     t(key) {
         if (!key || typeof key !== 'string') {
             return '';

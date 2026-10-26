@@ -15,6 +15,7 @@
     "modern-normalize": "^3.0.1"
   },
   "devDependencies": {
+    "@phosphor-icons/core": "2.1.1",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-inline-source": "^3.0.0",
